@@ -27,6 +27,8 @@
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-deep: var(--brand-deep);
+  --color-brand-deep-2: var(--brand-deep-2);
+
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
   --font-sans: "Work Sans", system-ui, sans-serif;
 }
