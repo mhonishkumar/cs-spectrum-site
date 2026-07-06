@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Facebook, Instagram, Youtube, ChevronRight, Menu } from "lucide-react";
+import { Mail, Facebook, Instagram, Youtube, Menu } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/cse-logo.png";
 
@@ -54,46 +54,38 @@ export function SiteHeader() {
       </div>
 
       {/* Nav strip */}
-      <div className="bg-primary">
-        <div className="mx-auto max-w-7xl px-6">
-          <ul className={`${open ? "flex flex-col" : "hidden md:flex"} items-stretch gap-1 overflow-x-auto text-white/85 text-sm font-medium`}>
+      <div className="bg-primary border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <ul className={`${open ? "flex flex-col py-2" : "hidden md:flex"} flex-wrap items-center justify-center gap-x-1 gap-y-1 text-white/80 text-[13px] font-medium`}>
             {NAV.map((item) => {
               const isHash = item.to.includes("#");
-              const inner = (isActive: boolean) => (
-                <>
-                  <span>{item.label}</span>
-                  <span
-                    className={`pointer-events-none absolute left-4 right-4 -bottom-px h-[3px] rounded-t bg-brand transition-transform duration-300 origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                  />
-                </>
-              );
+              const base =
+                "group relative inline-flex items-center rounded-full px-4 py-2.5 hover:text-white hover:bg-white/10 transition";
+              const activeCls = "text-white bg-white/10 ring-1 ring-brand/40";
               return (
-                <li key={item.label} className="shrink-0">
+                <li key={item.label}>
                   {isHash ? (
-                    <a href={item.to} className="group relative inline-flex items-center px-5 py-4 hover:text-white transition">
-                      {inner(false)}
+                    <a href={item.to} className={base}>
+                      {item.label}
                     </a>
                   ) : (
                     <Link
                       to={item.to as "/"}
-                      className="group relative inline-flex items-center px-5 py-4 hover:text-white transition"
-                      activeProps={{ className: "text-white" }}
+                      className={base}
+                      activeProps={{ className: `${base} ${activeCls}` }}
                       activeOptions={{ exact: item.to === "/" }}
                     >
-                      {({ isActive }) => inner(isActive)}
+                      {item.label}
                     </Link>
                   )}
                 </li>
               );
             })}
-            <li className="ml-auto hidden md:flex items-center pl-2">
-              <button className="h-8 w-8 rounded-full border border-white/30 text-white/80 grid place-items-center hover:bg-white/10">
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </li>
           </ul>
         </div>
+        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand to-transparent" />
       </div>
     </header>
   );
 }
+
