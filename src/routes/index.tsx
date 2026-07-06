@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { SectionTitle } from "@/components/site/PageHero";
 
 import hero from "@/assets/cse-hero.jpg";
-import { STATS, EVENTS } from "@/data/content";
+import { EVENTS } from "@/data/content";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -32,10 +32,6 @@ function Index() {
             <span className="mx-2 text-primary/30">/</span>
             <span className="text-brand">DEPARTMENT OVERVIEW</span>
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/50 backdrop-blur border border-primary/10 px-3 py-1.5 text-xs font-medium text-primary">
-            <Sparkles className="h-3.5 w-3.5 text-brand" />
-            NAAC A+ · NBA Accredited · Autonomous
-          </div>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold leading-[1.05] max-w-4xl">
             Department of Computer Science &{" "}
             <span className="text-brand">Engineering</span>
@@ -55,24 +51,6 @@ function Index() {
           </Reveal>
         </div>
 
-        {/* Stats bar */}
-        <div className="relative border-t border-border bg-card/80 backdrop-blur">
-          <div className="mx-auto max-w-7xl px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {STATS.map(({ icon: Icon, k, v }, i) => (
-              <Reveal key={v} delay={100 + i * 100} direction="up">
-                <div className="flex items-center gap-3 text-primary">
-                  <div className="h-10 w-10 rounded-lg bg-brand/10 grid place-items-center">
-                    <Icon className="h-5 w-5 text-brand" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-extrabold leading-none">{k}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{v}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
         <div className="h-1 w-full bg-brand" />
       </section>
 

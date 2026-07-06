@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { SectionTitle, PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Quote } from "lucide-react";
-import { STATS, TESTIMONIALS } from "@/data/content";
+import { TESTIMONIALS } from "@/data/content";
 import img from "@/assets/cse-careers.jpg";
 
 export const Route = createFileRoute("/achievements")({
@@ -24,23 +24,6 @@ function AchievementsPage() {
       />
 
       <main className="py-20">
-        <section className="mx-auto max-w-7xl px-6">
-          <SectionTitle kicker="BY THE NUMBERS">Department Stats</SectionTitle>
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {STATS.map(({ icon: Icon, k, v }, i) => (
-              <Reveal key={v} delay={i * 100} scale>
-                <div className="rounded-2xl border border-border bg-card p-6 flex flex-col items-center text-center hover:border-brand hover:-translate-y-1 transition-all shadow-sm h-full">
-                  <div className="h-12 w-12 rounded-xl bg-brand/10 grid place-items-center mb-4">
-                    <Icon className="h-6 w-6 text-brand" />
-                  </div>
-                  <p className="text-3xl font-extrabold text-primary">{k}</p>
-                  <p className="text-sm text-muted-foreground mt-2 font-medium">{v}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         <section className="mx-auto max-w-7xl px-6 py-20 mt-20 border-t border-border">
           <SectionTitle kicker="ALUMNI VOICES">What Our Graduates Say</SectionTitle>
           <div className="mt-10 grid gap-6 md:grid-cols-3">

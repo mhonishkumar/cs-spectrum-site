@@ -19,13 +19,6 @@ export const TECHS = [
   { icon: Code2, label: "Full-Stack Development", desc: "MERN, Next.js, TypeScript, cloud native." },
 ];
 
-export const STATS = [
-  { icon: Users, k: "1,200+", v: "Active Students" },
-  { icon: GraduationCap, k: "45+", v: "Expert Faculty" },
-  { icon: Trophy, k: "230+", v: "Hackathon Wins" },
-  { icon: Rocket, k: "98%", v: "Placement Rate" },
-];
-
 export const JOURNEY = [
   { year: "Year 1", title: "Foundations", body: "C, Python, data structures, digital logic and mathematics for computing." },
   { year: "Year 2", title: "Systems & Design", body: "Operating systems, DBMS, computer networks, software engineering." },
