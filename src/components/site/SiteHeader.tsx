@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Facebook, Instagram, Youtube, ChevronRight, Menu } from "lucide-react";
+import { Mail, Facebook, Instagram, Youtube, Menu } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/cse-logo.png";
 
