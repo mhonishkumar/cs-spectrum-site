@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { PageHero, SectionTitle } from "@/components/site/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 import { Clock, ArrowRight } from "lucide-react";
 import img1 from "@/assets/cse-ai.jpg";
 import img2 from "@/assets/cse-cloud.jpg";
@@ -93,24 +94,26 @@ function FacultyBlog() {
       <section className="bg-secondary/60">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle kicker="FEATURED">Editor's Pick</SectionTitle>
-          <article className="mt-10 grid gap-10 md:grid-cols-2 items-center group">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <img src={feature.img} alt="" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
-              <span className="absolute top-4 left-4 rounded-full bg-brand text-brand-foreground px-3 py-1 text-xs font-bold">{feature.tag}</span>
-            </div>
-            <div>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <img src={feature.avatar} alt={feature.author} className="h-8 w-8 rounded-full object-cover" width={64} height={64} loading="lazy" />
-                {feature.author} · {feature.date}
-                <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {feature.read}</span>
+          <Reveal>
+            <article className="mt-10 grid gap-10 md:grid-cols-2 items-center group">
+              <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                <img src={feature.img} alt="" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
+                <span className="absolute top-4 left-4 rounded-full bg-brand text-brand-foreground px-3 py-1 text-xs font-bold">{feature.tag}</span>
               </div>
-              <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-primary leading-tight">{feature.title}</h2>
-              <p className="mt-4 text-foreground/75 leading-relaxed">{feature.excerpt}</p>
-              <a href="#" className="mt-6 inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
-                Read the essay <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
-          </article>
+              <div>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <img src={feature.avatar} alt={feature.author} className="h-8 w-8 rounded-full object-cover" width={64} height={64} loading="lazy" />
+                  {feature.author} · {feature.date}
+                  <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {feature.read}</span>
+                </div>
+                <h2 className="mt-4 text-3xl md:text-4xl font-extrabold text-primary leading-tight">{feature.title}</h2>
+                <p className="mt-4 text-foreground/75 leading-relaxed">{feature.excerpt}</p>
+                <a href="#" className="mt-6 inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
+                  Read the essay <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </section>
 
@@ -119,22 +122,24 @@ function FacultyBlog() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle kicker="LATEST POSTS">All Essays</SectionTitle>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {rest.map((p) => (
-              <article key={p.title} className="group flex flex-col rounded-2xl overflow-hidden border border-border bg-card hover:border-brand hover:-translate-y-1 hover:shadow-xl transition-all">
-                <div className="relative overflow-hidden aspect-video">
-                  <img src={p.img} alt="" className="h-full w-full object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/95 text-primary px-2.5 py-1 text-[10px] font-bold tracking-widest">{p.tag.toUpperCase()}</span>
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-lg font-bold text-primary leading-tight">{p.title}</h3>
-                  <p className="mt-2 text-sm text-foreground/70 leading-relaxed flex-1">{p.excerpt}</p>
-                  <div className="mt-5 flex items-center gap-3 pt-4 border-t border-border text-xs text-muted-foreground">
-                    <img src={p.avatar} alt={p.author} className="h-7 w-7 rounded-full object-cover" width={64} height={64} loading="lazy" />
-                    <span className="font-medium text-foreground/80">{p.author}</span>
-                    <span className="ml-auto inline-flex items-center gap-1"><Clock className="h-3 w-3" /> {p.read}</span>
+            {rest.map((p, i) => (
+              <Reveal key={p.title} delay={i * 100}>
+                <article className="group flex flex-col rounded-2xl overflow-hidden border border-border bg-card hover:border-brand hover:-translate-y-1 hover:shadow-xl transition-all h-full">
+                  <div className="relative overflow-hidden aspect-video">
+                    <img src={p.img} alt="" className="h-full w-full object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
+                    <span className="absolute top-3 left-3 rounded-full bg-white/95 text-primary px-2.5 py-1 text-[10px] font-bold tracking-widest">{p.tag.toUpperCase()}</span>
                   </div>
-                </div>
-              </article>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="text-lg font-bold text-primary leading-tight">{p.title}</h3>
+                    <p className="mt-2 text-sm text-foreground/70 leading-relaxed flex-1">{p.excerpt}</p>
+                    <div className="mt-5 flex items-center gap-3 pt-4 border-t border-border text-xs text-muted-foreground">
+                      <img src={p.avatar} alt={p.author} className="h-7 w-7 rounded-full object-cover" width={64} height={64} loading="lazy" />
+                      <span className="font-medium text-foreground/80">{p.author}</span>
+                      <span className="ml-auto inline-flex items-center gap-1"><Clock className="h-3 w-3" /> {p.read}</span>
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>

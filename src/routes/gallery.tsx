@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SectionTitle, PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 import hero from "@/assets/cse-hero.jpg";
 import hackathon from "@/assets/cse-hackathon.jpg";
@@ -41,17 +42,19 @@ function GalleryPage() {
         <SectionTitle kicker="MOMENTS">Photo Gallery</SectionTitle>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {IMAGES.map((img, index) => (
-            <div key={index} className="group relative rounded-2xl overflow-hidden bg-muted aspect-square">
-              <img 
-                src={img.src} 
-                alt={img.alt} 
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-                loading="lazy" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
-                <p className="text-white font-medium">{img.alt}</p>
+            <Reveal key={index} delay={index * 100} scale>
+              <div className="group relative rounded-2xl overflow-hidden bg-muted aspect-square h-full">
+                <img 
+                  src={img.src} 
+                  alt={img.alt} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                  loading="lazy" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                  <p className="text-white font-medium">{img.alt}</p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </main>

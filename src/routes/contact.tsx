@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { Reveal } from "@/components/ui/Reveal";
 import { Mail, Phone, MapPin } from "lucide-react";
 import img from "@/assets/cse-lab.jpg";
 
@@ -24,51 +25,53 @@ function ContactPage() {
       </div>
 
       <main className="py-20 mx-auto max-w-4xl px-6">
-        <div className="rounded-3xl border border-border bg-card p-10 md:p-14 shadow-lg flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex-1 space-y-6">
-            <div>
-              <h2 className="text-3xl font-extrabold text-primary">Head of the Department</h2>
-              <p className="text-lg text-primary/80 font-medium mt-1">Dr. R. Karthikeyan (Prof & Head)</p>
+        <Reveal>
+          <div className="rounded-3xl border border-border bg-card p-10 md:p-14 shadow-lg flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1 space-y-6">
+              <div>
+                <h2 className="text-3xl font-extrabold text-primary">Head of the Department</h2>
+                <p className="text-lg text-primary/80 font-medium mt-1">Dr. R. Karthikeyan (Prof & Head)</p>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Our department nurtures innovation, research, and entrepreneurship — preparing students for cutting-edge opportunities in AI, Data Science, Cybersecurity, Cloud, and Full-Stack Development.
+              </p>
+              <div className="space-y-4 pt-4">
+                <div className="flex items-center gap-4 text-primary">
+                  <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <span className="font-medium">cse@velammalitech.edu.in</span>
+                </div>
+                <div className="flex items-center gap-4 text-primary">
+                  <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-medium">044-30446300 (Extn: 132)</span>
+                    <span className="font-medium">+91 9087556789</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 text-primary">
+                  <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <span className="font-medium leading-tight">Velammal Institute of Technology<br/>Chennai, Tamil Nadu</span>
+                </div>
+              </div>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Our department nurtures innovation, research, and entrepreneurship — preparing students for cutting-edge opportunities in AI, Data Science, Cybersecurity, Cloud, and Full-Stack Development.
-            </p>
-            <div className="space-y-4 pt-4">
-              <div className="flex items-center gap-4 text-primary">
-                <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <span className="font-medium">cse@velammalitech.edu.in</span>
-              </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-medium">044-30446300 (Extn: 132)</span>
-                  <span className="font-medium">+91 9087556789</span>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <span className="font-medium leading-tight">Velammal Institute of Technology<br/>Chennai, Tamil Nadu</span>
-              </div>
+            
+            <div className="w-full md:w-1/3 aspect-square rounded-2xl bg-secondary border border-border p-6 flex flex-col items-center justify-center text-center">
+               <div className="h-16 w-16 rounded-full bg-brand/10 grid place-items-center mb-4">
+                  <MapPin className="h-8 w-8 text-brand" />
+               </div>
+               <p className="font-bold text-primary">Visit Campus</p>
+               <p className="text-sm text-muted-foreground mt-2">Schedule a tour with our admission counselors to explore the labs and facilities.</p>
+               <button className="mt-6 w-full rounded-md bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
+                 Get Directions
+               </button>
             </div>
           </div>
-          
-          <div className="w-full md:w-1/3 aspect-square rounded-2xl bg-secondary border border-border p-6 flex flex-col items-center justify-center text-center">
-             <div className="h-16 w-16 rounded-full bg-brand/10 grid place-items-center mb-4">
-                <MapPin className="h-8 w-8 text-brand" />
-             </div>
-             <p className="font-bold text-primary">Visit Campus</p>
-             <p className="text-sm text-muted-foreground mt-2">Schedule a tour with our admission counselors to explore the labs and facilities.</p>
-             <button className="mt-6 w-full rounded-md bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
-               Get Directions
-             </button>
-          </div>
-        </div>
+        </Reveal>
       </main>
 
       <SiteFooter />
