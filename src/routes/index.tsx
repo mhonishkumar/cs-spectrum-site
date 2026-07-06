@@ -41,9 +41,9 @@ function Index() {
           </p>
           <Reveal delay={200}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/about" className="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
+              <a href="#about" className="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
                 Explore the Department <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <Link to="/digital-initiatives" className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-3 text-sm font-semibold text-primary hover:bg-muted transition">
                 Digital Initiatives
               </Link>
@@ -56,7 +56,7 @@ function Index() {
 
       <main className="py-20">
         {/* About */}
-        <section className="mx-auto max-w-7xl px-6">
+        <section id="about" className="mx-auto max-w-7xl px-6">
           <SectionTitle kicker="WHO WE ARE">About the Department</SectionTitle>
           <div className="mt-10 grid gap-10 md:grid-cols-2 items-start">
             <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
