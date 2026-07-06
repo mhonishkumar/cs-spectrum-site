@@ -29,36 +29,36 @@
   --color-brand-deep: var(--brand-deep);
   --color-brand-deep-2: var(--brand-deep-2);
 
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-sans: "Work Sans", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.25rem;
+  --radius: 0.5rem;
 
-  /* Editorial indigo palette — locked from selected direction */
-  --background: #0a0a1a;
-  --foreground: #f1f2fb;
-  --card: #141432;
-  --card-foreground: #f1f2fb;
-  --primary: #f1f2fb;              /* headings on dark bg */
-  --primary-foreground: #0a0a1a;
-  --secondary: #141432;
-  --secondary-foreground: #f1f2fb;
-  --muted: #141432;
-  --muted-foreground: #8a8fb8;     /* slate-400ish */
-  --accent: #4f46e5;
+  /* Modern Light Theme Palette */
+  --background: #ffffff;
+  --foreground: #334155;
+  --card: #ffffff;
+  --card-foreground: #334155;
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #3b82f6;
   --accent-foreground: #ffffff;
-  --border: #1e1e5a;
-  --input: #1e1e5a;
-  --ring: #4f46e5;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #3b82f6;
 
-  --brand: #4f46e5;                /* electric indigo */
+  --brand: #3b82f6;
   --brand-foreground: #ffffff;
-  --brand-deep: #141432;
-  --brand-deep-2: #1e1e5a;
+  --brand-deep: #2563eb;
+  --brand-deep-2: #1d4ed8;
 
-  --gradient-hero: linear-gradient(140deg, #0a0a1a 0%, #141432 55%, #1e1e5a 100%);
+  --gradient-hero: linear-gradient(140deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%);
 }
 
 @layer base {
@@ -69,10 +69,11 @@
     font-family: var(--font-sans);
     font-weight: 400;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
-    font-weight: 400;
+    font-weight: 600;
+    color: var(--color-primary);
   }
   ::selection { background: var(--brand); color: #fff; }
 }
@@ -80,13 +81,13 @@
 /* Editorial helpers */
 @utility eyebrow {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--brand);
 }
 
 @utility hairline {
-  border-color: var(--brand-deep-2);
+  border-color: var(--color-border);
 }

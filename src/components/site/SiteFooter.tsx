@@ -1,19 +1,19 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
 
 const ACADEMIC = [
-  { label: "Department Overview", href: "/#about" },
-  { label: "Syllabus & Notes Repository", href: "/#videos" },
-  { label: "Video Lecture Library", href: "/#videos" },
-  { label: "Pedagogy & Curriculum", href: "/#pedagogy" },
+  { label: "Department Overview", href: "/about" },
+  { label: "Syllabus & Notes Repository", href: "/resources" },
+  { label: "Video Lecture Library", href: "/resources" },
+  { label: "Pedagogy & Curriculum", href: "/resources" },
   { label: "Digital Initiatives", href: "/digital-initiatives" },
 ];
 
 const RESEARCH = [
-  { label: "Capstone Projects & Prototypes", href: "/#teaching" },
-  { label: "Faculty Outside Interaction", href: "/faculty-blog" },
+  { label: "Capstone Projects & Prototypes", href: "/achievements" },
+  { label: "Faculty Outside Interaction", href: "/faculty" },
   { label: "Faculty Research Blogs", href: "/faculty-blog" },
-  { label: "Innovative Teaching & Learning", href: "/#teaching" },
-  { label: "Emerging Technologies", href: "/#materials" },
+  { label: "Innovative Teaching & Learning", href: "/about" },
+  { label: "Emerging Technologies", href: "/resources" },
 ];
 
 export function SiteFooter() {

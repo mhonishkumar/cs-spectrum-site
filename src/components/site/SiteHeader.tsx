@@ -6,12 +6,14 @@ import vitLogo from "@/assets/vit-logo.png.asset.json";
 
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
-  { label: "Department", to: "/#about" },
-  { label: "Vision & Mission", to: "/#vision-mission" },
-  { label: "Pedagogy", to: "/#pedagogy" },
-  { label: "Emerging Tech", to: "/#materials" },
-  { label: "Digital Initiatives", to: "/digital-initiatives" },
-  { label: "Faculty Blog", to: "/faculty-blog" },
+  { label: "About", to: "/about" },
+  { label: "Faculty", to: "/faculty" },
+  { label: "Blog", to: "/faculty-blog" },
+  { label: "Events", to: "/events" },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Achievements", to: "/achievements" },
+  { label: "Resources", to: "/resources" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const UTIL = [
@@ -72,33 +74,19 @@ export function SiteHeader() {
             } flex-wrap gap-x-8 gap-y-2 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-foreground/85`}
           >
             {NAV.map((item, i) => {
-              const isHash = item.to.includes("#");
               const base =
-                "group inline-flex items-baseline gap-2 border-b border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
+                "group inline-flex items-baseline gap-2 border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
               const active = "text-brand border-brand";
-              const number = (
-                <span className="font-display italic text-brand/70 text-[13px]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              );
               return (
                 <li key={item.label}>
-                  {isHash ? (
-                    <a href={item.to} className={base}>
-                      {number}
-                      <span>{item.label}</span>
-                    </a>
-                  ) : (
                     <Link
                       to={item.to as "/"}
                       className={base}
                       activeProps={{ className: `${base} ${active}` }}
                       activeOptions={{ exact: item.to === "/" }}
                     >
-                      {number}
                       <span>{item.label}</span>
                     </Link>
-                  )}
                 </li>
               );
             })}

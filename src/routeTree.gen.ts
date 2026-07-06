@@ -9,18 +9,60 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FacultyBlogRouteImport } from './routes/faculty-blog'
+import { Route as FacultyRouteImport } from './routes/faculty'
+import { Route as EventsRouteImport } from './routes/events'
 import { Route as DigitalInitiativesRouteImport } from './routes/digital-initiatives'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AchievementsRouteImport } from './routes/achievements'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FacultyBlogRoute = FacultyBlogRouteImport.update({
   id: '/faculty-blog',
   path: '/faculty-blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FacultyRoute = FacultyRouteImport.update({
+  id: '/faculty',
+  path: '/faculty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DigitalInitiativesRoute = DigitalInitiativesRouteImport.update({
   id: '/digital-initiatives',
   path: '/digital-initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AchievementsRoute = AchievementsRouteImport.update({
+  id: '/achievements',
+  path: '/achievements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,36 +73,109 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/achievements': typeof AchievementsRoute
+  '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
+  '/gallery': typeof GalleryRoute
+  '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/achievements': typeof AchievementsRoute
+  '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
+  '/gallery': typeof GalleryRoute
+  '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/achievements': typeof AchievementsRoute
+  '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
+  '/gallery': typeof GalleryRoute
+  '/resources': typeof ResourcesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/digital-initiatives' | '/faculty-blog'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/achievements'
+    | '/contact'
+    | '/digital-initiatives'
+    | '/events'
+    | '/faculty'
+    | '/faculty-blog'
+    | '/gallery'
+    | '/resources'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/digital-initiatives' | '/faculty-blog'
-  id: '__root__' | '/' | '/digital-initiatives' | '/faculty-blog'
+  to:
+    | '/'
+    | '/about'
+    | '/achievements'
+    | '/contact'
+    | '/digital-initiatives'
+    | '/events'
+    | '/faculty'
+    | '/faculty-blog'
+    | '/gallery'
+    | '/resources'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/achievements'
+    | '/contact'
+    | '/digital-initiatives'
+    | '/events'
+    | '/faculty'
+    | '/faculty-blog'
+    | '/gallery'
+    | '/resources'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AchievementsRoute: typeof AchievementsRoute
+  ContactRoute: typeof ContactRoute
   DigitalInitiativesRoute: typeof DigitalInitiativesRoute
+  EventsRoute: typeof EventsRoute
+  FacultyRoute: typeof FacultyRoute
   FacultyBlogRoute: typeof FacultyBlogRoute
+  GalleryRoute: typeof GalleryRoute
+  ResourcesRoute: typeof ResourcesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faculty-blog': {
       id: '/faculty-blog'
       path: '/faculty-blog'
@@ -68,11 +183,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FacultyBlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faculty': {
+      id: '/faculty'
+      path: '/faculty'
+      fullPath: '/faculty'
+      preLoaderRoute: typeof FacultyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/digital-initiatives': {
       id: '/digital-initiatives'
       path: '/digital-initiatives'
       fullPath: '/digital-initiatives'
       preLoaderRoute: typeof DigitalInitiativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/achievements': {
+      id: '/achievements'
+      path: '/achievements'
+      fullPath: '/achievements'
+      preLoaderRoute: typeof AchievementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,9 +237,26 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AchievementsRoute: AchievementsRoute,
+  ContactRoute: ContactRoute,
   DigitalInitiativesRoute: DigitalInitiativesRoute,
+  EventsRoute: EventsRoute,
+  FacultyRoute: FacultyRoute,
   FacultyBlogRoute: FacultyBlogRoute,
+  GalleryRoute: GalleryRoute,
+  ResourcesRoute: ResourcesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
