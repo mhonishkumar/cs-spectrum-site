@@ -1,88 +1,116 @@
-import { Facebook, Instagram, Youtube, Send } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+
+const ACADEMIC = [
+  { label: "Department Overview", href: "/#about" },
+  { label: "Syllabus & Notes Repository", href: "/#videos" },
+  { label: "Video Lecture Library", href: "/#videos" },
+  { label: "Pedagogy & Curriculum", href: "/#pedagogy" },
+  { label: "Digital Initiatives", href: "/digital-initiatives" },
+];
+
+const RESEARCH = [
+  { label: "Capstone Projects & Prototypes", href: "/#teaching" },
+  { label: "Faculty Outside Interaction", href: "/faculty-blog" },
+  { label: "Faculty Research Blogs", href: "/faculty-blog" },
+  { label: "Innovative Teaching & Learning", href: "/#teaching" },
+  { label: "Emerging Technologies", href: "/#materials" },
+];
 
 export function SiteFooter() {
   return (
-    <>
-      <div className="h-1 w-full bg-brand" />
-      <footer className="bg-primary text-white/85 relative overflow-hidden">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-brand/5 blur-3xl" />
-
-        {/* Newsletter */}
-        <div className="relative border-b border-white/10">
-          <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-white">Stay in the loop</h3>
-              <p className="text-sm text-white/70 mt-1">Get monthly updates on research, events and student wins.</p>
-            </div>
-            <form className="flex w-full md:w-auto items-center gap-2">
-              <input
-                type="email"
-                required
-                placeholder="you@velammalitech.edu.in"
-                className="w-full md:w-80 rounded-md bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-brand"
-              />
-              <button className="inline-flex items-center gap-2 rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
-                Subscribe <Send className="h-4 w-4" />
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-3">
-          <div>
-            <h3 className="text-xl font-bold text-white">Velammal Institute of Technology</h3>
-            <p className="mt-4 font-semibold text-white">Department of Computer Science & Engineering</p>
-            <p className="mt-1 text-sm">Velammal Knowledge Park, Chennai – Kolkata Highway, Panchetti, Thiruvallur District, Tamil Nadu – 601204</p>
-            <div className="my-5 h-px bg-white/15" />
-            <p className="text-sm"><span className="text-brand font-semibold">HOD Contact:</span> Dr. R. Karthikeyan (Prof & Head)</p>
-            <p className="text-sm mt-1"><span className="font-semibold">Email:</span> cse@velammalitech.edu.in</p>
-            <p className="text-sm mt-1"><span className="font-semibold">Phone:</span> 044-30446300 (Extn: 132) / +91 9087556789</p>
-            <div className="mt-5 flex items-center gap-3">
-              <span className="text-sm font-semibold text-white">Follow Us:</span>
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="h-9 w-9 rounded-full border border-white/25 grid place-items-center hover:border-brand hover:text-brand hover:-translate-y-0.5 transition">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="text-white font-bold text-lg">Academic Portals</h4>
-            <ul className="mt-4 space-y-3 text-sm">
-              {[
-                { label: "Department Overview", href: "/#about" },
-                { label: "Syllabus & Notes Repository", href: "/#videos" },
-                { label: "Video Lecture Library", href: "/#videos" },
-                { label: "Pedagogy & Curriculum", href: "/#pedagogy" },
-                { label: "Digital Initiatives", href: "/digital-initiatives" },
-              ].map((l) => (
-                <li key={l.label}><a href={l.href} className="hover:text-brand transition">{l.label}</a></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-bold text-lg">Research & Faculty</h4>
-            <ul className="mt-4 space-y-3 text-sm">
-              {[
-                { label: "Capstone Projects & Prototypes", href: "/#teaching" },
-                { label: "Faculty Outside Interaction", href: "/faculty-blog" },
-                { label: "Faculty Research Blogs", href: "/faculty-blog" },
-                { label: "Innovative Teaching & Learning", href: "/#teaching" },
-                { label: "Emerging Technologies", href: "/#materials" },
-              ].map((l) => (
-                <li key={l.label}><a href={l.href} className="hover:text-brand transition">{l.label}</a></li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-        <div className="relative border-t border-white/10">
-          <p className="mx-auto max-w-7xl px-6 py-5 text-xs text-white/60 text-center">
-            © 2026 Department of Computer Science & Engineering, Velammal Institute of Technology. All rights reserved.
+    <footer className="bg-card border-t hairline pt-20 pb-10">
+      <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
+        {/* Newsletter — editorial masthead */}
+        <div className="md:col-span-5">
+          <p className="eyebrow">Volume 26 · Dispatch</p>
+          <h4 className="mt-4 font-display italic text-4xl md:text-5xl text-primary leading-[1.05]">
+            Join the Pulse.
+          </h4>
+          <p className="mt-6 text-sm text-muted-foreground max-w-sm leading-relaxed">
+            Monthly deep-dives on departmental research, faculty appointments,
+            capstone showcases and upcoming technical symposiums — straight to
+            your inbox.
           </p>
+          <form className="mt-8 flex items-center border-b hairline pb-2 focus-within:border-brand transition-colors">
+            <input
+              type="email"
+              required
+              placeholder="your.name@velammalitech.edu.in"
+              className="bg-transparent w-full text-sm outline-none placeholder:text-muted-foreground/60 placeholder:italic text-primary"
+            />
+            <button
+              type="submit"
+              className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand hover:text-primary transition-colors"
+            >
+              Subscribe →
+            </button>
+          </form>
+          <div className="mt-8 flex items-center gap-5 text-muted-foreground">
+            {[Facebook, Instagram, Youtube].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="h-9 w-9 grid place-items-center border hairline hover:text-brand hover:border-brand transition"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
-      </footer>
-    </>
+
+        {/* Academic Portals */}
+        <div className="md:col-span-3 md:pl-8 md:border-l hairline">
+          <h5 className="eyebrow">Academic Portals</h5>
+          <ul className="mt-8 space-y-4 text-sm font-medium">
+            {ACADEMIC.map((l) => (
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  className="text-foreground/85 hover:text-brand transition-colors inline-flex items-baseline gap-2"
+                >
+                  <span className="font-display italic text-brand/60 text-[13px]">·</span>
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Research & Faculty */}
+        <div className="md:col-span-4 md:pl-8 md:border-l hairline">
+          <h5 className="eyebrow">Research & Faculty</h5>
+          <ul className="mt-8 space-y-4 text-sm font-medium">
+            {RESEARCH.map((l) => (
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  className="text-foreground/85 hover:text-brand transition-colors inline-flex items-baseline gap-2"
+                >
+                  <span className="font-display italic text-brand/60 text-[13px]">·</span>
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 text-xs text-muted-foreground leading-relaxed">
+            <p className="text-primary font-medium">Dr. R. Karthikeyan · HOD</p>
+            <p className="mt-1">cse@velammalitech.edu.in</p>
+            <p>+91 90875 56789 · 044-30446300 (Extn 132)</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Base rule */}
+      <div className="mx-auto max-w-7xl px-6 mt-20 pt-8 border-t hairline flex flex-col md:flex-row justify-between items-center gap-4">
+        <span className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+          © 2026 · Velammal Institute of Technology · Department of CSE
+        </span>
+        <div className="flex gap-8 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+          <a href="#" className="hover:text-brand">Privacy</a>
+          <a href="#" className="hover:text-brand">Accessibility</a>
+          <a href="#" className="hover:text-brand">Sitemap</a>
+        </div>
+      </div>
+    </footer>
   );
 }

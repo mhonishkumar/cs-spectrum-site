@@ -27,35 +27,38 @@
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-deep: var(--brand-deep);
-  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --color-brand-deep-2: var(--brand-deep-2);
+
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.99 0.005 180);
-  --foreground: oklch(0.18 0.03 200);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 200);
-  --primary: oklch(0.22 0.05 200);
-  --primary-foreground: oklch(0.98 0.01 180);
-  --secondary: oklch(0.96 0.02 180);
-  --secondary-foreground: oklch(0.22 0.05 200);
-  --muted: oklch(0.96 0.01 200);
-  --muted-foreground: oklch(0.5 0.03 200);
-  --accent: oklch(0.72 0.18 155);
-  --accent-foreground: oklch(0.15 0.03 200);
-  --border: oklch(0.9 0.015 200);
-  --input: oklch(0.9 0.015 200);
-  --ring: oklch(0.72 0.18 155);
+  --radius: 0.25rem;
 
-  /* Brand tokens */
-  --brand: oklch(0.72 0.18 155);            /* emerald/teal accent */
-  --brand-foreground: oklch(0.15 0.03 200);
-  --brand-deep: oklch(0.22 0.05 200);       /* deep teal-navy */
-  --brand-deep-2: oklch(0.28 0.08 190);     /* teal */
+  /* Editorial indigo palette — locked from selected direction */
+  --background: #0a0a1a;
+  --foreground: #f1f2fb;
+  --card: #141432;
+  --card-foreground: #f1f2fb;
+  --primary: #f1f2fb;              /* headings on dark bg */
+  --primary-foreground: #0a0a1a;
+  --secondary: #141432;
+  --secondary-foreground: #f1f2fb;
+  --muted: #141432;
+  --muted-foreground: #8a8fb8;     /* slate-400ish */
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  --border: #1e1e5a;
+  --input: #1e1e5a;
+  --ring: #4f46e5;
 
-  --gradient-hero: linear-gradient(120deg, oklch(0.22 0.05 200) 0%, oklch(0.32 0.09 185) 55%, oklch(0.42 0.13 170) 100%);
+  --brand: #4f46e5;                /* electric indigo */
+  --brand-foreground: #ffffff;
+  --brand-deep: #141432;
+  --brand-deep-2: #1e1e5a;
+
+  --gradient-hero: linear-gradient(140deg, #0a0a1a 0%, #141432 55%, #1e1e5a 100%);
 }
 
 @layer base {
@@ -64,6 +67,26 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-weight: 400;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    font-weight: 400;
+  }
+  ::selection { background: var(--brand); color: #fff; }
+}
+
+/* Editorial helpers */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+@utility hairline {
+  border-color: var(--brand-deep-2);
 }

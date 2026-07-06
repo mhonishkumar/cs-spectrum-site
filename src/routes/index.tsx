@@ -167,7 +167,7 @@ function Index() {
             </div>
             <div className="relative">
               <img src={coding} alt="Student coding on laptop" width={1200} height={800} loading="lazy" className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]" />
-              <div className="absolute -bottom-6 -left-6 hidden md:block rounded-xl bg-primary text-white p-4 shadow-xl w-52">
+              <div className="absolute -bottom-6 -left-6 hidden md:block rounded-xl bg-brand-deep-2 text-primary border hairline p-4 shadow-xl w-52">
                 <p className="text-3xl font-extrabold text-brand">15+</p>
                 <p className="text-xs text-white/80 mt-1">Years shaping computing leaders in Tamil Nadu</p>
               </div>
@@ -235,7 +235,7 @@ function Index() {
                   { k: "PEO 3", v: "Work in a business environment, exhibiting team skills, work ethics, adaptability and lifelong learning." },
                 ].map((p) => (
                   <li key={p.k} className="flex gap-4">
-                    <span className="shrink-0 rounded-lg bg-primary text-white px-3 py-1.5 text-xs font-extrabold h-fit">{p.k}</span>
+                    <span className="shrink-0 rounded-lg bg-brand-deep-2 text-primary border hairline px-3 py-1.5 text-xs font-extrabold h-fit">{p.k}</span>
                     <p className="text-foreground/80 leading-relaxed">{p.v}</p>
                   </li>
                 ))}
@@ -419,7 +419,7 @@ function Index() {
                 const [day, month] = e.date.split(" ");
                 return (
                   <li key={e.title} className="group flex items-center gap-5 rounded-xl border border-border bg-card p-4 hover:border-brand hover:shadow-md transition">
-                    <div className="shrink-0 w-16 rounded-lg bg-primary text-white text-center py-2">
+                    <div className="shrink-0 w-16 rounded-lg bg-brand-deep-2 text-primary border hairline text-center py-2">
                       <p className="text-2xl font-extrabold leading-none text-brand">{day}</p>
                       <p className="text-[10px] uppercase tracking-widest mt-1">{month}</p>
                     </div>

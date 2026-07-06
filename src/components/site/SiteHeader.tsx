@@ -1,82 +1,92 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Facebook, Instagram, Youtube, Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/cse-logo.png";
 
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
-  { label: "Department Overview", to: "/#about" },
+  { label: "Department", to: "/#about" },
   { label: "Vision & Mission", to: "/#vision-mission" },
-  { label: "Pedagogy & Curriculum", to: "/#pedagogy" },
-  { label: "Emerging Technologies", to: "/#materials" },
+  { label: "Pedagogy", to: "/#pedagogy" },
+  { label: "Emerging Tech", to: "/#materials" },
   { label: "Digital Initiatives", to: "/digital-initiatives" },
   { label: "Faculty Blog", to: "/faculty-blog" },
 ];
 
+const UTIL = [
+  { label: "Contact", href: "#" },
+  { label: "Directory", href: "#" },
+  { label: "Facebook", href: "#" },
+  { label: "YouTube", href: "#" },
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40">
-      {/* Brand bar */}
-      <div className="bg-white/95 backdrop-blur border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-6 flex-wrap">
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-brand/20 blur-lg group-hover:blur-xl transition-all" />
-              <img src={logo} alt="VIT logo" width={56} height={56} className="relative h-14 w-14" />
-            </div>
-            <div>
-              <p className="text-[10px] md:text-xs font-semibold tracking-[0.22em] text-primary/70">
-                VELAMMAL INSTITUTE OF TECHNOLOGY
-              </p>
-              <h1 className="text-base md:text-xl font-extrabold text-primary leading-tight uppercase">
-                Department of Computer Science<br className="hidden md:block" /> & Engineering
-              </h1>
-            </div>
+    <>
+      {/* Editorial masthead */}
+      <header className="border-b hairline bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-8 flex items-end justify-between gap-6">
+          <Link to="/" className="group min-w-0">
+            <p className="eyebrow text-brand">Velammal Institute of Technology</p>
+            <h1 className="mt-1 font-display text-4xl md:text-5xl leading-none tracking-tight text-primary">
+              CSE<span className="italic text-brand">.</span>
+              <span className="ml-3 hidden md:inline text-2xl md:text-3xl text-muted-foreground/80">
+                / Computer Science & Engineering
+              </span>
+            </h1>
           </Link>
-          <nav className="hidden md:flex items-center gap-2">
-            {[
-              { label: "Contact", icon: Mail },
-              { label: "Facebook", icon: Facebook },
-              { label: "Instagram", icon: Instagram },
-              { label: "YouTube", icon: Youtube },
-            ].map(({ label, icon: Icon }) => (
-              <a key={label} href="#" className="inline-flex items-center gap-2 rounded-md border border-border bg-white px-3.5 py-2 text-sm font-medium text-primary hover:border-brand hover:text-brand hover:-translate-y-0.5 transition-all">
-                <Icon className="h-4 w-4" /> {label}
+          <nav className="hidden md:flex items-end gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
+            {UTIL.map((u) => (
+              <a key={u.label} href={u.href} className="hover:text-brand transition-colors">
+                {u.label}
               </a>
             ))}
           </nav>
-          <button onClick={() => setOpen((v) => !v)} className="md:hidden inline-flex items-center justify-center rounded-md border border-border p-2 text-primary">
-            <Menu className="h-5 w-5" />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+            className="md:hidden inline-flex items-center justify-center p-2 border hairline text-primary"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Nav strip */}
-      <div className="bg-primary border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <ul className={`${open ? "flex flex-col py-2" : "hidden md:flex"} flex-wrap items-center justify-center gap-x-1 gap-y-1 text-white/80 text-[13px] font-medium`}>
-            {NAV.map((item) => {
+      {/* Sticky nav — hairline underline with electric-indigo hover */}
+      <nav className="sticky top-0 z-40 bg-background/95 backdrop-blur-md border-b hairline">
+        <div className="mx-auto max-w-7xl px-6">
+          <ul
+            className={`${
+              open ? "flex flex-col py-3" : "hidden md:flex"
+            } flex-wrap gap-x-8 gap-y-2 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-foreground/85`}
+          >
+            {NAV.map((item, i) => {
               const isHash = item.to.includes("#");
               const base =
-                "group relative inline-flex items-center rounded-full px-4 py-2.5 hover:text-white hover:bg-white/10 transition";
-              const activeCls = "text-white bg-white/10 ring-1 ring-brand/40";
+                "group inline-flex items-baseline gap-2 border-b border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
+              const active = "text-brand border-brand";
+              const number = (
+                <span className="font-display italic text-brand/70 text-[13px]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              );
               return (
                 <li key={item.label}>
                   {isHash ? (
                     <a href={item.to} className={base}>
-                      {item.label}
+                      {number}
+                      <span>{item.label}</span>
                     </a>
                   ) : (
                     <Link
                       to={item.to as "/"}
                       className={base}
-                      activeProps={{ className: `${base} ${activeCls}` }}
+                      activeProps={{ className: `${base} ${active}` }}
                       activeOptions={{ exact: item.to === "/" }}
                     >
-                      {item.label}
+                      {number}
+                      <span>{item.label}</span>
                     </Link>
                   )}
                 </li>
@@ -84,9 +94,7 @@ export function SiteHeader() {
             })}
           </ul>
         </div>
-        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-brand to-transparent" />
-      </div>
-    </header>
+      </nav>
+    </>
   );
 }
-

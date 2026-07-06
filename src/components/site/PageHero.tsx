@@ -12,40 +12,57 @@ export function PageHero({
   bg?: string;
 }) {
   return (
-    <section className="relative overflow-hidden" style={{ backgroundImage: "var(--gradient-hero)" }}>
+    <section className="relative overflow-hidden bg-background border-b hairline">
       {bg && (
-        <img src={bg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25 mix-blend-screen" />
+        <img
+          src={bg}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-15 mix-blend-luminosity"
+        />
       )}
-      {/* decorative grid */}
-      <div className="absolute inset-0 opacity-[0.08]" style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-        backgroundSize: "48px 48px",
-      }} />
-      <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 text-white">
-        <p className="text-sm font-medium tracking-wide flex items-center gap-1">
-          <span className="text-white/80">HOME</span>
-          <ChevronRight className="h-4 w-4 text-white/40" />
-          <span className="text-brand uppercase">{crumb}</span>
-        </p>
-        <h1 className="mt-4 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] max-w-4xl animate-fade-in">
-          {title}
-        </h1>
-        <p className="mt-5 max-w-2xl text-white/85 md:text-lg">{subtitle}</p>
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{ backgroundImage: "var(--gradient-hero)" }}
+      />
+      <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28 grid grid-cols-12 gap-8 items-end">
+        <div className="col-span-12 lg:col-span-9">
+          <p className="eyebrow flex items-center gap-2">
+            HOME
+            <ChevronRight className="h-3 w-3 text-brand" />
+            <span className="text-brand">{crumb}</span>
+          </p>
+          <h1 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-primary">
+            {title}
+          </h1>
+        </div>
+        <div className="col-span-12 lg:col-span-3 lg:border-l hairline lg:pl-8">
+          <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
+            {subtitle}
+          </p>
+        </div>
       </div>
-      <div className="h-1 w-full bg-brand" />
     </section>
   );
 }
 
-export function SectionTitle({ children, kicker }: { children: React.ReactNode; kicker?: string }) {
+export function SectionTitle({
+  children,
+  kicker,
+}: {
+  children: React.ReactNode;
+  kicker?: string;
+}) {
   return (
-    <div className="pb-4 border-b border-border">
-      {kicker && <p className="text-xs font-bold tracking-[0.22em] text-brand mb-2">{kicker}</p>}
-      <div className="flex items-center gap-3">
-        <span className="inline-block h-7 w-1.5 rounded-sm bg-brand" />
-        <h2 className="text-2xl md:text-3xl font-bold text-primary">{children}</h2>
+    <div className="pb-6 border-b hairline flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div className="min-w-0">
+        {kicker && <p className="eyebrow">{kicker}</p>}
+        <h2 className="mt-3 font-display text-4xl md:text-5xl leading-[1.02] text-primary tracking-tight">
+          {children}
+        </h2>
       </div>
+      <span className="font-display italic text-brand text-2xl md:text-3xl shrink-0">
+        §
+      </span>
     </div>
   );
 }
