@@ -50,19 +50,32 @@ export function SiteFooter() {
           <div>
             <h4 className="text-white font-bold text-lg">Academic Portals</h4>
             <ul className="mt-4 space-y-3 text-sm">
-              {["Department Overview","Syllabus & Notes Repository","Video Lecture Library","Pedagogy & Curriculum","Digital Initiatives"].map((l) => (
-                <li key={l}><a href="#" className="hover:text-brand transition">{l}</a></li>
+              {[
+                { label: "Department Overview", href: "/#about" },
+                { label: "Syllabus & Notes Repository", href: "/#videos" },
+                { label: "Video Lecture Library", href: "/#videos" },
+                { label: "Pedagogy & Curriculum", href: "/#pedagogy" },
+                { label: "Digital Initiatives", href: "/digital-initiatives" },
+              ].map((l) => (
+                <li key={l.label}><a href={l.href} className="hover:text-brand transition">{l.label}</a></li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-white font-bold text-lg">Research & Faculty</h4>
             <ul className="mt-4 space-y-3 text-sm">
-              {["Capstone Projects & Prototypes","Faculty Outside Interaction","Faculty Research Blogs","Innovative Teaching & Learning","Emerging Technologies"].map((l) => (
-                <li key={l}><a href="#" className="hover:text-brand transition">{l}</a></li>
+              {[
+                { label: "Capstone Projects & Prototypes", href: "/#teaching" },
+                { label: "Faculty Outside Interaction", href: "/faculty-blog" },
+                { label: "Faculty Research Blogs", href: "/faculty-blog" },
+                { label: "Innovative Teaching & Learning", href: "/#teaching" },
+                { label: "Emerging Technologies", href: "/#materials" },
+              ].map((l) => (
+                <li key={l.label}><a href={l.href} className="hover:text-brand transition">{l.label}</a></li>
               ))}
             </ul>
           </div>
+
         </div>
         <div className="relative border-t border-white/10">
           <p className="mx-auto max-w-7xl px-6 py-5 text-xs text-white/60 text-center">
