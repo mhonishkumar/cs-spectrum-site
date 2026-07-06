@@ -59,15 +59,25 @@ function ContactPage() {
               </div>
             </div>
             
-            <div className="w-full md:w-1/3 aspect-square rounded-2xl bg-secondary border border-border p-6 flex flex-col items-center justify-center text-center">
-               <div className="h-16 w-16 rounded-full bg-brand/10 grid place-items-center mb-4">
-                  <MapPin className="h-8 w-8 text-brand" />
+            <div className="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden border border-border bg-card shadow-sm flex flex-col relative group">
+               <iframe 
+                 src="https://maps.google.com/maps?q=Velammal+Institute+of+Technology,+Chennai&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                 className="flex-1 w-full h-full border-0"
+                 allowFullScreen={false}
+                 loading="lazy"
+                 referrerPolicy="no-referrer-when-downgrade"
+                 title="Velammal Institute of Technology Location"
+               />
+               <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <a 
+                   href="https://maps.app.goo.gl/KCoHi3nVhnBFZKvg7" 
+                   target="_blank" 
+                   rel="noreferrer"
+                   className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-brand-foreground shadow-lg hover:brightness-110 transition flex items-center gap-2"
+                 >
+                   <MapPin className="h-4 w-4" /> Open in Maps
+                 </a>
                </div>
-               <p className="font-bold text-primary">Visit Campus</p>
-               <p className="text-sm text-muted-foreground mt-2">Schedule a tour with our admission counselors to explore the labs and facilities.</p>
-               <button className="mt-6 w-full rounded-md bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
-                 Get Directions
-               </button>
             </div>
           </div>
         </Reveal>
