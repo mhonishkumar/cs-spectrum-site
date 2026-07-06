@@ -9,8 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as FacultyBlogRouteImport } from './routes/faculty-blog'
+import { Route as DigitalInitiativesRouteImport } from './routes/digital-initiatives'
 import { Route as IndexRouteImport } from './routes/index'
 
+const FacultyBlogRoute = FacultyBlogRouteImport.update({
+  id: '/faculty-blog',
+  path: '/faculty-blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DigitalInitiativesRoute = DigitalInitiativesRouteImport.update({
+  id: '/digital-initiatives',
+  path: '/digital-initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +31,50 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/faculty-blog': typeof FacultyBlogRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/faculty-blog': typeof FacultyBlogRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/digital-initiatives': typeof DigitalInitiativesRoute
+  '/faculty-blog': typeof FacultyBlogRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/digital-initiatives' | '/faculty-blog'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/digital-initiatives' | '/faculty-blog'
+  id: '__root__' | '/' | '/digital-initiatives' | '/faculty-blog'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DigitalInitiativesRoute: typeof DigitalInitiativesRoute
+  FacultyBlogRoute: typeof FacultyBlogRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/faculty-blog': {
+      id: '/faculty-blog'
+      path: '/faculty-blog'
+      fullPath: '/faculty-blog'
+      preLoaderRoute: typeof FacultyBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-initiatives': {
+      id: '/digital-initiatives'
+      path: '/digital-initiatives'
+      fullPath: '/digital-initiatives'
+      preLoaderRoute: typeof DigitalInitiativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DigitalInitiativesRoute: DigitalInitiativesRoute,
+  FacultyBlogRoute: FacultyBlogRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
