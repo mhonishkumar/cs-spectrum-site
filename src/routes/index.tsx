@@ -8,7 +8,8 @@ import {
 
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { PageHero, SectionTitle } from "@/components/site/PageHero";
+import { PageHero as _PageHero, SectionTitle } from "@/components/site/PageHero";
+void _PageHero;
 
 import hero from "@/assets/cse-hero.jpg";
 import hackathon from "@/assets/cse-hackathon.jpg";
