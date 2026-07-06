@@ -239,7 +239,7 @@ function Index() {
           <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.5fr] items-start">
             <Reveal scale className="mx-auto lg:mx-0 w-64 lg:w-full max-w-sm">
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-card">
-                <img src="/hodimg.jpeg" alt="Dr. R. Venkadesh" className="w-full h-auto object-cover aspect-[4/5]" />
+                <img src="/hodimg.jpeg" alt="Dr. R. Venkadesh" className="w-full h-auto object-cover aspect-4/5" />
               </div>
               <div className="mt-5 text-center lg:text-left">
                 <p className="font-extrabold text-2xl text-primary">Dr. R . Venkadesh</p>
