@@ -13,7 +13,6 @@ import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FacultyBlogRouteImport } from './routes/faculty-blog'
 import { Route as FacultyRouteImport } from './routes/faculty'
-import { Route as EventsRouteImport } from './routes/events'
 import { Route as DigitalInitiativesRouteImport } from './routes/digital-initiatives'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AchievementsRouteImport } from './routes/achievements'
@@ -37,11 +36,6 @@ const FacultyBlogRoute = FacultyBlogRouteImport.update({
 const FacultyRoute = FacultyRouteImport.update({
   id: '/faculty',
   path: '/faculty',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsRoute = EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DigitalInitiativesRoute = DigitalInitiativesRouteImport.update({
@@ -70,7 +64,6 @@ export interface FileRoutesByFullPath {
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
-  '/events': typeof EventsRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
   '/gallery': typeof GalleryRoute
@@ -81,7 +74,6 @@ export interface FileRoutesByTo {
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
-  '/events': typeof EventsRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
   '/gallery': typeof GalleryRoute
@@ -93,7 +85,6 @@ export interface FileRoutesById {
   '/achievements': typeof AchievementsRoute
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
-  '/events': typeof EventsRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
   '/gallery': typeof GalleryRoute
@@ -106,7 +97,6 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/contact'
     | '/digital-initiatives'
-    | '/events'
     | '/faculty'
     | '/faculty-blog'
     | '/gallery'
@@ -117,7 +107,6 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/contact'
     | '/digital-initiatives'
-    | '/events'
     | '/faculty'
     | '/faculty-blog'
     | '/gallery'
@@ -128,7 +117,6 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/contact'
     | '/digital-initiatives'
-    | '/events'
     | '/faculty'
     | '/faculty-blog'
     | '/gallery'
@@ -140,7 +128,6 @@ export interface RootRouteChildren {
   AchievementsRoute: typeof AchievementsRoute
   ContactRoute: typeof ContactRoute
   DigitalInitiativesRoute: typeof DigitalInitiativesRoute
-  EventsRoute: typeof EventsRoute
   FacultyRoute: typeof FacultyRoute
   FacultyBlogRoute: typeof FacultyBlogRoute
   GalleryRoute: typeof GalleryRoute
@@ -175,13 +162,6 @@ declare module '@tanstack/react-router' {
       path: '/faculty'
       fullPath: '/faculty'
       preLoaderRoute: typeof FacultyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events': {
-      id: '/events'
-      path: '/events'
-      fullPath: '/events'
-      preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/digital-initiatives': {
@@ -220,7 +200,6 @@ const rootRouteChildren: RootRouteChildren = {
   AchievementsRoute: AchievementsRoute,
   ContactRoute: ContactRoute,
   DigitalInitiativesRoute: DigitalInitiativesRoute,
-  EventsRoute: EventsRoute,
   FacultyRoute: FacultyRoute,
   FacultyBlogRoute: FacultyBlogRoute,
   GalleryRoute: GalleryRoute,

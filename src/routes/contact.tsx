@@ -20,7 +20,7 @@ function ContactPage() {
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         <div className="relative z-10 text-center text-primary-foreground px-6">
           <p className="text-sm font-bold tracking-widest text-brand mb-2">GET IN TOUCH</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white">Contact Us</h1>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ function ContactPage() {
             <div className="flex-1 space-y-6">
               <div>
                 <h2 className="text-3xl font-extrabold text-primary">Head of the Department</h2>
-                <p className="text-lg text-primary/80 font-medium mt-1">Dr. R. Karthikeyan (Prof & Head)</p>
+                <p className="text-lg text-primary/80 font-medium mt-1">Dr. R. Venkadesh (Prof & Head)</p>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Our department nurtures innovation, research, and entrepreneurship — preparing students for cutting-edge opportunities in AI, Data Science, Cybersecurity, Cloud, and Full-Stack Development.
@@ -40,15 +40,14 @@ function ContactPage() {
                   <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <span className="font-medium">cse@velammalitech.edu.in</span>
+                  <span className="font-medium">hod.cse@velammalitech.edu.in</span>
                 </div>
                 <div className="flex items-center gap-4 text-primary">
                   <div className="h-10 w-10 rounded-full bg-brand/10 text-brand grid place-items-center">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-medium">044-30446300 (Extn: 132)</span>
-                    <span className="font-medium">+91 9087556789</span>
+                    <span className="font-medium">+91 91762 27586</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-primary">

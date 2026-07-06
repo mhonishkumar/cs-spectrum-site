@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Target, Lightbulb, Award, Eye, Compass, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Target, Lightbulb, Award, Eye, Compass, CheckCircle2, Mail, Phone } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -230,6 +230,58 @@ function Index() {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </section>
+
+        {/* HOD Welcome Section */}
+        <section className="mx-auto max-w-7xl px-6 py-20 border-t border-border mt-10">
+          <SectionTitle kicker="LEADERSHIP">Welcome Message from the Head of Department</SectionTitle>
+          <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.5fr] items-start">
+            <Reveal scale className="mx-auto lg:mx-0 w-64 lg:w-full max-w-sm">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-card">
+                <img src="/hodimg.jpeg" alt="Dr. R. Venkadesh" className="w-full h-auto object-cover aspect-[4/5]" />
+              </div>
+              <div className="mt-5 text-center lg:text-left">
+                <p className="font-extrabold text-2xl text-primary">Dr. R . Venkadesh</p>
+                <p className="text-sm font-semibold text-brand mt-1">Professor & Head of Department • B.E.,M.Tech,Ph.D.,</p>
+              </div>
+            </Reveal>
+
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+              <Reveal delay={100}>
+                <p>
+                  Welcome to the Department of Computer Science and Engineering at Velammal Institute of Technology. Our department is committed to nurturing future-ready software professionals, innovators, and researchers through academic excellence, practical learning, and continuous innovation. We provide students with a strong foundation in Computer Science, Artificial Intelligence, Data Science, Cybersecurity, Cloud Computing, Full-Stack Development, and emerging technologies. With experienced faculty, modern laboratories, industry collaborations, research opportunities, and a focus on outcome-based education, we empower our students to excel in both higher studies and the global technology industry.
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <p>
+                  We encourage every student to cultivate curiosity, creativity, ethical values, and lifelong learning, preparing them to become responsible professionals who contribute meaningfully to society and technological advancement.
+                </p>
+              </Reveal>
+              
+              <Reveal delay={300}>
+                <div className="mt-10 space-y-4 pt-6 border-t border-border inline-block min-w-full lg:min-w-0">
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                      <Mail className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest">Email</p>
+                      <p className="font-semibold text-primary">hod.cse@velammalitech.edu.in</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand">
+                      <Phone className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest">Phone</p>
+                      <p className="font-semibold text-primary">+91 91762 27586</p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
       </main>

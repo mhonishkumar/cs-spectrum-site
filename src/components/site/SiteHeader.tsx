@@ -7,9 +7,9 @@ const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
   { label: "Faculty", to: "/faculty" },
   { label: "Blog", to: "/faculty-blog" },
-  { label: "Events", to: "/events" },
   { label: "Gallery", to: "/gallery" },
   { label: "Achievements", to: "/achievements" },
+  { label: "Digital Initiatives", to: "/digital-initiatives" },
   { label: "Resources", to: "/resources" },
   { label: "Contact", to: "/contact" },
 ];

@@ -93,8 +93,8 @@ export function SiteFooter() {
             ))}
           </ul>
           <div className="mt-10 text-xs text-muted-foreground leading-relaxed">
-            <p className="text-primary font-medium">Dr. R. Karthikeyan · HOD</p>
-            <p className="mt-1">cse@velammalitech.edu.in</p>
+            <p className="text-primary font-medium">Dr. R. Venkadesh · HOD</p>
+            <p className="mt-1">hod.cse@velammalitech.edu.in</p>
             <p>+91 90875 56789 · 044-30446300 (Extn 132)</p>
           </div>
         </div>

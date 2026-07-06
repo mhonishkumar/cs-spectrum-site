@@ -27,7 +27,7 @@ export const JOURNEY = [
 ];
 
 export const FACULTY = [
-  { name: "Dr. R. Karthikeyan", role: "Professor & Head", area: "Machine Learning · NLP", img: faculty2 },
+  { name: "Dr. R. Venkadesh", role: "Professor & Head", area: "Machine Learning · NLP", img: faculty2 },
   { name: "Dr. Meenakshi Iyer", role: "Associate Professor", area: "Cybersecurity · IoT", img: faculty1 },
   { name: "Prof. Anitha Suresh", role: "Assistant Professor", area: "Cloud · DevOps", img: faculty3 },
 ];
