@@ -3,8 +3,9 @@ import {
   Cpu, Shield, Cloud, Brain, Code2, Database, Boxes, Bot,
   GraduationCap, Trophy, Users, Rocket, BookOpen, Calendar,
   ArrowRight, Star, Quote, Play, FileText, Github, ExternalLink,
-  Sparkles, Target, Lightbulb, Award,
+  Sparkles, Target, Lightbulb, Award, Eye, Compass, CheckCircle2,
 } from "lucide-react";
+
 
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -175,8 +176,135 @@ function Index() {
         </div>
       </section>
 
+      {/* Vision & Mission */}
+      <section id="vision-mission" className="bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <SectionTitle kicker="OUR NORTH STAR">Vision & Mission of the Department</SectionTitle>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="relative rounded-2xl overflow-hidden border border-border bg-card p-8 hover:border-brand transition">
+              <div className="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-brand/10 blur-3xl" />
+              <div className="relative flex items-center gap-3">
+                <span className="h-11 w-11 rounded-xl bg-brand/15 text-brand grid place-items-center">
+                  <Eye className="h-5 w-5" />
+                </span>
+                <h3 className="text-xl font-extrabold text-primary">Vision</h3>
+              </div>
+              <p className="mt-5 text-foreground/80 leading-relaxed">
+                To create successful engineers with technical competency and innovative ideas in the field of Computer Science and Engineering.
+              </p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-border bg-card p-8 hover:border-brand transition">
+              <div className="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-brand/10 blur-3xl" />
+              <div className="relative flex items-center gap-3">
+                <span className="h-11 w-11 rounded-xl bg-brand/15 text-brand grid place-items-center">
+                  <Compass className="h-5 w-5" />
+                </span>
+                <h3 className="text-xl font-extrabold text-primary">Mission</h3>
+              </div>
+              <ol className="mt-5 space-y-3 text-foreground/80 leading-relaxed list-none">
+                {[
+                  "To achieve academic excellence through effective teaching-learning process to meet the demands of the industry.",
+                  "To equip students to face the challenges in the field of Computer Science and Engineering and prepare them as responsible engineers with human values.",
+                  "To enrich students with required skills for employability, entrepreneurship and pursuing higher studies.",
+                  "To encourage the students to implement innovative ideas for research and development.",
+                ].map((m, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="shrink-0 h-6 w-6 rounded-md bg-brand text-brand-foreground grid place-items-center text-xs font-bold">{i + 1}</span>
+                    <span>{m}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PEOs & PSOs */}
+      <section id="peo-pso" className="bg-secondary/60">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <SectionTitle kicker="OUTCOMES">Program Educational Objectives & Specific Outcomes</SectionTitle>
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-8">
+              <p className="text-xs font-bold tracking-widest text-brand">PEOs</p>
+              <h3 className="mt-1 text-xl font-extrabold text-primary">Program Educational Objectives</h3>
+              <p className="mt-2 text-sm text-foreground/70">Graduates of the CSE program will:</p>
+              <ul className="mt-5 space-y-4">
+                {[
+                  { k: "PEO 1", v: "Apply their technical competence in computer science to solve real-world problems, with technical and people leadership." },
+                  { k: "PEO 2", v: "Conduct cutting-edge research and develop solutions on problems of social relevance." },
+                  { k: "PEO 3", v: "Work in a business environment, exhibiting team skills, work ethics, adaptability and lifelong learning." },
+                ].map((p) => (
+                  <li key={p.k} className="flex gap-4">
+                    <span className="shrink-0 rounded-lg bg-primary text-white px-3 py-1.5 text-xs font-extrabold h-fit">{p.k}</span>
+                    <p className="text-foreground/80 leading-relaxed">{p.v}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-8">
+              <p className="text-xs font-bold tracking-widest text-brand">PSOs</p>
+              <h3 className="mt-1 text-xl font-extrabold text-primary">Programme Specific Outcomes</h3>
+              <p className="mt-2 text-sm text-foreground/70">Graduates of B.E. CSE will have the ability to:</p>
+              <ul className="mt-5 space-y-4">
+                {[
+                  { k: "PSO 1", v: "Exhibit design and programming skills to build and automate business solutions using cutting-edge technologies." },
+                  { k: "PSO 2", v: "Build a strong theoretical foundation leading to excellence and excitement towards research, providing elegant solutions to complex problems." },
+                  { k: "PSO 3", v: "Work effectively with various engineering fields as a team to design, build and develop system applications." },
+                ].map((p) => (
+                  <li key={p.k} className="flex gap-4">
+                    <span className="shrink-0 rounded-lg bg-brand text-brand-foreground px-3 py-1.5 text-xs font-extrabold h-fit">{p.k}</span>
+                    <p className="text-foreground/80 leading-relaxed">{p.v}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Outcomes */}
+      <section id="po" className="bg-background">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <SectionTitle kicker="POs">Program Outcomes — Graduate Attributes</SectionTitle>
+          <p className="mt-4 max-w-3xl text-foreground/75">
+            The twelve graduate attributes prescribed by the National Board of Accreditation that every engineering graduate of the department is trained to demonstrate.
+          </p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              ["Engineering Knowledge","Apply mathematics, science, engineering fundamentals and specialization to solve complex engineering problems."],
+              ["Problem Analysis","Identify, formulate, review literature and analyze complex engineering problems using first principles."],
+              ["Design / Development","Design solutions for complex problems with consideration for public health, safety, cultural, and environmental factors."],
+              ["Investigation","Use research-based knowledge and methods including experiments, data analysis, and synthesis for valid conclusions."],
+              ["Modern Tool Usage","Create, select and apply appropriate techniques, resources and modern IT tools with an awareness of their limitations."],
+              ["Engineer & Society","Assess societal, health, safety, legal and cultural issues relevant to professional engineering practice."],
+              ["Environment & Sustainability","Understand the impact of engineering solutions in societal and environmental contexts for sustainable development."],
+              ["Ethics","Apply ethical principles and commit to professional ethics, responsibilities and norms of engineering practice."],
+              ["Individual & Team Work","Function effectively as an individual, and as a member or leader in diverse and multidisciplinary teams."],
+              ["Communication","Communicate effectively — comprehend and write reports, make presentations, and give and receive clear instructions."],
+              ["Project Management & Finance","Apply engineering and management principles to manage projects in multidisciplinary environments."],
+              ["Life-long Learning","Recognize the need for and engage in independent, life-long learning in the context of technological change."],
+            ].map(([title, desc], i) => (
+              <div key={title} className="group relative rounded-2xl border border-border bg-card p-5 hover:border-brand hover:-translate-y-1 hover:shadow-md transition-all">
+                <div className="flex items-start gap-3">
+                  <span className="shrink-0 h-9 w-9 rounded-lg bg-brand/15 text-brand grid place-items-center font-extrabold text-sm group-hover:bg-brand group-hover:text-brand-foreground transition">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <p className="font-bold text-primary flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-brand" /> {title}
+                    </p>
+                    <p className="mt-1.5 text-sm text-foreground/70 leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Curriculum journey */}
       <section id="pedagogy" className="bg-background">
+
         <div className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle kicker="FOUR-YEAR JOURNEY">Curriculum & Pedagogy</SectionTitle>
           <div className="mt-10 relative">
