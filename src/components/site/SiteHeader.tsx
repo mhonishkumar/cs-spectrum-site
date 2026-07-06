@@ -5,13 +5,14 @@ import logo from "@/assets/cse-logo.png";
 
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
+  { label: "Department Overview", to: "/#about" },
+  { label: "Vision & Mission", to: "/#vision-mission" },
+  { label: "Pedagogy & Curriculum", to: "/#pedagogy" },
+  { label: "Emerging Technologies", to: "/#materials" },
   { label: "Digital Initiatives", to: "/digital-initiatives" },
   { label: "Faculty Blog", to: "/faculty-blog" },
-  { label: "Innovative Teaching", to: "/#teaching" },
-  { label: "Instruction Materials", to: "/#materials" },
-  { label: "Pedagogy", to: "/#pedagogy" },
-  { label: "Lecture Videos", to: "/#videos" },
 ];
+
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
