@@ -56,7 +56,7 @@ export function SiteHeader() {
       {/* Nav strip */}
       <div className="bg-primary">
         <div className="mx-auto max-w-7xl px-6">
-          <ul className={`${open ? "flex flex-col" : "hidden md:flex"} items-stretch gap-1 overflow-x-auto text-white/85 text-sm font-medium`}>
+          <ul className={`${open ? "flex flex-col" : "hidden md:flex"} flex-wrap items-stretch gap-1 text-white/85 text-sm font-medium`}>
             {NAV.map((item) => {
               const isHash = item.to.includes("#");
               const inner = (isActive: boolean) => (
