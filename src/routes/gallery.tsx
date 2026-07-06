@@ -50,7 +50,7 @@ function GalleryPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                   loading="lazy" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-linear-to-t from-primary/80 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                   <p className="text-white font-medium">{img.alt}</p>
                 </div>
               </div>

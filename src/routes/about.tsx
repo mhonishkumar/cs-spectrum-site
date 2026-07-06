@@ -49,7 +49,7 @@ function AboutPage() {
               </Reveal>
             </div>
             <Reveal direction="left" className="relative">
-              <img src={coding} alt="Student coding on laptop" width={1200} height={800} loading="lazy" className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]" />
+              <img src={coding} alt="Student coding on laptop" width={1200} height={800} loading="lazy" className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-4/3" />
               <div className="absolute -bottom-6 -left-6 hidden md:block rounded-xl bg-primary text-primary-foreground border border-border p-4 shadow-xl w-52">
                 <p className="text-3xl font-extrabold text-brand">15+</p>
                 <p className="text-xs text-primary-foreground/80 mt-1">Years shaping computing leaders in Tamil Nadu</p>

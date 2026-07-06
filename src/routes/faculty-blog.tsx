@@ -97,7 +97,7 @@ function FacultyBlog() {
           <Reveal>
             <article className="mt-10 grid gap-10 md:grid-cols-2 items-center group">
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
-                <img src={feature.img} alt="" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
+                <img src={feature.img} alt="" className="w-full h-auto aspect-4/3 object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
                 <span className="absolute top-4 left-4 rounded-full bg-brand text-brand-foreground px-3 py-1 text-xs font-bold">{feature.tag}</span>
               </div>
               <div>

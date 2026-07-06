@@ -72,7 +72,7 @@ function ResourcesPage() {
             {TECHS.map(({ icon: Icon, label, desc }, i) => (
               <Reveal key={label} delay={i * 100}>
                 <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 hover:border-brand hover:shadow-md transition-all h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand/0 to-brand/5 group-hover:from-brand/10 group-hover:to-transparent transition" />
+                  <div className="absolute inset-0 bg-linear-to-br from-brand/0 to-brand/5 group-hover:from-brand/10 group-hover:to-transparent transition" />
                   <div className="relative">
                     <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand grid place-items-center group-hover:bg-brand group-hover:text-brand-foreground transition">
                       <Icon className="h-6 w-6" />
