@@ -33,7 +33,7 @@ export function SiteHeader() {
             <img
               src={vitLogo.url}
               alt="Velammal Institute of Technology logo"
-              className="h-14 w-14 md:h-16 md:w-16 object-contain shrink-0 rounded-sm bg-white p-1 border hairline"
+              className="h-14 w-14 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
             />
             <div className="min-w-0">
               <p className="eyebrow text-brand">Velammal Institute of Technology</p>
