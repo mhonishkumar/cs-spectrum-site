@@ -57,25 +57,35 @@ export function SiteHeader() {
       <div className="bg-primary">
         <div className="mx-auto max-w-7xl px-6">
           <ul className={`${open ? "flex flex-col" : "hidden md:flex"} items-stretch gap-1 overflow-x-auto text-white/85 text-sm font-medium`}>
-            {NAV.map((item) => (
-              <li key={item.label} className="shrink-0">
-                <Link
-                  to={item.to}
-                  className="group relative inline-flex items-center px-5 py-4 hover:text-white transition"
-                  activeProps={{ className: "text-white" }}
-                  activeOptions={{ exact: item.to === "/" }}
-                >
-                  {({ isActive }) => (
-                    <>
-                      <span>{item.label}</span>
-                      <span
-                        className={`pointer-events-none absolute left-4 right-4 -bottom-px h-[3px] rounded-t bg-brand transition-transform duration-300 origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                      />
-                    </>
+            {NAV.map((item) => {
+              const isHash = item.to.includes("#");
+              const inner = (isActive: boolean) => (
+                <>
+                  <span>{item.label}</span>
+                  <span
+                    className={`pointer-events-none absolute left-4 right-4 -bottom-px h-[3px] rounded-t bg-brand transition-transform duration-300 origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                  />
+                </>
+              );
+              return (
+                <li key={item.label} className="shrink-0">
+                  {isHash ? (
+                    <a href={item.to} className="group relative inline-flex items-center px-5 py-4 hover:text-white transition">
+                      {inner(false)}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.to as "/"}
+                      className="group relative inline-flex items-center px-5 py-4 hover:text-white transition"
+                      activeProps={{ className: "text-white" }}
+                      activeOptions={{ exact: item.to === "/" }}
+                    >
+                      {({ isActive }) => inner(isActive)}
+                    </Link>
                   )}
-                </Link>
-              </li>
-            ))}
+                </li>
+              );
+            })}
             <li className="ml-auto hidden md:flex items-center pl-2">
               <button className="h-8 w-8 rounded-full border border-white/30 text-white/80 grid place-items-center hover:bg-white/10">
                 <ChevronRight className="h-4 w-4" />
