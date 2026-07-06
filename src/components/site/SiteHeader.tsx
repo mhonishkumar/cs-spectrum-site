@@ -45,13 +45,14 @@ export function SiteHeader() {
               </h1>
             </div>
           </Link>
-
+          <nav className="hidden md:flex items-end gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
             {UTIL.map((u) => (
               <a key={u.label} href={u.href} className="hover:text-brand transition-colors">
                 {u.label}
               </a>
             ))}
           </nav>
+
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
