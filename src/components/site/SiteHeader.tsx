@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import vitLogo from "@/assets/vit-logo.jpg.asset.json";
+
 
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
