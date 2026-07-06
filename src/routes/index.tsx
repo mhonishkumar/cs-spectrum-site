@@ -3,8 +3,9 @@ import {
   Cpu, Shield, Cloud, Brain, Code2, Database, Boxes, Bot,
   GraduationCap, Trophy, Users, Rocket, BookOpen, Calendar,
   ArrowRight, Star, Quote, Play, FileText, Github, ExternalLink,
-  Sparkles, Target, Lightbulb, Award,
+  Sparkles, Target, Lightbulb, Award, Eye, Compass, CheckCircle2,
 } from "lucide-react";
+
 
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
