@@ -30,16 +30,6 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "",
-    "title": "Elections",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
     "facultyName": "Mr. D. Retheesh",
     "title": "Speech to Braille Converting Communicati on Device for the Visual and Hearing Impaired Persons Using IoT",
     "patentNumber": "202441037325",
@@ -110,16 +100,6 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "",
-    "title": "Communicati on, Authenticatio n and Dynamic Traffic Management",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
     "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "Developing an IoT-Based Framework to Deter and Detect Animal Intrusion in Advanced Agricultural Practices",
     "patentNumber": "202441037333",
@@ -146,16 +126,6 @@ export const PATENTS = [
     "status": "Published",
     "date": "24-05-2024",
     "year": "2024",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
-    "facultyName": "Pushparathi",
-    "title": "License Plate Recognition for Theft Vehicle Detection",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
     "link": "",
     "office": "Indian Patent Office"
   },
@@ -196,16 +166,6 @@ export const PATENTS = [
     "status": "Published",
     "date": "10-01-2025",
     "year": "2025",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
-    "facultyName": "",
-    "title": "5G Wireless Networks",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
     "link": "",
     "office": "Indian Patent Office"
   },
@@ -280,16 +240,6 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "",
-    "title": "Detection and Recognition for Criminal Identification System",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
     "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "Text Based Emotion Classification by Using NLP with Playback Music",
     "patentNumber": "202341033826",
@@ -326,16 +276,6 @@ export const PATENTS = [
     "status": "Published",
     "date": "30-06-2023",
     "year": "2023",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
-    "facultyName": "Gladis Pushparathi",
-    "title": "Segmentation Prediction Using Deep Learning in CNN Model",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
     "link": "",
     "office": "Indian Patent Office"
   },
@@ -410,16 +350,6 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "",
-    "title": "Cost IoT System for Automated Attendee Registration Based on Wireless Electronic Sensors",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
     "facultyName": "Mr. R. Nithin Kumar",
     "title": "Deep Learning Resolves Representativ e Movement Patterns in a Marine",
     "patentNumber": "202341016417",
@@ -436,16 +366,6 @@ export const PATENTS = [
     "status": "Published",
     "date": "17-03-2023",
     "year": "2023",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
-    "facultyName": "",
-    "title": "Sensors",
-    "patentNumber": "",
-    "status": "",
-    "date": "",
-    "year": "Unknown",
     "link": "",
     "office": "Indian Patent Office"
   },
