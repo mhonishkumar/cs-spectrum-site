@@ -89,14 +89,14 @@ export function StudentAchievementsCarousel() {
                         hash={`student-${achievement.id}`}
                         className="group block relative h-full bg-card rounded-[20px] border border-border shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-250 cursor-pointer overflow-hidden"
                       >
-                        <div className="aspect-[4/3] relative overflow-hidden bg-muted">
+                        <div className="aspect-4/3 relative overflow-hidden bg-muted">
                           <img 
                             src={achievement.image} 
                             alt={achievement.title}
                             loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                           
                           {/* Badge */}
                           <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold border flex items-center gap-1.5 shadow-sm bg-white text-gray-900 border-white/20">
