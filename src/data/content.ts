@@ -51,3 +51,32 @@ export const RESOURCES = [
   { icon: Github, title: "Open-source Projects", href: "#" },
   { icon: BookOpen, title: "Research Publications", href: "#" },
 ];
+
+export const FACULTY_FEEDBACK = [
+  {
+    name: "Dr. V. Illayaraja",
+    role: "Associate Professor",
+    department: "Department of Computer Science & Engineering",
+    email: "infoilai11@gmail.com",
+    body: "After carefully reviewing the lecture notes, laboratory manuals, question papers, and course materials, I am pleased to note that the overall quality of the resources is excellent. The lecture notes are well-structured, comprehensive, and presented in a logical sequence that will help students understand the concepts with ease. The laboratory manuals are detailed, user-friendly, and provide clear procedural steps, enabling students to perform experiments confidently. The question papers are balanced, covering all Course Outcomes and different cognitive levels, ensuring a fair assessment of students' knowledge and analytical abilities. The course materials demonstrate academic rigor, relevance, and a strong commitment to quality education. I appreciate the effort invested in preparing these resources, and I believe they will significantly enhance the teaching-learning process.",
+  },
+  {
+    name: "Dr. K. Balachander",
+    role: "Professor",
+    department: "Department of Computer Science & Engineering",
+    email: "kbc.cse@gmail.com",
+    body: "I found the course materials to be professionally prepared and aligned with the curriculum requirements. The lecture notes explain complex concepts in a simple and effective manner with appropriate examples, making them highly beneficial for students. The laboratory manuals are systematic, comprehensive, and encourage practical understanding of the subject. The question papers are thoughtfully designed, ensuring an appropriate balance between theoretical knowledge and problem-solving skills. It is evident that considerable time and dedication have been invested in preparing these materials. Overall, the teaching resources are of a very high standard and will contribute positively to students' academic growth and learning outcomes.",
+  },
+  {
+    name: "Dr. Kaanan",
+    role: "Associate Professor",
+    department: "Department of Computer Science & Engineering",
+    body: "The teaching materials reflect excellent academic planning and attention to detail. The lecture notes are organized, informative, and cover the syllabus comprehensively while maintaining clarity throughout. The laboratory manuals provide detailed instructions and are suitable for effective hands-on learning. The question papers are well-balanced and aligned with the expected Course Outcomes, enabling students to demonstrate both conceptual understanding and analytical thinking. I appreciate the dedication shown in preparing these resources, and I recommend only minor refinements to further improve presentation and readability.",
+  },
+  {
+    name: "Dr. Joiceruby",
+    role: "Assistant Professor",
+    department: "Department of Computer Science & Engineering",
+    body: "The overall quality of the course materials is highly commendable. The lecture notes are engaging, accurate, and student-friendly, making them an excellent learning resource. The laboratory manuals are clearly written and provide sufficient guidance for students to complete practical exercises independently. The assessment materials are fair, comprehensive, and effectively evaluate students across multiple learning domains. The effort and professionalism demonstrated in the preparation of these teaching resources are truly appreciable. These materials will undoubtedly support effective teaching and foster meaningful learning experiences for students.",
+  },
+];
