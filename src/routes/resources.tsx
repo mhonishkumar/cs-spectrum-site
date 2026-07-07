@@ -81,7 +81,7 @@ function ResourcesPage() {
       <main className="py-20">
         <section className="mx-auto max-w-7xl px-6">
           <SectionTitle kicker="LEARN ANYTIME">Study Materials</SectionTitle>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {RESOURCES.map((resource, i) => (
               <Reveal key={resource.title} delay={i * 100}>
                 <ResourceCard resource={resource} />
