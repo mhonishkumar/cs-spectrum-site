@@ -253,6 +253,7 @@ function AchievementsPage() {
                 {STUDENT_ACHIEVEMENTS.map((achievement, idx) => (
                   <div 
                     key={achievement.id}
+                    id={`student-${achievement.id}`}
                     className="group flex flex-col bg-card rounded-[18px] border border-border overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
                     style={{ animationDuration: '600ms', animationDelay: `${(idx % 12) * 50}ms`, animationTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)' }}
                   >
