@@ -22,7 +22,7 @@ export const FACULTY_ACHIEVEMENTS: FacultyAchievement[] = [
     year: "2025",
     date: "October 2025",
     organization: "NPTEL, IIT Madras",
-    image: "/achievements/faculty-certificates/image2.jpeg"
+    image: "/achievements/faculty-certificates/image1.jpeg"
   },
   {
     id: "nptel-believer-2025",
@@ -34,7 +34,7 @@ export const FACULTY_ACHIEVEMENTS: FacultyAchievement[] = [
     year: "2025",
     date: "Jul–Dec 2025",
     organization: "NPTEL, IIT Madras",
-    image: "/achievements/faculty-certificates/image3.jpeg"
+    image: "/achievements/faculty-certificates/image2.jpeg"
   },
   {
     id: "nptel-discipline-star-2024",
@@ -45,6 +45,18 @@ export const FACULTY_ACHIEVEMENTS: FacultyAchievement[] = [
     shortDescription: "Recognized for completing over 50 weeks of certified courses within the CS discipline while securing top grades.",
     year: "2024",
     date: "Jul–Dec 2024",
+    organization: "NPTEL, IIT Madras",
+    image: "/achievements/faculty-certificates/image3.jpeg"
+  },
+  {
+    id: "nptel-discipline-star-2026",
+    facultyName: "Mr. Raja R",
+    title: "NPTEL Discipline Star in Computer Science and Engineering (Jan-Apr 2026)",
+    category: "Recognition",
+    description: "The Department of Computer Science and Engineering proudly congratulates Mr. Raja R on being recognized as an NPTEL Discipline Star in Computer Science and Engineering for the January-April 2026 semester. The NPTEL Discipline Star recognition is awarded to learners who successfully complete more than 50 weeks of certified courses within the same discipline while securing a minimum score of 55% in every course. This recognition highlights consistent academic excellence and in-depth knowledge in a specialized field.",
+    shortDescription: "Recognized for completing over 50 weeks of certified courses within the CS discipline while securing top grades.",
+    year: "2026",
+    date: "Jan-Apr 2026",
     organization: "NPTEL, IIT Madras",
     image: "/achievements/faculty-certificates/image4.jpeg"
   }
