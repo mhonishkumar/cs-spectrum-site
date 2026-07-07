@@ -86,7 +86,7 @@ function GalleryPage() {
         {/* CSS-based Masonry Grid */}
         <div className="mt-12 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
           {albums.map((album, index) => (
-            <Reveal key={album.name} delay={(index % 4) * 80} duration={600} slideUp>
+            <Reveal key={album.name} delay={(index % 4) * 80} duration={600}>
               <div 
                 className="group relative rounded-2xl overflow-hidden bg-card border border-border shadow-sm break-inside-avoid cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
                 onClick={() => openLightbox(album.images)}

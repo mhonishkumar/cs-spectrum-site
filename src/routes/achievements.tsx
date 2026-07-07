@@ -1,52 +1,275 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useMemo } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { SectionTitle, PageHero } from "@/components/site/PageHero";
+import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
-import { Quote } from "lucide-react";
-import { TESTIMONIALS } from "@/data/content";
+import { Search, Filter, X, ChevronLeft, ChevronRight, Award, FileBadge, Medal, LayoutGrid } from "lucide-react";
+import { FACULTY_ACHIEVEMENTS, FacultyAchievement } from "@/data/facultyAchievements";
 import img from "@/assets/cse-careers.jpg";
 
 export const Route = createFileRoute("/achievements")({
+  head: () => ({
+    meta: [
+      { title: "Faculty Achievements — CSE Department" },
+      { name: "description", content: "Celebrating the accomplishments, recognitions, awards, certifications, and professional excellence of the faculty members." },
+    ],
+  }),
   component: AchievementsPage,
 });
 
 function AchievementsPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedYear, setSelectedYear] = useState("All");
+  const [activeAchievementIndex, setActiveAchievementIndex] = useState<number | null>(null);
+
+  const categories = useMemo(() => ["All", ...Array.from(new Set(FACULTY_ACHIEVEMENTS.map(a => a.category)))], []);
+  const years = useMemo(() => ["All", ...Array.from(new Set(FACULTY_ACHIEVEMENTS.map(a => a.year)))].sort((a, b) => b.localeCompare(a)), []);
+
+  const filteredAchievements = useMemo(() => {
+    return FACULTY_ACHIEVEMENTS.filter(a => {
+      const searchLower = searchQuery.toLowerCase();
+      const matchesSearch = 
+        a.facultyName.toLowerCase().includes(searchLower) ||
+        a.title.toLowerCase().includes(searchLower) ||
+        a.organization.toLowerCase().includes(searchLower);
+
+      const matchesCategory = selectedCategory === "All" || a.category === selectedCategory;
+      const matchesYear = selectedYear === "All" || a.year === selectedYear;
+
+      return matchesSearch && matchesCategory && matchesYear;
+    });
+  }, [searchQuery, selectedCategory, selectedYear]);
+
+  // Modals logic
+  const activeAchievement = activeAchievementIndex !== null ? filteredAchievements[activeAchievementIndex] : null;
+
+  const closeModal = () => setActiveAchievementIndex(null);
+  const nextAchievement = () => {
+    if (activeAchievementIndex !== null && activeAchievementIndex < filteredAchievements.length - 1) {
+      setActiveAchievementIndex(activeAchievementIndex + 1);
+    }
+  };
+  const prevAchievement = () => {
+    if (activeAchievementIndex !== null && activeAchievementIndex > 0) {
+      setActiveAchievementIndex(activeAchievementIndex - 1);
+    }
+  };
+
+  // Stats
+  const totalAchievements = FACULTY_ACHIEVEMENTS.length;
+  const totalCertifications = FACULTY_ACHIEVEMENTS.filter(a => a.category === "Certification").length;
+  const totalRecognitions = FACULTY_ACHIEVEMENTS.filter(a => a.category === "Recognition").length;
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <SiteHeader />
       
       <PageHero
         crumb="Achievements"
-        title="Our Achievements"
-        subtitle="A track record of excellence in placements, hackathons, and industry recognitions."
+        title="Faculty Achievements"
+        subtitle="Celebrating the accomplishments, recognitions, awards, certifications, and professional excellence of the faculty members of the Department of Computer Science and Engineering."
         bg={img}
       />
 
-      <main className="py-20">
-        <section className="mx-auto max-w-7xl px-6 py-20 mt-20 border-t border-border">
-          <SectionTitle kicker="ALUMNI VOICES">What Our Graduates Say</SectionTitle>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 100}>
-                <figure className="relative rounded-2xl border border-border bg-card p-8 hover:border-brand transition shadow-sm h-full flex flex-col">
-                  <Quote className="absolute top-6 right-6 h-8 w-8 text-brand/20" />
-                  <blockquote className="text-foreground/80 leading-relaxed relative z-10 text-sm flex-1">"{t.body}"</blockquote>
-                  <figcaption className="mt-8 flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-full bg-primary grid place-items-center text-primary-foreground font-bold text-lg">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-bold text-primary">{t.name}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
-                    </div>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
+      <main className="flex-1 bg-secondary/30 py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
+              <Award className="h-8 w-8 text-brand mb-3" />
+              <p className="text-3xl font-extrabold text-primary">{totalAchievements}</p>
+              <p className="text-sm font-medium text-muted-foreground mt-1">Total Achievements</p>
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
+              <FileBadge className="h-8 w-8 text-brand mb-3" />
+              <p className="text-3xl font-extrabold text-primary">{totalCertifications}</p>
+              <p className="text-sm font-medium text-muted-foreground mt-1">Certifications</p>
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
+              <Medal className="h-8 w-8 text-brand mb-3" />
+              <p className="text-3xl font-extrabold text-primary">{totalRecognitions}</p>
+              <p className="text-sm font-medium text-muted-foreground mt-1">Recognitions</p>
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
+              <LayoutGrid className="h-8 w-8 text-brand mb-3" />
+              <p className="text-3xl font-extrabold text-primary">100%</p>
+              <p className="text-sm font-medium text-muted-foreground mt-1">Commitment</p>
+            </div>
           </div>
-        </section>
+
+          {/* Controls Bar */}
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-card p-4 rounded-2xl border border-border shadow-sm mb-12">
+            <div className="flex-1 w-full md:w-auto relative">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <input 
+                type="text" 
+                placeholder="Search by faculty, title, or organization..." 
+                className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow text-sm"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            
+            <div className="flex w-full md:w-auto gap-4">
+              <div className="relative flex-1 md:w-48">
+                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <select 
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow appearance-none text-sm font-medium"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                >
+                  {categories.map(cat => (
+                    <option key={cat} value={cat}>{cat === "All" ? "All Categories" : cat}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="relative flex-1 md:w-40">
+                <select 
+                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow appearance-none text-sm font-medium"
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                >
+                  {years.map(year => (
+                    <option key={year} value={year}>{year === "All" ? "All Years" : year}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Achievements Grid */}
+          {filteredAchievements.length === 0 ? (
+            <div className="text-center py-20 bg-card border border-border rounded-2xl shadow-sm">
+              <Medal className="h-12 w-12 mx-auto text-muted-foreground/50 mb-4" />
+              <h3 className="text-lg font-bold text-primary">No achievements found</h3>
+              <p className="text-muted-foreground mt-2">Adjust your filters to see more results.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredAchievements.map((achievement, idx) => (
+                <div 
+                  key={achievement.id}
+                  className="group flex flex-col bg-card rounded-[18px] border border-border overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
+                  style={{ animationDuration: '600ms', animationDelay: `${(idx % 12) * 50}ms`, animationTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)' }}
+                >
+                  <div className="relative aspect-video overflow-hidden bg-muted cursor-pointer" onClick={() => setActiveAchievementIndex(idx)}>
+                    <img 
+                      src={achievement.image} 
+                      alt={achievement.title} 
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                    />
+                    <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-brand shadow-sm border border-border/50">
+                      {achievement.category}
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 flex flex-col flex-1">
+                    <p className="text-xs font-bold text-brand uppercase tracking-wider mb-2">{achievement.facultyName}</p>
+                    <h3 className="text-lg font-bold text-primary leading-tight mb-3 line-clamp-2" title={achievement.title}>
+                      {achievement.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-1">
+                      {achievement.shortDescription}
+                    </p>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
+                      <div className="text-xs text-muted-foreground">
+                        <span className="font-semibold">{achievement.organization}</span>
+                        <span className="mx-2">•</span>
+                        <span>{achievement.date}</span>
+                      </div>
+                      <button 
+                        onClick={() => setActiveAchievementIndex(idx)}
+                        className="text-xs font-bold text-brand hover:text-primary transition-colors px-3 py-1.5 rounded-lg hover:bg-secondary"
+                      >
+                        Read More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+        </div>
       </main>
+
+      {/* Modal */}
+      {activeAchievement && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-background/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div 
+            className="absolute inset-0"
+            onClick={closeModal}
+          />
+          <div className="relative w-full max-w-4xl bg-card rounded-2xl shadow-2xl border border-border overflow-hidden flex flex-col max-h-[90vh] animate-in zoom-in-95 duration-300">
+            
+            <button 
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 p-2 bg-background/50 backdrop-blur-md hover:bg-background/80 text-foreground rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="overflow-y-auto flex-1 p-0">
+              <div className="w-full bg-muted border-b border-border p-6 flex justify-center items-center">
+                <img 
+                  src={activeAchievement.image} 
+                  alt={activeAchievement.title}
+                  className="max-h-[50vh] w-auto object-contain rounded-lg shadow-md"
+                />
+              </div>
+              
+              <div className="p-8 sm:p-10">
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-sm font-semibold">
+                  <span className="bg-brand/10 text-brand px-3 py-1 rounded-full">{activeAchievement.category}</span>
+                  <span className="text-muted-foreground">{activeAchievement.date}</span>
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-primary mb-2 leading-tight">
+                  {activeAchievement.title}
+                </h2>
+                <p className="text-lg font-bold text-brand mb-8">{activeAchievement.facultyName}</p>
+                
+                <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-muted-foreground">
+                  <p className="leading-relaxed">{activeAchievement.description}</p>
+                </div>
+                
+                <div className="mt-8 pt-6 border-t border-border flex flex-wrap gap-x-8 gap-y-4 text-sm">
+                  <div>
+                    <span className="text-muted-foreground block mb-1">Awarding Organization</span>
+                    <span className="font-semibold text-foreground">{activeAchievement.organization}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Navigation */}
+            <div className="border-t border-border bg-secondary/30 p-4 flex items-center justify-between">
+              <button
+                onClick={prevAchievement}
+                disabled={activeAchievementIndex === 0}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-background hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </button>
+              <button
+                onClick={nextAchievement}
+                disabled={activeAchievementIndex === filteredAchievements.length - 1}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-background hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      )}
 
       <SiteFooter />
     </div>
