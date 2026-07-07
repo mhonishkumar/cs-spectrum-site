@@ -33,7 +33,7 @@ function GalleryPage() {
       
       <PageHero
         crumb="Gallery"
-        title="Life at CSE"
+        title="Life @ CSE"
         subtitle="Explore our campus, laboratories, events, and the vibrant student community."
         bg={lab}
       />
