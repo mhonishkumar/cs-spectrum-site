@@ -90,3 +90,69 @@ export const FACULTY_FEEDBACK = [
     body: "The overall quality of the course materials is highly commendable. The lecture notes are engaging, accurate, and student-friendly, making them an excellent learning resource. The laboratory manuals are clearly written and provide sufficient guidance for students to complete practical exercises independently. The assessment materials are fair, comprehensive, and effectively evaluate students across multiple learning domains. The effort and professionalism demonstrated in the preparation of these teaching resources are truly appreciable. These materials will undoubtedly support effective teaching and foster meaningful learning experiences for students.",
   },
 ];
+
+export const FACULTY_RESEARCH = [
+  {
+    facultyName: "Dr. R. Venkadesh",
+    role: "Professor & Head",
+    avatar: faculty2,
+    papers: [
+      {
+        title: "Advancements in Transformer Models for Resource-Constrained Environments",
+        journal: "IEEE Transactions on Neural Networks and Learning Systems",
+        date: "Dec 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "A Federated Learning Framework for Privacy-Preserving Medical Image Analysis",
+        journal: "International Conference on Machine Learning (ICML)",
+        date: "Jul 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  },
+  {
+    facultyName: "Dr. Meenakshi Iyer",
+    role: "Associate Professor",
+    avatar: faculty1,
+    papers: [
+      {
+        title: "Zero-Trust Architecture Implementation in Edge Computing Networks",
+        journal: "ACM Journal of Computer Security",
+        date: "Oct 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "Predictive Threat Modeling for IoT Device Ecosystems",
+        journal: "USENIX Security Symposium",
+        date: "Aug 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  },
+  {
+    facultyName: "Prof. Anitha Suresh",
+    role: "Assistant Professor",
+    avatar: faculty3,
+    papers: [
+      {
+        title: "Optimizing Serverless Cold Starts using Predictive Resource Allocation",
+        journal: "IEEE Cloud Computing",
+        date: "Nov 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "Active Learning Pedagogies in Undergraduate Computer Science Education",
+        journal: "ACM SIGCSE Technical Symposium",
+        date: "Mar 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  }
+];

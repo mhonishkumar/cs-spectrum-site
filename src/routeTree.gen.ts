@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FeedbackRouteImport } from './routes/feedback'
-import { Route as FacultyBlogRouteImport } from './routes/faculty-blog'
+import { Route as FacultyResearchRouteImport } from './routes/faculty-research'
 import { Route as FacultyRouteImport } from './routes/faculty'
 import { Route as DigitalInitiativesRouteImport } from './routes/digital-initiatives'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -34,9 +34,9 @@ const FeedbackRoute = FeedbackRouteImport.update({
   path: '/feedback',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FacultyBlogRoute = FacultyBlogRouteImport.update({
-  id: '/faculty-blog',
-  path: '/faculty-blog',
+const FacultyResearchRoute = FacultyResearchRouteImport.update({
+  id: '/faculty-research',
+  path: '/faculty-research',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FacultyRoute = FacultyRouteImport.update({
@@ -71,7 +71,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
-  '/faculty-blog': typeof FacultyBlogRoute
+  '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
@@ -82,7 +82,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
-  '/faculty-blog': typeof FacultyBlogRoute
+  '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
@@ -94,7 +94,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
-  '/faculty-blog': typeof FacultyBlogRoute
+  '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
@@ -107,7 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/digital-initiatives'
     | '/faculty'
-    | '/faculty-blog'
+    | '/faculty-research'
     | '/feedback'
     | '/gallery'
     | '/resources'
@@ -118,7 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/digital-initiatives'
     | '/faculty'
-    | '/faculty-blog'
+    | '/faculty-research'
     | '/feedback'
     | '/gallery'
     | '/resources'
@@ -129,7 +129,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/digital-initiatives'
     | '/faculty'
-    | '/faculty-blog'
+    | '/faculty-research'
     | '/feedback'
     | '/gallery'
     | '/resources'
@@ -141,7 +141,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DigitalInitiativesRoute: typeof DigitalInitiativesRoute
   FacultyRoute: typeof FacultyRoute
-  FacultyBlogRoute: typeof FacultyBlogRoute
+  FacultyResearchRoute: typeof FacultyResearchRoute
   FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
   ResourcesRoute: typeof ResourcesRoute
@@ -170,11 +170,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeedbackRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faculty-blog': {
-      id: '/faculty-blog'
-      path: '/faculty-blog'
-      fullPath: '/faculty-blog'
-      preLoaderRoute: typeof FacultyBlogRouteImport
+    '/faculty-research': {
+      id: '/faculty-research'
+      path: '/faculty-research'
+      fullPath: '/faculty-research'
+      preLoaderRoute: typeof FacultyResearchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faculty': {
@@ -221,7 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DigitalInitiativesRoute: DigitalInitiativesRoute,
   FacultyRoute: FacultyRoute,
-  FacultyBlogRoute: FacultyBlogRoute,
+  FacultyResearchRoute: FacultyResearchRoute,
   FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
   ResourcesRoute: ResourcesRoute,
