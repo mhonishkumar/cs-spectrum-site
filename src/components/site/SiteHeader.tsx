@@ -6,7 +6,7 @@ import { useState } from "react";
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
   { label: "Faculty", to: "/faculty" },
-  { label: "Blog", to: "/faculty-blog" },
+  { label: "Research", to: "/faculty-research" },
   { label: "Gallery", to: "/gallery" },
   { label: "Achievements", to: "/achievements" },
   { label: "Digital Initiatives", to: "/digital-initiatives" },

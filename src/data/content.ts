@@ -47,9 +47,17 @@ export const EVENTS = [
 
 export const RESOURCES = [
   { icon: FileText, title: "Subject-Wise Notes", href: "https://drive.google.com/drive/folders/19yLKZUvIJDHQA0FTo-l0DKYttGmt-Ze1?usp=sharing" },
-  { icon: Play, title: "YouTube Lecture Series", href: "https://youtu.be/dKe5pJljThc?feature=shared" },
-  { icon: Github, title: "Open-source Projects", href: "#" },
-  { icon: BookOpen, title: "Research Publications", href: "#" },
+  { icon: Play, title: "YouTube Lecture Series", href: "https://youtube.com/@innovatecse?si=mX3h1bWgCHNAYnFr" },
+  { 
+    icon: GraduationCap, 
+    title: "Google Classroom", 
+    links: [
+      { label: "Classroom 1 (2022-2023)", href: "https://drive.google.com/file/d/1B0Q25SZomZ_Uckier58M930mm6U_-_bo/view?usp=drive_link" },
+      { label: "Classroom 2 (2023-2024)", href: "https://drive.google.com/file/d/1ap12U-yBtprDpnRXzi0kFp--_RtWpQKK/view?usp=drive_link" },
+      { label: "Classroom 3 (2024-2025)", href: "https://drive.google.com/file/d/1xn4ahdr_SwkI-d6qHrg4PLU94k_MKlhW/view?usp=drive_link" },
+      { label: "Classroom 4 (2025-2026)", href: "https://drive.google.com/file/d/1O2zXfxnJ3f4T7ZJ1F4v4l3LZR8a5-hXY/view?usp=drive_link" },
+    ] 
+  }
 ];
 
 export const FACULTY_FEEDBACK = [
@@ -81,4 +89,70 @@ export const FACULTY_FEEDBACK = [
     college:"Velammal Institute of Technology",
     body: "The overall quality of the course materials is highly commendable. The lecture notes are engaging, accurate, and student-friendly, making them an excellent learning resource. The laboratory manuals are clearly written and provide sufficient guidance for students to complete practical exercises independently. The assessment materials are fair, comprehensive, and effectively evaluate students across multiple learning domains. The effort and professionalism demonstrated in the preparation of these teaching resources are truly appreciable. These materials will undoubtedly support effective teaching and foster meaningful learning experiences for students.",
   },
+];
+
+export const FACULTY_RESEARCH = [
+  {
+    facultyName: "Dr. R. Venkadesh",
+    role: "Professor & Head",
+    avatar: faculty2,
+    papers: [
+      {
+        title: "Advancements in Transformer Models for Resource-Constrained Environments",
+        journal: "IEEE Transactions on Neural Networks and Learning Systems",
+        date: "Dec 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "A Federated Learning Framework for Privacy-Preserving Medical Image Analysis",
+        journal: "International Conference on Machine Learning (ICML)",
+        date: "Jul 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  },
+  {
+    facultyName: "Dr. Meenakshi Iyer",
+    role: "Associate Professor",
+    avatar: faculty1,
+    papers: [
+      {
+        title: "Zero-Trust Architecture Implementation in Edge Computing Networks",
+        journal: "ACM Journal of Computer Security",
+        date: "Oct 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "Predictive Threat Modeling for IoT Device Ecosystems",
+        journal: "USENIX Security Symposium",
+        date: "Aug 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  },
+  {
+    facultyName: "Prof. Anitha Suresh",
+    role: "Assistant Professor",
+    avatar: faculty3,
+    papers: [
+      {
+        title: "Optimizing Serverless Cold Starts using Predictive Resource Allocation",
+        journal: "IEEE Cloud Computing",
+        date: "Nov 2025",
+        type: "Journal",
+        link: "#",
+      },
+      {
+        title: "Active Learning Pedagogies in Undergraduate Computer Science Education",
+        journal: "ACM SIGCSE Technical Symposium",
+        date: "Mar 2025",
+        type: "Conference",
+        link: "#",
+      }
+    ]
+  }
 ];
