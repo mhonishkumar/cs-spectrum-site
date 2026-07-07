@@ -36,6 +36,13 @@ export const STUDENT_ACHIEVEMENTS: StudentAchievement[] = [
     "image": "/achievements/Codera/WhatsApp Image 2026-07-07 at 9.25.47 PM.jpeg"
   },
   {
+    "id": "protospark",
+    "title": "Protospark",
+    "description": "PROTOSPARK National Project Competition 2026 \u2013 Special Category Winner (Social Impact)\n\nThe Department of Computer Science and Engineering proudly congratulates our students for winning the Special Category Award \u2013 Social Impact at the PROTOSPARK National Project Competition 2026. Their innovative project demonstrated a technology-driven solution with significant potential to create a positive social impact.\n\nTeam Members\n\nRaghul I\nRanjith\nVishva Vengatesan\n\nAchievement\n\nWinner \u2013 Special Category (Social Impact)\nEvent: PROTOSPARK National Project Competition 2026\nCategory: Social Impact\nRecognized for innovation, creativity, and addressing real-world societal challenges through technology.",
+    "shortDescription": "PROTOSPARK National Project Competition 2026 \u2013 Special Category Winner (Social Impact)",
+    "image": "/achievements/Protospark/WhatsApp Image 2026-07-07 at 10.59.26 PM.jpeg"
+  },
+  {
     "id": "smart-india-hackathon",
     "title": "Smart India Hackathon",
     "description": "Smart India Hackathon (SIH) 2025 \u2013 Software Edition Grand Finale\n\nRepresented Velammal Institute of Technology at the Smart India Hackathon (SIH) 2025 \u2013 Software Edition Grand Finale, hosted by Manav Rachna International Institute of Research and Studies, Faridabad, Haryana. The team developed and presented an innovative software solution for Problem Statement SIH25262 under the Ministry of Agriculture & Farmers Welfare (MoA&FW), demonstrating technical innovation, collaboration, and problem-solving skills.\n\nTeam Name: BluNymphs\n\nTeam Members:\n\nJersiah Lois J (Team Leader)\nFanny Prajeetha J\nSundara Raghavan K S\nArya K\nAshith Julian LR\nShyam K K\n\nFaculty Members:\nPonsangeetha Arumugam\nSundaresan B",
