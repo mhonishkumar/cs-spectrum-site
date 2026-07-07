@@ -132,6 +132,41 @@ function ResourcesPage() {
             ))}
           </div>
         </section>
+
+        {/* Academic Coordinator Welcome Section */}
+        <section className="mx-auto max-w-7xl px-6 py-20 border-t border-border mt-10">
+          <SectionTitle kicker="LEADERSHIP">Message from the Academic Coordinator</SectionTitle>
+          <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.5fr] items-start">
+            <Reveal scale className="mx-auto lg:mx-0 w-64 lg:w-full max-w-sm">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-card">
+                <img src="/acedamiccoordinator.jpeg" alt="Dr. R. Raja" className="w-full h-auto object-cover aspect-4/5" />
+              </div>
+              <div className="mt-5 text-center lg:text-left">
+                <p className="font-extrabold text-2xl text-primary">Dr. R. Raja</p>
+                <p className="text-sm font-semibold text-brand mt-1">Academic Coordinator – Digital Innovation Cell</p>
+                <p className="text-xs font-medium text-muted-foreground mt-1">Department of Computer Science and Engineering<br/>Velammal Institute of Technology</p>
+              </div>
+            </Reveal>
+
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+              <Reveal delay={100}>
+                <p>
+                  It is a pleasure to see our faculty and students embracing digital innovation and continuous learning. The Digital Innovation Cell is committed to fostering creativity, collaboration, and academic excellence through modern teaching practices and emerging technologies.
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <p>
+                  I appreciate the dedication of our faculty and the enthusiasm of our students in making learning more effective and innovative. Let us continue to explore new ideas, enhance our skills, and work together towards excellence.
+                </p>
+              </Reveal>
+              <Reveal delay={300}>
+                <p>
+                  Best wishes for your continued success.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
