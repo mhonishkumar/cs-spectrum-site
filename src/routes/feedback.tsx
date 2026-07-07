@@ -55,7 +55,9 @@ function FacultyFeedbackPage() {
                     <div>
                       <p className="font-semibold text-primary group-hover:text-brand transition-colors duration-300">{feedback.name}</p>
                       <p className="text-sm font-medium text-muted-foreground mt-0.5">{feedback.role}</p>
-                      <p className="text-xs text-muted-foreground/70 mt-0.5">{feedback.department}</p>
+                      {feedback.department && <p className="text-xs text-muted-foreground/70 mt-0.5">{feedback.department}</p>}
+                      {feedback.college && <p className="text-xs text-muted-foreground/70 mt-0.5">{feedback.college}</p>}
+                      {feedback.email && <p className="text-xs text-brand/70 mt-0.5"><a href={`mailto:${feedback.email}`}>{feedback.email}</a></p>}
                     </div>
                   </figcaption>
                 </figure>
