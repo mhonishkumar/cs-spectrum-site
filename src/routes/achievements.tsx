@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Lightbox } from "@/components/ui/Lightbox";
 import { Search, Filter, X, ChevronLeft, ChevronRight, Award, FileBadge, Medal, LayoutGrid, Maximize2 } from "lucide-react";
 import { FACULTY_ACHIEVEMENTS, FacultyAchievement } from "@/data/facultyAchievements";
+import { STUDENT_ACHIEVEMENTS } from "@/data/studentAchievements";
 import img from "@/assets/cse-careers.jpg";
 
 export const Route = createFileRoute("/achievements")({
@@ -24,6 +25,7 @@ function AchievementsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedYear, setSelectedYear] = useState("All");
   const [activeAchievementIndex, setActiveAchievementIndex] = useState<number | null>(null);
+  const [activeStudentAchievementIndex, setActiveStudentAchievementIndex] = useState<number | null>(null);
 
   // Lightbox State
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -65,6 +67,21 @@ function AchievementsPage() {
     }
   };
 
+  // Student Modals logic
+  const activeStudentAchievement = activeStudentAchievementIndex !== null ? STUDENT_ACHIEVEMENTS[activeStudentAchievementIndex] : null;
+
+  const closeStudentModal = () => setActiveStudentAchievementIndex(null);
+  const nextStudentAchievement = () => {
+    if (activeStudentAchievementIndex !== null && activeStudentAchievementIndex < STUDENT_ACHIEVEMENTS.length - 1) {
+      setActiveStudentAchievementIndex(activeStudentAchievementIndex + 1);
+    }
+  };
+  const prevStudentAchievement = () => {
+    if (activeStudentAchievementIndex !== null && activeStudentAchievementIndex > 0) {
+      setActiveStudentAchievementIndex(activeStudentAchievementIndex - 1);
+    }
+  };
+
   // Stats
   const totalAchievements = FACULTY_ACHIEVEMENTS.length;
   const totalCertifications = FACULTY_ACHIEVEMENTS.filter(a => a.category === "Certification").length;
@@ -76,77 +93,23 @@ function AchievementsPage() {
       
       <PageHero
         crumb="Achievements"
-        title="Faculty Achievements"
+        title="Faculty & Student Achievements"
         subtitle="Celebrating the accomplishments, recognitions, awards, certifications, and professional excellence of the faculty members of the Department of Computer Science and Engineering."
         bg={img}
       />
 
       <main className="flex-1 bg-secondary/30 py-16">
         <div className="mx-auto max-w-7xl px-6">
-          
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-              <Award className="h-8 w-8 text-brand mb-3" />
-              <p className="text-3xl font-extrabold text-primary">{totalAchievements}</p>
-              <p className="text-sm font-medium text-muted-foreground mt-1">Total Achievements</p>
+          <Reveal>
+            <div className="mb-12">
+              <h2 className="text-3xl font-extrabold text-primary mb-4 tracking-tight">
+                Faculty Achievements
+              </h2>
+              <p className="text-muted-foreground max-w-4xl leading-relaxed">
+                Celebrating the accomplishments, recognitions, awards, certifications, and professional excellence of the faculty members of the Department of Computer Science and Engineering.
+              </p>
             </div>
-            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-              <FileBadge className="h-8 w-8 text-brand mb-3" />
-              <p className="text-3xl font-extrabold text-primary">{totalCertifications}</p>
-              <p className="text-sm font-medium text-muted-foreground mt-1">Certifications</p>
-            </div>
-            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-              <Medal className="h-8 w-8 text-brand mb-3" />
-              <p className="text-3xl font-extrabold text-primary">{totalRecognitions}</p>
-              <p className="text-sm font-medium text-muted-foreground mt-1">Recognitions</p>
-            </div>
-            <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-              <LayoutGrid className="h-8 w-8 text-brand mb-3" />
-              <p className="text-3xl font-extrabold text-primary">100%</p>
-              <p className="text-sm font-medium text-muted-foreground mt-1">Commitment</p>
-            </div>
-          </div>
-
-          {/* Controls Bar */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-card p-4 rounded-2xl border border-border shadow-sm mb-12">
-            <div className="flex-1 w-full md:w-auto relative">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              <input 
-                type="text" 
-                placeholder="Search by faculty, title, or organization..." 
-                className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow text-sm"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-            
-            <div className="flex w-full md:w-auto gap-4">
-              <div className="relative flex-1 md:w-48">
-                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <select 
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow appearance-none text-sm font-medium"
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                >
-                  {categories.map(cat => (
-                    <option key={cat} value={cat}>{cat === "All" ? "All Categories" : cat}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="relative flex-1 md:w-40">
-                <select 
-                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand/50 transition-shadow appearance-none text-sm font-medium"
-                  value={selectedYear}
-                  onChange={(e) => setSelectedYear(e.target.value)}
-                >
-                  {years.map(year => (
-                    <option key={year} value={year}>{year === "All" ? "All Years" : year}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
+          </Reveal>
 
           {/* Achievements Grid */}
           {filteredAchievements.length === 0 ? (
@@ -224,7 +187,7 @@ function AchievementsPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-6 border-b border-border">
                 <div>
                   <h3 className="text-2xl font-bold text-primary flex items-center gap-2">
-                    <span className="text-2xl">🏅</span> NPTEL Elite Certificates
+                    <span className="text-2xl"></span> NPTEL Elite Certificates
                   </h3>
                   <p className="text-muted-foreground mt-3 max-w-3xl text-sm leading-relaxed">
                     <strong>Course:</strong> Programming in Java (12 Weeks) — <strong>Platform:</strong> NPTEL / SWAYAM — <strong>Institute:</strong> IIT Kharagpur<br/>
@@ -270,6 +233,61 @@ function AchievementsPage() {
                     No certificates found in the folder.
                   </div>
                 )}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Featured Student Achievements Grid */}
+          <Reveal delay={200}>
+            <div className="mt-20">
+              <div className="mb-10 border-b border-border pb-4">
+                <h3 className="text-2xl font-bold text-primary flex items-center gap-2">
+                  <span className="text-2xl">🏆</span> Featured Student Achievements
+                </h3>
+                <p className="text-muted-foreground mt-2 max-w-2xl text-sm">
+                  Highlighting the exceptional victories of our students in national-level hackathons, state-level competitions, and prestigious technical events.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {STUDENT_ACHIEVEMENTS.map((achievement, idx) => (
+                  <div 
+                    key={achievement.id}
+                    className="group flex flex-col bg-card rounded-[18px] border border-border overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 animate-in fade-in slide-in-from-bottom-8 fill-mode-both"
+                    style={{ animationDuration: '600ms', animationDelay: `${(idx % 12) * 50}ms`, animationTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)' }}
+                  >
+                    <div className="relative aspect-video overflow-hidden bg-muted cursor-pointer" onClick={() => setActiveStudentAchievementIndex(idx)}>
+                      <img 
+                        src={achievement.image} 
+                        alt={achievement.title} 
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                      />
+                      <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-brand shadow-sm border border-border/50">
+                        Achievement
+                      </div>
+                    </div>
+                    
+                    <div className="p-6 flex flex-col flex-1">
+                      <p className="text-xs font-bold text-brand uppercase tracking-wider mb-2">Student Team</p>
+                      <h3 className="text-lg font-bold text-primary leading-tight mb-3 line-clamp-2" title={achievement.title}>
+                        {achievement.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-1">
+                        {achievement.shortDescription}
+                      </p>
+                      
+                      <div className="flex items-center justify-end pt-4 border-t border-border mt-auto">
+                        <button 
+                          onClick={() => setActiveStudentAchievementIndex(idx)}
+                          className="text-xs font-bold text-brand hover:text-primary transition-colors px-3 py-1.5 rounded-lg hover:bg-secondary"
+                        >
+                          Read More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </Reveal>
@@ -338,6 +356,71 @@ function AchievementsPage() {
               <button
                 onClick={nextAchievement}
                 disabled={activeAchievementIndex === filteredAchievements.length - 1}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-background hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      )}
+
+      {/* Modal for Student Achievements */}
+      {activeStudentAchievement && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-background/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div 
+            className="absolute inset-0"
+            onClick={closeStudentModal}
+          />
+          <div className="relative w-full max-w-4xl bg-card rounded-2xl shadow-2xl border border-border overflow-hidden flex flex-col max-h-[90vh] animate-in zoom-in-95 duration-300">
+            
+            <button 
+              onClick={closeStudentModal}
+              className="absolute top-4 right-4 z-10 p-2 bg-background/50 backdrop-blur-md hover:bg-background/80 text-foreground rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="overflow-y-auto flex-1 p-0">
+              <div className="w-full bg-muted border-b border-border p-6 flex justify-center items-center">
+                <img 
+                  src={activeStudentAchievement.image} 
+                  alt={activeStudentAchievement.title}
+                  className="max-h-[50vh] w-auto object-contain rounded-lg shadow-md"
+                />
+              </div>
+              
+              <div className="p-8 sm:p-10">
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-sm font-semibold">
+                  <span className="bg-brand/10 text-brand px-3 py-1 rounded-full">Achievement</span>
+                </div>
+                
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-primary mb-2 leading-tight">
+                  {activeStudentAchievement.title}
+                </h2>
+                <p className="text-lg font-bold text-brand mb-8">Student Team</p>
+                
+                <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-muted-foreground">
+                  <p className="leading-relaxed whitespace-pre-wrap">{activeStudentAchievement.description}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Navigation */}
+            <div className="border-t border-border bg-secondary/30 p-4 flex items-center justify-between">
+              <button
+                onClick={prevStudentAchievement}
+                disabled={activeStudentAchievementIndex === 0}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-background hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </button>
+              <button
+                onClick={nextStudentAchievement}
+                disabled={activeStudentAchievementIndex === STUDENT_ACHIEVEMENTS.length - 1}
                 className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-background hover:text-foreground disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Next
