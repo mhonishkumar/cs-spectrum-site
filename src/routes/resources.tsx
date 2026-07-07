@@ -1,15 +1,70 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SectionTitle, PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronDown } from "lucide-react";
 import { RESOURCES, TECHS, JOURNEY } from "@/data/content";
 import img from "@/assets/cse-cloud.jpg";
 
 export const Route = createFileRoute("/resources")({
   component: ResourcesPage,
 });
+
+function ResourceCard({ resource }: { resource: any }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const Icon = resource.icon;
+  
+  if (resource.links) {
+    return (
+      <div 
+        className="group relative rounded-2xl border border-border bg-card p-6 hover:border-brand hover:shadow-md transition-all flex flex-col items-center text-center h-full cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="h-14 w-14 rounded-full bg-brand/10 text-brand grid place-items-center group-hover:bg-brand group-hover:text-brand-foreground transition">
+          <Icon className="h-6 w-6" />
+        </div>
+        <p className="mt-4 font-bold text-primary">{resource.title}</p>
+        <span className="mt-3 inline-flex items-center gap-1 text-xs text-brand font-semibold">
+          View Links <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+        </span>
+        
+        {/* Dropdown Links */}
+        {isOpen && (
+          <div className="w-full mt-4 flex flex-col gap-2 pt-4 border-t border-border animate-in fade-in slide-in-from-top-2 duration-200">
+            {resource.links.map((link: any, idx: number) => (
+              <a 
+                key={idx} 
+                href={link.href} 
+                target="_blank" 
+                rel="noreferrer"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking link
+                className="flex items-center justify-between text-sm p-3 rounded-lg bg-secondary/50 hover:bg-brand/10 hover:text-brand text-muted-foreground transition-colors"
+              >
+                <span className="font-medium">{link.label}</span>
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Normal Card
+  return (
+    <a href={resource.href} target="_blank" rel="noreferrer" className="group rounded-2xl border border-border bg-card p-6 hover:border-brand hover:-translate-y-1 hover:shadow-md transition-all flex flex-col items-center text-center h-full">
+      <div className="h-14 w-14 rounded-full bg-brand/10 text-brand grid place-items-center group-hover:bg-brand group-hover:text-brand-foreground transition">
+        <Icon className="h-6 w-6" />
+      </div>
+      <p className="mt-4 font-bold text-primary">{resource.title}</p>
+      <span className="mt-3 inline-flex items-center gap-1 text-xs text-brand font-semibold">
+        Open Link <ExternalLink className="h-3 w-3" />
+      </span>
+    </a>
+  );
+}
 
 function ResourcesPage() {
   return (
@@ -27,17 +82,9 @@ function ResourcesPage() {
         <section className="mx-auto max-w-7xl px-6">
           <SectionTitle kicker="LEARN ANYTIME">Study Materials</SectionTitle>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {RESOURCES.map(({ icon: Icon, title, href }, i) => (
-              <Reveal key={title} delay={i * 100}>
-                <a href={href} target="_blank" rel="noreferrer" className="group rounded-2xl border border-border bg-card p-6 hover:border-brand hover:-translate-y-1 hover:shadow-md transition-all flex flex-col items-center text-center h-full">
-                  <div className="h-14 w-14 rounded-full bg-brand/10 text-brand grid place-items-center group-hover:bg-brand group-hover:text-brand-foreground transition">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <p className="mt-4 font-bold text-primary">{title}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs text-brand font-semibold">
-                    Open Link <ExternalLink className="h-3 w-3" />
-                  </span>
-                </a>
+            {RESOURCES.map((resource, i) => (
+              <Reveal key={resource.title} delay={i * 100}>
+                <ResourceCard resource={resource} />
               </Reveal>
             ))}
           </div>

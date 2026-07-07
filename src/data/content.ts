@@ -48,7 +48,16 @@ export const EVENTS = [
 export const RESOURCES = [
   { icon: FileText, title: "Subject-Wise Notes", href: "https://drive.google.com/drive/folders/19yLKZUvIJDHQA0FTo-l0DKYttGmt-Ze1?usp=sharing" },
   { icon: Play, title: "YouTube Lecture Series", href: "https://youtu.be/dKe5pJljThc?feature=shared" },
-  { icon: Github, title: "Open-source Projects", href: "#" },
+  { 
+    icon: GraduationCap, 
+    title: "Google Classroom", 
+    links: [
+      { label: "Classroom 1 (2022-2023)", href: "https://drive.google.com/file/d/1B0Q25SZomZ_Uckier58M930mm6U_-_bo/view?usp=drive_link" },
+      { label: "Classroom 2 (2023-2024)", href: "https://drive.google.com/file/d/1ap12U-yBtprDpnRXzi0kFp--_RtWpQKK/view?usp=drive_link" },
+      { label: "Classroom 3 (2024-2025)", href: "https://drive.google.com/file/d/1xn4ahdr_SwkI-d6qHrg4PLU94k_MKlhW/view?usp=drive_link" },
+      { label: "Classroom 4 (2025-2026)", href: "https://drive.google.com/file/d/1O2zXfxnJ3f4T7ZJ1F4v4l3LZR8a5-hXY/view?usp=drive_link" },
+    ] 
+  },
   { icon: BookOpen, title: "Research Publications", href: "#" },
 ];
 
