@@ -4,7 +4,8 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
-import { Search, Filter, X, ChevronLeft, ChevronRight, Award, FileBadge, Medal, LayoutGrid } from "lucide-react";
+import { Lightbox } from "@/components/ui/Lightbox";
+import { Search, Filter, X, ChevronLeft, ChevronRight, Award, FileBadge, Medal, LayoutGrid, Maximize2 } from "lucide-react";
 import { FACULTY_ACHIEVEMENTS, FacultyAchievement } from "@/data/facultyAchievements";
 import img from "@/assets/cse-careers.jpg";
 
@@ -23,6 +24,13 @@ function AchievementsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedYear, setSelectedYear] = useState("All");
   const [activeAchievementIndex, setActiveAchievementIndex] = useState<number | null>(null);
+
+  // Lightbox State
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const nptelGlob = import.meta.glob('/public/achievements/NPTEL Certificates/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}');
+  const nptelCertificates = useMemo(() => Object.keys(nptelGlob).map(p => p.replace(/^\/public/, '')), []);
 
   const categories = useMemo(() => ["All", ...Array.from(new Set(FACULTY_ACHIEVEMENTS.map(a => a.category)))], []);
   const years = useMemo(() => ["All", ...Array.from(new Set(FACULTY_ACHIEVEMENTS.map(a => a.year)))].sort((a, b) => b.localeCompare(a)), []);
@@ -198,7 +206,77 @@ function AchievementsPage() {
         </div>
       </main>
 
-      {/* Modal */}
+      <section className="bg-background py-16 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <div className="mb-12">
+              <h2 className="text-3xl font-extrabold text-primary mb-4 tracking-tight">
+                Students Achievements
+              </h2>
+              <p className="text-muted-foreground max-w-4xl leading-relaxed">
+                The Department of Computer Science and Engineering proudly recognizes the remarkable accomplishment of its students in earning Elite NPTEL Certifications. These achievements reflect strong fundamentals, consistent learning, and commitment to enhancing technical competencies beyond the regular curriculum.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div className="bg-card rounded-[20px] border border-border shadow-sm p-6 sm:p-10 mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-6 border-b border-border">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary flex items-center gap-2">
+                    <span className="text-2xl">🏅</span> NPTEL Elite Certificates
+                  </h3>
+                  <p className="text-muted-foreground mt-3 max-w-3xl text-sm leading-relaxed">
+                    <strong>Course:</strong> Programming in Java (12 Weeks) — <strong>Platform:</strong> NPTEL / SWAYAM — <strong>Institute:</strong> IIT Kharagpur<br/>
+                    <span className="block mt-2">
+                      Demonstrating exceptional academic excellence, our students secured <strong>Elite Certification</strong> with outstanding consolidated scores ranging from <strong>90% to 93%</strong>. This showcases outstanding proficiency in Java programming, object-oriented design principles, problem-solving techniques, exception handling, multithreading, and software development concepts.
+                    </span>
+                  </p>
+                </div>
+                <div className="mt-4 sm:mt-0 bg-brand/10 text-brand px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap">
+                  {nptelCertificates.length} Certificates
+                </div>
+              </div>
+
+              {/* Masonry Gallery */}
+              <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+                {nptelCertificates.map((certPath, idx) => (
+                  <Reveal key={certPath} delay={(idx % 6) * 60 + 60} duration={600}>
+                    <div 
+                      className="group relative rounded-xl overflow-hidden bg-muted border border-border/50 break-inside-avoid cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                      onClick={() => {
+                        setLightboxIndex(idx);
+                        setLightboxOpen(true);
+                      }}
+                    >
+                      <img 
+                        src={certPath} 
+                        alt={`NPTEL Elite Certificate ${idx + 1}`} 
+                        loading="lazy"
+                        className="w-full h-auto object-cover transform group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[1px]">
+                        <div className="bg-white/20 text-white p-3 rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-sm border border-white/30 flex items-center gap-2">
+                          <Maximize2 className="h-5 w-5" />
+                          <span className="text-xs font-bold px-1">View Certificate</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+                
+                {nptelCertificates.length === 0 && (
+                  <div className="col-span-full py-12 text-center text-muted-foreground border-2 border-dashed border-border rounded-xl">
+                    No certificates found in the folder.
+                  </div>
+                )}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Modal for Faculty Achievements */}
       {activeAchievement && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-background/80 backdrop-blur-md animate-in fade-in duration-200">
           <div 
@@ -270,6 +348,14 @@ function AchievementsPage() {
           </div>
         </div>
       )}
+
+      {/* Lightbox for Students Achievements */}
+      <Lightbox 
+        isOpen={lightboxOpen} 
+        onClose={() => setLightboxOpen(false)} 
+        images={nptelCertificates} 
+        initialIndex={lightboxIndex} 
+      />
 
       <SiteFooter />
     </div>
