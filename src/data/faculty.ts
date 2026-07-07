@@ -3,13 +3,13 @@ export const FACULTY = [
     "name": "Dr. Balaji N",
     "designation": "Principal/Professor",
     "qualification": "M.E., Ph.D.,",
-    "image": "/faculty-images/dr r balaji.jpeg"
+    "image": "/faculty-images/balaji.jpeg"
   },
   {
     "name": "Dr. Soundararajan S",
     "designation": "Vice-Principal/Professor",
     "qualification": "M.E., Ph.D.,",
-    "image": "/faculty-images/Dr.soundrajan .jpeg"
+    "image": "/faculty-images/soundrajan .jpeg"
   },
   {
     "name": "Dr. Venkadesh R",
@@ -123,7 +123,7 @@ export const FACULTY = [
     "name": "Ms. Konduru Lakshmi Mounika K",
     "designation": "Assistant Professor",
     "qualification": "M.E.,",
-    "image": "/faculty-images/konduru lakshmi Mounika.jpeg"
+    "image": "/faculty-images/Konduru_lakshmi_Mounika.jpeg"
   },
   {
     "name": "Mrs. Kanchana D",
@@ -135,7 +135,7 @@ export const FACULTY = [
     "name": "Ms. Mary Flavia Lucas",
     "designation": "Assistant Professor",
     "qualification": "M.E.,",
-    "image": "/faculty-images/mary flavia.jpeg"
+    "image": "/faculty-images/mary_flavia.jpeg"
   },
   {
     "name": "Mrs. Saranya G",
