@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as GalleryRouteImport } from './routes/gallery'
-import { Route as FacultyFeedbackRouteImport } from './routes/faculty-feedback'
+import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as FacultyBlogRouteImport } from './routes/faculty-blog'
 import { Route as FacultyRouteImport } from './routes/faculty'
 import { Route as DigitalInitiativesRouteImport } from './routes/digital-initiatives'
@@ -29,9 +29,9 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FacultyFeedbackRoute = FacultyFeedbackRouteImport.update({
-  id: '/faculty-feedback',
-  path: '/faculty-feedback',
+const FeedbackRoute = FeedbackRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FacultyBlogRoute = FacultyBlogRouteImport.update({
@@ -72,7 +72,7 @@ export interface FileRoutesByFullPath {
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
-  '/faculty-feedback': typeof FacultyFeedbackRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
 }
@@ -83,7 +83,7 @@ export interface FileRoutesByTo {
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
-  '/faculty-feedback': typeof FacultyFeedbackRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
 }
@@ -95,7 +95,7 @@ export interface FileRoutesById {
   '/digital-initiatives': typeof DigitalInitiativesRoute
   '/faculty': typeof FacultyRoute
   '/faculty-blog': typeof FacultyBlogRoute
-  '/faculty-feedback': typeof FacultyFeedbackRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/resources': typeof ResourcesRoute
 }
@@ -108,7 +108,7 @@ export interface FileRouteTypes {
     | '/digital-initiatives'
     | '/faculty'
     | '/faculty-blog'
-    | '/faculty-feedback'
+    | '/feedback'
     | '/gallery'
     | '/resources'
   fileRoutesByTo: FileRoutesByTo
@@ -119,7 +119,7 @@ export interface FileRouteTypes {
     | '/digital-initiatives'
     | '/faculty'
     | '/faculty-blog'
-    | '/faculty-feedback'
+    | '/feedback'
     | '/gallery'
     | '/resources'
   id:
@@ -130,7 +130,7 @@ export interface FileRouteTypes {
     | '/digital-initiatives'
     | '/faculty'
     | '/faculty-blog'
-    | '/faculty-feedback'
+    | '/feedback'
     | '/gallery'
     | '/resources'
   fileRoutesById: FileRoutesById
@@ -142,7 +142,7 @@ export interface RootRouteChildren {
   DigitalInitiativesRoute: typeof DigitalInitiativesRoute
   FacultyRoute: typeof FacultyRoute
   FacultyBlogRoute: typeof FacultyBlogRoute
-  FacultyFeedbackRoute: typeof FacultyFeedbackRoute
+  FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
   ResourcesRoute: typeof ResourcesRoute
 }
@@ -163,11 +163,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faculty-feedback': {
-      id: '/faculty-feedback'
-      path: '/faculty-feedback'
-      fullPath: '/faculty-feedback'
-      preLoaderRoute: typeof FacultyFeedbackRouteImport
+    '/feedback': {
+      id: '/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof FeedbackRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faculty-blog': {
@@ -222,7 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   DigitalInitiativesRoute: DigitalInitiativesRoute,
   FacultyRoute: FacultyRoute,
   FacultyBlogRoute: FacultyBlogRoute,
-  FacultyFeedbackRoute: FacultyFeedbackRoute,
+  FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
   ResourcesRoute: ResourcesRoute,
 }

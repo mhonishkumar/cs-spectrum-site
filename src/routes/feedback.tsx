@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Quote, Star } from "lucide-react";
 import { FACULTY_FEEDBACK } from "@/data/content";
 
-export const Route = createFileRoute("/faculty-feedback")({
+export const Route = createFileRoute("/feedback")({
   component: FacultyFeedbackPage,
 });
 
@@ -21,8 +21,8 @@ function FacultyFeedbackPage() {
       <SiteHeader />
       
       <PageHero
-        crumb="Faculty Feedback"
-        title="Faculty Feedback"
+        crumb="Feedback"
+        title="Feedback"
         subtitle="Hear what our faculty members have to say about the Department of Computer Science and Engineering and its commitment to academic excellence, innovation, and student development."
       />
 
