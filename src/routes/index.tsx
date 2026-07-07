@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Target, Lightbulb, Award, Eye, Compass, CheckCircle2, Mail, Phone } from "lucide-react";
+import { StudentAchievementsCarousel } from "@/components/site/StudentAchievementsCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -53,6 +54,8 @@ function Index() {
 
         <div className="h-1 w-full bg-brand" />
       </section>
+
+      <StudentAchievementsCarousel />
 
       <main className="py-20">
         {/* About */}
