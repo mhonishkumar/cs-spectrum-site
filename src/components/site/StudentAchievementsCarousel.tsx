@@ -18,7 +18,7 @@ function getCategoryBadge(title: string) {
 export function StudentAchievementsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start", skipSnaps: false },
-    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]
+    [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
