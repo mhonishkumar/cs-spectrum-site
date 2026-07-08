@@ -24,6 +24,12 @@ export const FACULTY = [
     "image": "/faculty-images/gurvaammal.jpeg"
   },
   {
+    "name": "Dr. Prameeladevi C H",
+    "designation": "Associate Professor",
+    "qualification": "M.E., Ph.D.,",
+    "image": "/faculty-images/updated/row_7.png"
+  },
+  {
     "name": "Mr. Raja R",
     "designation": "Associate Professor",
     "qualification": "M.E., (Ph. D).,",
@@ -39,19 +45,31 @@ export const FACULTY = [
     "name": "Mr. Anbumani A",
     "designation": "Assistant Professor",
     "qualification": "M., Tech.,",
-    "image": "/faculty-images/anbumani.jpeg"
+    "image": "/faculty-images/updated/row_10.png"
   },
   {
     "name": "Mr. Sathiya Jebasundar J",
     "designation": "Assistant Professor",
     "qualification": "M.E.,",
-    "image": "/faculty-images/sathiya jebasundar.jpeg"
+    "image": "/faculty-images/updated/row_11.png"
+  },
+  {
+    "name": "Mr. Subramani R",
+    "designation": "Assistant Professor",
+    "qualification": "M.E.,",
+    "image": "/faculty-images/updated/row_12.png"
   },
   {
     "name": "Mr. Retheesh D",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
     "image": "/faculty-images/retheesh.jpeg"
+  },
+  {
+    "name": "Mrs. Kirupavathy J",
+    "designation": "Assistant Professor",
+    "qualification": "M.E., (Ph. D).,",
+    "image": "/faculty-images/updated/row_14.png"
   },
   {
     "name": "Mr. Nithinkumar R",
@@ -63,7 +81,7 @@ export const FACULTY = [
     "name": "Mrs. Ponsangeetha A",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
-    "image": "/faculty-images/ponsangeetha .jpeg"
+    "image": "/faculty-images/updated/ponsangeetha.png"
   },
   {
     "name": "Mrs. Pratheeba R S",
@@ -72,13 +90,25 @@ export const FACULTY = [
     "image": "/faculty-images/pratheeba.jpeg"
   },
   {
+    "name": "Mrs. Jemima P",
+    "designation": "Assistant Professor",
+    "qualification": "M.E.,",
+    "image": "/faculty-images/updated/row_18.png"
+  },
+  {
     "name": "Mrs. Joice Ruby J",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
-    "image": "/faculty-images/joy ruby.jpeg"
+    "image": "/faculty-images/updated/row_19.png"
   },
   {
-    "name": "Mrs. Bhavani Chandana",
+    "name": "Mrs. Vidhya R",
+    "designation": "Assistant Professor",
+    "qualification": "M.E., (Ph. D).,",
+    "image": "/faculty-images/updated/row_20.png"
+  },
+  {
+    "name": "Mrs. Bhavani Chandana ",
     "designation": "Assistant Professor",
     "qualification": "M. Tech.,",
     "image": "/faculty-images/bhanvani chandhana.jpeg"
@@ -87,25 +117,25 @@ export const FACULTY = [
     "name": "Mrs. Renuga R",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
-    "image": "/faculty-images/renuga r.jpeg"
+    "image": "/faculty-images/updated/row_22.png"
   },
   {
     "name": "Mr. Iraniya Pandiyan M",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
-    "image": "/faculty-images/pandian.jpeg"
+    "image": "/faculty-images/updated/row_23.png"
   },
   {
     "name": "Mr. Kannan G",
     "designation": "Assistant Professor",
     "qualification": "M.E., (Ph. D).,",
-    "image": "/faculty-images/kanan.jpeg"
+    "image": "/faculty-images/updated/row_24.png"
   },
   {
     "name": "Ms. Anitha T",
     "designation": "Assistant Professor",
     "qualification": "M.E.,",
-    "image": "/faculty-images/anitha.jpeg"
+    "image": "/faculty-images/updated/row_25.png"
   },
   {
     "name": "Mrs. Merlin Rosia J",
@@ -120,7 +150,7 @@ export const FACULTY = [
     "image": "/faculty-images/kavitha.jpeg"
   },
   {
-    "name": "Ms. Konduru Lakshmi Mounika K",
+    "name": "Ms. Konduru Lakshmi Mounika",
     "designation": "Assistant Professor",
     "qualification": "M.E.,",
     "image": "/faculty-images/Konduru_lakshmi_Mounika.jpeg"

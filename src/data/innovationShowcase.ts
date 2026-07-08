@@ -18,7 +18,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-1",
     title: "AI-Based Smart Attendance System",
-    videoId: "dQw4w9WgXcQ", // Placeholder mock ID
+    videoId: "#", // Placeholder mock ID
     students: ["Harish Narayan", "Karthik R."],
     facultyGuide: "Dr. R. Venkadesh",
     technology: ["React", "Flask", "OpenCV", "TensorFlow"],
@@ -36,7 +36,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-2",
     title: "Zero-Trust IoT Security Gateway",
-    videoId: "kJQP7kiw5Fk", // Placeholder mock ID
+    videoId: "#", // Placeholder mock ID
     students: ["Divya S.", "Priya M."],
     facultyGuide: "Dr. Meenakshi Iyer",
     technology: ["Python", "AWS IoT", "Docker", "Raspberry Pi"],
@@ -54,7 +54,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-3",
     title: "Predictive Healthcare Analytics Engine",
-    videoId: "jNQXAC9IVRw", // Placeholder mock ID
+    videoId: "#", // Placeholder mock ID
     students: ["Aravind K.", "Rahul V."],
     facultyGuide: "Prof. Anitha Suresh",
     technology: ["Next.js", "FastAPI", "PostgreSQL", "Scikit-Learn"],
@@ -72,7 +72,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-4",
     title: "Decentralized Academic Credentials",
-    videoId: "LXb3EKWsInQ", // Placeholder mock ID
+    videoId: "#", // Placeholder mock ID
     students: ["Siddharth M."],
     facultyGuide: "Dr. R. Venkadesh",
     technology: ["Solidity", "React", "Ethereum", "IPFS"],
@@ -90,7 +90,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-5",
     title: "Autonomous Warehouse Robot",
-    videoId: "M7lc1UVf-VE", // Placeholder mock ID
+    videoId: "#", // Placeholder mock ID
     students: ["Naveen T.", "Vijay P."],
     facultyGuide: "Dr. Meenakshi Iyer",
     technology: ["ROS", "C++", "Lidar", "Arduino"],
@@ -107,7 +107,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-6",
     title: "Serverless E-Commerce Microservices",
-    videoId: "M7lc1UVf-VE", // Reusing a valid placeholder
+    videoId: "#", // Reusing a valid placeholder
     students: ["Sneha R.", "Ananya J."],
     facultyGuide: "Prof. Anitha Suresh",
     technology: ["AWS Lambda", "DynamoDB", "React", "Node.js"],
