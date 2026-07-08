@@ -1,0 +1,48 @@
+## Student Achievements – NPTEL Online Certification (Programming in Java)
+
+The Department of Computer Science and Engineering proudly congratulates the following students for successfully completing the **NPTEL Online Certification – Programming in Java (12 Weeks)**, conducted by **IIT Kharagpur** through the **SWAYAM** platform.
+
+The students demonstrated exceptional academic excellence by securing **Elite Certification** with outstanding consolidated scores ranging from **90% to 93%**. Their achievements reflect strong programming fundamentals, consistent learning, and commitment to enhancing their technical competencies beyond the regular curriculum.
+
+These certifications strengthen students' knowledge in Java programming, object-oriented programming concepts, exception handling, multithreading, collections, file handling, and software development principles, preparing them for higher studies, internships, coding competitions, and industry careers.
+
+### Student Achievement Details
+
+| S.No | Student Name     | Course              | Assignment (/25) | Proctored Exam (/75) | Consolidated Score | Certification |
+| ---: | ---------------- | ------------------- | ---------------: | -------------------: | -----------------: | ------------- |
+|    1 | Ponmika V        | Programming in Java |            24.81 |                66.00 |            **91%** | Elite         |
+|    2 | Pavithra N N     | Programming in Java |            24.94 |                64.75 |            **90%** | Elite         |
+|    3 | Priyanga S       | Programming in Java |            25.00 |                65.25 |            **90%** | Elite         |
+|    4 | Sharmila Suresh  | Programming in Java |            24.88 |                65.25 |            **90%** | Elite         |
+|    5 | Shravani R       | Programming in Java |            24.19 |                67.50 |            **92%** | Elite         |
+|    6 | T Sandhiya       | Programming in Java |            25.00 |                67.50 |            **93%** | Elite         |
+|    7 | Sabibaa Bhanu B  | Programming in Java |            19.06 |                70.50 |            **90%** | Elite         |
+|    8 | Ranjani K        | Programming in Java |            24.94 |                68.25 |            **93%** | Elite         |
+|    9 | Nethra V         | Programming in Java |            24.38 |                69.00 |            **93%** | Elite         |
+|   10 | Harish Narayan T | Programming in Java |            23.75 |                67.50 |            **91%** | Elite         |
+|   11 | Deepa S          | Programming in Java |            24.69 |                66.00 |            **91%** | Elite         |
+
+---
+
+## Department Achievement Summary
+
+* **Course:** Programming in Java
+* **Platform:** NPTEL – SWAYAM
+* **Offering Institute:** IIT Kharagpur
+* **Course Duration:** 12 Weeks (July – October 2025)
+* **Certification Level:** Elite
+* **Total Students Certified:** **11**
+* **Highest Consolidated Score:** **93%**
+* **Lowest Consolidated Score:** **90%**
+* **Average Consolidated Score:** **91.27%**
+* **Elite Certifications:** **11 (100%)**
+
+---
+
+## Professional Achievement Note
+
+The Department of Computer Science and Engineering proudly recognizes the remarkable accomplishment of its students in earning **Elite NPTEL Certifications** in **Programming in Java**. Successfully completing a rigorous 12-week course from **IIT Kharagpur** demonstrates their commitment to academic excellence, self-directed learning, and continuous skill development.
+
+By achieving scores between **90% and 93%**, the students have showcased outstanding proficiency in Java programming, object-oriented design principles, problem-solving techniques, exception handling, multithreading, collections framework, and software development concepts. These certifications significantly enhance their technical profile and prepare them for internships, placements, competitive examinations, and advanced learning opportunities.
+
+The department congratulates all the achievers for bringing pride to the institution through their dedication, perseverance, and pursuit of excellence. Their success reflects the department's commitment to fostering a culture of innovation, lifelong learning, and industry-relevant technical education.
