@@ -38,27 +38,27 @@
 
   /* Modern Light Theme Palette */
   --background: #ffffff;
-  --foreground: #334155;
+  --foreground: #1f2e2a;
   --card: #ffffff;
-  --card-foreground: #334155;
-  --primary: #0f172a;
+  --card-foreground: #1f2e2a;
+  --primary: #0f1a17;
   --primary-foreground: #ffffff;
-  --secondary: #f8fafc;
-  --secondary-foreground: #334155;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #3b82f6;
-  --accent-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #3b82f6;
+  --secondary: #E6F2DD;
+  --secondary-foreground: #1f2e2a;
+  --muted: #f2f7ef;
+  --muted-foreground: #5a756b;
+  --accent: #88BDA4;
+  --accent-foreground: #0f1a17;
+  --border: #B1D3B9;
+  --input: #B1D3B9;
+  --ring: #88BDA4;
 
-  --brand: #3b82f6;
+  --brand: #659287;
   --brand-foreground: #ffffff;
-  --brand-deep: #2563eb;
-  --brand-deep-2: #1d4ed8;
+  --brand-deep: #4a6d65;
+  --brand-deep-2: #364f49;
 
-  --gradient-hero: linear-gradient(140deg, #f8fafc 0%, #f1f5f9 55%, #e2e8f0 100%);
+  --gradient-hero: linear-gradient(140deg, #E6F2DD 0%, #f2f7ef 55%, #B1D3B9 100%);
 }
 
 @layer base {
