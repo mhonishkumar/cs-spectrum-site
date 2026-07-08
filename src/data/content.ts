@@ -46,7 +46,7 @@ export const EVENTS = [
 ];
 
 export const RESOURCES = [
-  { icon: FileText, title: "Circular", href: "/circular.pdf" },
+  { icon: FileText, title: "Circular", href: "/Circular to upload.pdf" },
   { icon: FileText, title: "Subject-Wise Notes", href: "https://drive.google.com/drive/folders/19yLKZUvIJDHQA0FTo-l0DKYttGmt-Ze1?usp=sharing" },
   { icon: Play, title: "YouTube Lecture Series", href: "https://youtube.com/@innovatecse?si=mX3h1bWgCHNAYnFr" },
   { 
