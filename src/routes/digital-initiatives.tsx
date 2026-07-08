@@ -6,6 +6,7 @@ import { Cloud, Cpu, Monitor, ServerCog, GraduationCap, BookOpen, ExternalLink }
 import cloudImg from "@/assets/cse-cloud.jpg";
 import labImg from "@/assets/cse-lab.jpg";
 import aiImg from "@/assets/cse-ai.jpg";
+import pedagogyImg from "@/assets/cse-pedagogy.png";
 
 export const Route = createFileRoute("/digital-initiatives")({
   head: () => ({
@@ -23,6 +24,7 @@ const PLATFORMS = [
   { title: "SWAYAM MOOCs", desc: "National platform for open online courses in computing and engineering.", href: "https://swayam.gov.in", img: labImg },
   { title: "Diksha Portal", desc: "Nationwide e-learning platform for schools, colleges and educators.", href: "https://diksha.gov.in", img: aiImg },
   { title: "National Digital Library", desc: "Millions of learning resources for CSE students and researchers.", href: "https://ndl.iitkgp.ac.in", img: cloudImg },
+  { title: "Teaching Methodologies (Pedagogy) ", desc: "Pedagogy is the art and science of teaching that focuses on creating engaging, student-centered learning experiences", href: "https://drive.google.com/file/d/1Kb1O86soWiyhUgwCoGXXlM9-SGrSx9Md/view?usp=drive_link", img: pedagogyImg },
 ];
 
 const INFRA = [
@@ -63,7 +65,7 @@ function DigitalInitiatives() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle kicker="OPEN LEARNING">National E-Learning Portals</SectionTitle>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-4">
             {PLATFORMS.map((p) => (
               <a key={p.title} href={p.href} target="_blank" rel="noreferrer" className="group rounded-2xl overflow-hidden border border-border bg-card hover:-translate-y-1 hover:shadow-xl transition-all">
                 <div className="relative aspect-video overflow-hidden">
