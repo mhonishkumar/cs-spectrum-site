@@ -1,17 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import vitLogo from "@/assets/vit-logo.png.asset.json";
 
 
 const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
-  { label: "Department", to: "/#about" },
-  { label: "Vision & Mission", to: "/#vision-mission" },
-  { label: "Pedagogy", to: "/#pedagogy" },
-  { label: "Emerging Tech", to: "/#materials" },
+  { label: "Faculty", to: "/faculty" },
+  { label: "Research", to: "/faculty-research" },
+  { label: "Innovation Showcase", to: "/innovation-showcase" },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Achievements", to: "/achievements" },
   { label: "Digital Initiatives", to: "/digital-initiatives" },
-  { label: "Faculty Blog", to: "/faculty-blog" },
+  { label: "Feedback", to: "/feedback" },
+  { label: "Resources", to: "/resources" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const UTIL = [
@@ -31,17 +33,14 @@ export function SiteHeader() {
         <div className="mx-auto max-w-7xl px-6 py-8 flex items-end justify-between gap-6">
           <Link to="/" className="group min-w-0 flex items-center gap-4">
             <img
-              src={vitLogo.url}
+              src="/vit.png"
               alt="Velammal Institute of Technology logo"
               className="h-14 w-14 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
             />
             <div className="min-w-0">
               <p className="eyebrow text-brand">Velammal Institute of Technology</p>
               <h1 className="mt-1 font-display text-4xl md:text-5xl leading-none tracking-tight text-primary">
-                CSE<span className="italic text-brand">.</span>
-                <span className="ml-3 hidden md:inline text-2xl md:text-3xl text-muted-foreground/80">
-                  / Computer Science & Engineering
-                </span>
+                Computer Science & Engineering
               </h1>
             </div>
           </Link>
@@ -72,33 +71,19 @@ export function SiteHeader() {
             } flex-wrap gap-x-8 gap-y-2 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-foreground/85`}
           >
             {NAV.map((item, i) => {
-              const isHash = item.to.includes("#");
               const base =
-                "group inline-flex items-baseline gap-2 border-b border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
+                "group inline-flex items-baseline gap-2 border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
               const active = "text-brand border-brand";
-              const number = (
-                <span className="font-display italic text-brand/70 text-[13px]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              );
               return (
                 <li key={item.label}>
-                  {isHash ? (
-                    <a href={item.to} className={base}>
-                      {number}
-                      <span>{item.label}</span>
-                    </a>
-                  ) : (
                     <Link
                       to={item.to as "/"}
                       className={base}
                       activeProps={{ className: `${base} ${active}` }}
                       activeOptions={{ exact: item.to === "/" }}
                     >
-                      {number}
                       <span>{item.label}</span>
                     </Link>
-                  )}
                 </li>
               );
             })}

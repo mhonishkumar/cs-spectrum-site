@@ -68,7 +68,7 @@ function DigitalInitiatives() {
               <a key={p.title} href={p.href} target="_blank" rel="noreferrer" className="group rounded-2xl overflow-hidden border border-border bg-card hover:-translate-y-1 hover:shadow-xl transition-all">
                 <div className="relative aspect-video overflow-hidden">
                   <img src={p.img} alt={p.title} className="h-full w-full object-cover group-hover:scale-105 transition duration-500" width={1200} height={800} loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-primary/70 to-transparent" />
                 </div>
                 <div className="p-5">
                   <p className="font-bold text-primary flex items-center gap-2">
@@ -103,7 +103,7 @@ function DigitalInitiatives() {
               ))}
             </ul>
           </div>
-          <img src={cloudImg} alt="Cloud data center" width={1200} height={800} loading="lazy" className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]" />
+          <img src={cloudImg} alt="Cloud data center" width={1200} height={800} loading="lazy" className="rounded-2xl shadow-xl w-full h-auto object-cover aspect-4/3" />
         </div>
       </section>
 

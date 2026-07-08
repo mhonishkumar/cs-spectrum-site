@@ -1,0 +1,886 @@
+ 
+ 
+JOURNAL PUBLICATION BY FACULTY MEMBERS  
+Academic Year 2025–2026 
+S.No Name of the Faculty Title of the Paper Journal Name Calendar Year 
+of Publication ISSN Number Link to Website of 
+the Journal 
+Link to Article / 
+Paper / Abstract 
+1. 1 Mrs.R. S. Pratheeba,  
+Histopathological 
+Image Analysis and 
+Enhanced Diagnostic 
+Accuracy 
+Explainability for Oral 
+Cancer Detection 
+Cancer 
+Investigation(Tayl
+or & Francis) 
+September 2025 
+Print: 0735-
+7907Online: 1532-
+4192 
+https://www.tandfonli
+ne.com/journals/icnv2
+0 
+https://doi.org/10.1080
+/07357907.2025.2559
+103 
+2. 2 Mrs.T. Kavitha,  
+Blockchain-Enhanced 
+Framework for 
+Ensuring Data 
+Consistency, 
+Transparency and 
+Privacy in Cloud 
+Computing 
+Journal of 
+Applied 
+Engineering and 
+Technological 
+Science 
+December 2025 E-ISSN: 2715-
+5315 
+https://journal.yrpipku.
+com/index.php/jaets 
+https://journal.yrpipku.
+com/index.php/jaets/ar
+ticle/view/8851 
+3. 4 Mrs.J. Merlin Rosia,  
+Strategic Frameworks 
+for Carbon Emission 
+Mitigation 
+Discover 
+Sustainability 
+(Springer Nature) 
+2026 E-ISSN: 2662-
+9984 
+https://link.springer.co
+m/journal/43621 
+https://doi.org/10.1007
+/s43621-026-03247-0 
+ 
+S.No Name of the Faculty Title of the Paper Journal Name Calendar Year 
+of Publication ISSN Number Link to Website of 
+the Journal 
+Link to Article / 
+Paper / Abstract 
+4. 5 Mrs.J. Merlin Rosia,  
+Carbon Emission 
+Reduction 
+Methodologies 
+International 
+Journal of 
+Innovative 
+Science and 
+Research 
+Technology 
+(IJISRT) 
+September 2025 ISSN: 2456-2165 https://ijisrt.com 
+https://doi.org/10.3812
+4/ijisrt/25sep325 
+5. 7 Dr. Guruvammal  
+Explainable AI with 
+Hybrid Deep Learning 
+Model for Brain 
+Tumor Classification 
+Sensing and 
+Imaging 
+(Springer Nature) 
+2026 
+Print: 1557-
+2064Online: 1557-
+2072 
+https://link.springer.co
+m/journal/11220 
+https://link.springer.co
+m/article/10.1007/s11
+220-026-00803-w 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Academic Year 2024–2025 
+S.No Name of the 
+Faculty 
+Title of the 
+Paper Journal Name 
+Calendar 
+Year of 
+Publication 
+ISSN Number Link to Website 
+of the Journal 
+Link to Article / 
+Paper / Abstract 
+1 Dr. V. P. Gladis 
+Pushparathi 
+An Attention-
+Based Neural 
+Network for Lung 
+Cancer 
+Classification and 
+Gradient in MRI 
+Automatika – 
+Journal for Control, 
+Measurement, 
+Electronics, 
+Computing and 
+Communications 
+July 2024 
+0005-1144ISSN 
+(Online): 1848-
+3380 
+https://www.tandf
+online.com/journa
+ls/taut20 
+https://doi.org/10.10
+80/00051144.2024.2
+376776 
+2 Dr. V. P. Gladis 
+Pushparathi 
+Prostate Cancer 
+Classification and 
+Interpretation 
+with 
+Multiparametric 
+Magnetic 
+Resonance 
+Imaging and 
+Gleason Grade 
+Score Using 
+DarkNet53 Model 
+Automatika – 
+Journal for Control, 
+Measurement, 
+Electronics, 
+Computing and 
+Communications 
+November 
+2024 
+0005-1144ISSN 
+(Online): 1848-
+3380 
+https://www.tandf
+online.com/journa
+ls/taut20 
+https://pubmed.ncbi.
+nlm.nih.gov/395846
+18/ 
+3 Dr. V. P. Gladis 
+Pushparathi 
+Early Colon 
+Cancer Prediction 
+from 
+Histopathological 
+Images Using 
+Enhanced Deep 
+Cancer Investigation April 2025 
+0735-7907ISSN 
+(Online): 1532-
+4192 
+https://www.tandf
+online.com/journa
+ls/icnv20 
+https://doi.org/10.10
+80/07357907.2025.2
+483302 
+ 
+S.No Name of the 
+Faculty 
+Title of the 
+Paper Journal Name 
+Calendar 
+Year of 
+Publication 
+ISSN Number Link to Website 
+of the Journal 
+Link to Article / 
+Paper / Abstract 
+Learning with 
+Confidence 
+Scoring 
+4 Dr. S. 
+Soundararajan 
+Enhancing 
+Natural Disaster 
+Analysis and 
+Waste 
+Classification 
+Environmental 
+Monitoring and 
+Assessment 
+June 2024 
+0167-6369ISSN 
+(Online): 1573-
+2959 
+https://link.spring
+er.com/journal/10
+661 
+https://doi.org/10.10
+07/s10661-024-
+12745-5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Academic Year 2023–2024 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abs
+tract 
+1 Dr. N. Balaji 
+Predicting Heart 
+Disease Using 
+FTGM-PCA Based 
+Informative 
+Entropy Based 
+Random Forest 
+Current Applied 
+Science and 
+Technology 
+June 2023 
+ISSN (Print): 
+2586-9396ISSN 
+(Online): 2586-
+940X 
+https://li01.tci-
+thaijo.org/index.ph
+p/cast  
+https://li01.tci-
+thaijo.org/index.ph
+p/cast/article/view/
+253129 
+2 Dr. Balachander 
+Kandasamy 
+Predicting 
+Nanoparticle 
+Behavior in 
+Biological 
+Systems: A 
+Machine Learning 
+Approach 
+Nano World 
+Journal November 2023 ISSN (Online): 
+2379-1101 
+https://www.nanoth
+eranostics.com 
+https://doi.org/10.1
+7756/nwj.2023-s3-
+169 
+3 Dr. S. Soundararajan 
+Hybrid Pelican and 
+Archimedes 
+Optimization 
+Algorithm Fostered 
+Energy-Aware 
+Task Scheduling in 
+Heterogeneous 
+Virtualized Cloud 
+Computing 
+Transactions on 
+Emerging 
+Telecommunicati
+ons Technologies 
+September 2023 ISSN (Online): 
+2161-3915 
+https://onlinelibrar
+y.wiley.com/journa
+l/21613915 
+https://doi.org/10.1
+002/ett.4851?urlap
+pend=%3Futm_sou
+rce%3Dresearchgat
+e.net%26utm_medi
+um%3Darticle  
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abs
+tract 
+4 Dr. S. Soundararajan 
+Delay-Aware 
+Optimized 
+Scheduling 
+Algorithm for 
+High-Performance 
+Wireless Sensor 
+Networks 
+Automatika August 2023 
+ISSN (Print): 
+0005-1144ISSN 
+(Online): 1848-
+3380 
+https://www.tandfo
+nline.com/journals/
+taut20 
+https://doi.org/10.1
+080/00051144.202
+3.2269642 
+5 Dr. S. Soundararajan 
+Metaheuristic 
+Optimization and 
+Multihop Routing 
+Scheme with 
+Mobile Sink for 
+Wireless Sensor 
+Networks 
+Wireless Personal 
+Communications March 2023 
+ISSN (Print): 
+0929-6212ISSN 
+(Online): 1572-
+834X 
+https://link.springer
+.com/journal/11277 
+https://doi.org/10.1
+007/s11277-023-
+10247-
+0?urlappend=%3F
+utm_source%3Dre
+searchgate.net%26
+utm_medium%3Da
+rticle  
+6 Dr. S. Soundararajan 
+Energy-Efficient 
+Congestion Control 
+Scheme Based on 
+Modified Harris 
+Hawks 
+Optimization for 
+Heavy Traffic 
+Wireless Sensor 
+Networks 
+Automatika August 2023 
+ISSN (Print): 
+0005-1144ISSN 
+(Online): 1848-
+3380 
+https://www.tandfo
+nline.com/journals/
+taut20 
+https://doi.org/10.1
+080/00051144.202
+3.2243143 
+7 Dr. S. Soundararajan A Novel Survival Expert Systems July 2023 ISSN (Print): https://www.scienc https://doi.org/10.1
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abs
+tract 
+Analysis of 
+Machine Using 
+Fuzzy Ensemble 
+Convolutional 
+Based Optimal 
+RNN 
+with Applications 0957-4174ISSN 
+(Online): 1873-
+6793 
+edirect.com/journal
+/expert-systems-
+with-applications  
+016/j.asoc.2021.10
+8094 
+8 Dr. S. Soundararajan 
+Improving Image 
+Quality Through 
+Adaptive Filtering 
+Enhancement 
+Using Bidirectional 
+Memory and 
+Spatiotemporal 
+Constrained 
+Optimization 
+ICTACT Journal 
+on Image and 
+Video Processing 
+August 2023 ISSN (Print): 
+0976-9102 
+https://ictactjournal
+s.in/IJIVP 
+https://doi.org/10.2
+1917/ijivp.2023.04
+31 
+9 Dr. S. Soundararajan 
+Optimizing Wear 
+of Al 6062 Alloy 
+Using Machine 
+Learning and 
+Tungsten Carbide 
+Nanoparticles 
+European 
+Chemical Bulletin 2023 ISSN (Print): 
+2063-5346 
+https://www.eurche
+mbull.com 
+https://www.eurche
+mbull.com/uploads
+/paper/2fa6414964
+df5b752599f9b452
+01eb9b.pdf 
+10 Dr. S. Soundararajan 
+Affordable and 
+Energy-Efficient 
+Smart Security 
+System with 
+European 
+Chemical Bulletin 2023 ISSN (Print): 
+2063-5346 
+https://www.eurche
+mbull.com 
+https://www.ijresm
+.com/Vol.2_2019/
+Vol2_Iss5_May19/
+IJRESM_V2_I5_1
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abs
+tract 
+Information 
+Stamping for IoT 
+Networks 
+25.pdf 
+11 Dr. S. Soundararajan 
+Blockchain 
+Espoused Adaptive 
+Multi-Scale Dual 
+Attention Network 
+with Quaternion 
+Fractional Order 
+Meixner Moments 
+Encryption for 
+Cyber Security in 
+Wireless 
+Communication 
+Network 
+Wireless 
+Networks January 2024 
+ISSN (Print): 
+1022-0038ISSN 
+(Online): 1572-
+8196 
+https://link.springer
+.com/journal/11276 
+https://doi.org/10.1
+007/s11276-024-
+03674-
+9?urlappend=%3F
+utm_source%3Dre
+searchgate.net%26
+utm_medium%3Da
+rticle  
+12 Dr. S. Soundararajan 
+Self-Attention 
+Based Generative 
+Adversarial 
+Network with 
+Aquila 
+Optimization 
+Algorithm 
+Espoused Energy-
+Aware Cluster 
+Head Selection in 
+International 
+Journal of 
+Communication 
+Systems 
+2023 
+ISSN (Print): 
+1074-5351ISSN 
+(Online): 1099-
+1131 
+https://onlinelibrar
+y.wiley.com/journa
+l/10991131 
+https://doi.org/10.1
+002/dac.5690?urla
+ppend=%3Futm_so
+urce%3Dresearchg
+ate.net%26utm_me
+dium%3Darticle 
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abs
+tract 
+WSN 
+13 Dr. S. Soundararajan 
+Fuzzy Logic with 
+Honey Badger 
+Algorithm for 
+Cluster-Based 
+Multi-Hop Routing 
+Protocol for 
+Wireless Sensor 
+Networks 
+International 
+Journal of 
+Communication 
+Systems 
+May 2024 
+ISSN (Print): 
+1074-5351ISSN 
+(Online): 1099-
+1131 
+https://onlinelibrar
+y.wiley.com/journa
+l/10991131 
+https://doi.org/10.1
+002/dac.5810?urla
+ppend=%3Futm_so
+urce%3Dresearchg
+ate.net%26utm_me
+dium%3Darticle 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Academic Year 2022–2023 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abst
+ract 
+1 Dr. N. Balaji 
+Effective Heart 
+Disease Prediction 
+with Grey-Wolf 
+with Firefly 
+Algorithm–
+Differential 
+Evolution (GF-DE) 
+for Feature 
+Selection and 
+Weighted ANN 
+Classification 
+Computer 
+Methods in 
+Biomechanics 
+and Biomedical 
+Engineering 
+June 2022 
+ISSN (Print): 
+1025-5842ISSN 
+(Online): 1476-
+8259 
+https://www.tandfon
+line.com/journals/gc
+mb20 
+https://doi.org/10.10
+80/10255842.2022.2
+078966 
+2 Dr. S. 
+Soundararajan 
+Enhanced Path 
+Routing with 
+Buffer Allocation 
+Method Using 
+Coupling Node 
+Selection 
+Algorithm in 
+MANET 
+Wireless 
+Communications 
+and Mobile 
+Computing 
+July 2022 ISSN (Online): 
+1530-8669 
+https://www.hindawi
+.com/journals/wcmc/  
+https://doi.org/10.11
+55/2022/1955290  
+3 Dr. S. 
+Soundararajan 
+Optimal Route 
+Design for Sensor 
+Networks with 
+Effective Area 
+NeuroQuantology August 2022 ISSN (Print): 
+1303-5150 
+https://www.neuroqu
+antology.com  
+doi: 
+10.14704/nq.2022.20.
+10.NQ55306 
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abst
+ract 
+Coverage 
+4 Dr. S. 
+Soundararajan 
+Region-Centric GL 
+Feature 
+Approximation 
+Based Secure 
+Routing for 
+Improved QoS in 
+MANET 
+Intelligent 
+Automation & 
+Soft Computing 
+September 2022 
+ISSN (Print): 
+1079-8587ISSN 
+(Online): 2326-
+005X 
+https://www.techscie
+nce.com/iasc  
+https://doi.org/10.32
+604/iasc.2023.03223
+9 
+5 Dr. S. 
+Soundararajan 
+Modified Ad hoc 
+On-Demand 
+Distance Vector for 
+Trust Evaluation 
+and Attack 
+Detection 
+Intelligent 
+Automation & 
+Soft Computing 
+January 2023 
+ISSN (Print): 
+1079-8587ISSN 
+(Online): 2326-
+005X 
+https://www.techscie
+nce.com/iasc  
+https://doi.org/10.32
+604/iasc.2023.02575
+2 
+6 Dr. S. 
+Soundararajan 
+Metaheuristic 
+Optimization 
+Based Node 
+Localization and 
+Multihop Routing 
+Scheme with 
+Mobile Sink for 
+Wireless Sensor 
+Networks 
+Wireless Personal 
+Communications March 2023 
+ISSN (Print): 
+0929-6212ISSN 
+(Online): 1572-
+834X 
+https://link.springer.
+com/journal/11277 
+https://link.springer.
+com/article/10.1007/
+s11277-023-10247-0 
+7 Dr. V. P. Data Sampling Journal of August 2022 ISSN (Print): https://www.iospress https://doi.org/10.32
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abst
+ract 
+Gladis 
+Pushparathi 
+Approach Using 
+Heuristic Learning 
+Vector 
+Quantization 
+(LVQ) Classifier 
+for Software 
+Defect Prediction 
+Intelligent & 
+Fuzzy Systems 
+1064-1246ISSN 
+(Online): 1875-
+8967 
+.com/catalog/journal
+s/journal-of-
+intelligent-and-
+fuzzy-systems  
+33/JIFS-220480 
+8 Dr. Pranamita 
+Nanda 
+An Efficient 
+Algorithm for 
+Multi-Class 
+Classification in 
+Deep Neural 
+Network 
+Lecture Notes in 
+Networks and 
+Systems 
+October 2022 
+ISSN (Print): 
+2367-3370ISSN 
+(Online): 2367-
+3389 
+https://link.springer.
+com/bookseries/151
+79 
+https://link.springer.
+com/chapter/10.100
+7/978-981-19-5845-
+8_27 
+9 
+Dr. V. P. 
+Gladis 
+Pushparathi 
+Traffic Sign 
+Detection and 
+Recognition Using 
+RGSM and a Novel 
+Feature Extraction 
+Method 
+Peer-to-Peer 
+Networking and 
+Applications 
+December 2022 
+ISSN (Print): 
+1936-6442ISSN 
+(Online): 1936-
+6450 
+https://link.springer.
+com/journal/12083 
+https://link.springer.
+com/article/10.1007/
+s12083-021-01138-x 
+10 Dr. N. Balaji 
+Effective Heart 
+Disease Prediction 
+Using Novel MLP-
+EBMDA Approach 
+Biomedical 
+Signal Processing 
+and Control 
+February 2022 
+ISSN (Print): 
+1746-8094ISSN 
+(Online): 1746-
+8108 
+https://www.science
+direct.com/journal/bi
+omedical-signal-
+processing-and-
+control  
+https://www.science
+direct.com/science/a
+rticle/abs/pii/S17468
+09421009150 
+ 
+S.No Name of the 
+Faculty Title of the Paper Journal Name Publication 
+Month/Year ISSN Number Link to Website of 
+the Journal 
+Link to 
+Article/Paper/Abst
+ract 
+11 Dr. N. Balaji 
+Effective Heart 
+Disease Prediction 
+with Grey-Wolf 
+with Firefly 
+Algorithm–
+Differential 
+Evolution (GF-DE) 
+for Feature 
+Selection and 
+Weighted ANN 
+Classification 
+Computer 
+Methods in 
+Biomechanics 
+and Biomedical 
+Engineering 
+August 2022 
+ISSN (Print): 
+1025-5842ISSN 
+(Online): 1476-
+8259 
+https://www.tandfon
+line.com/journals/gc
+mb20 
+https://doi.org/10.10
+80/10255842.2022.2
+078966 
+12 Dr. S. 
+Soundararajan 
+GAMAN – Genetic 
+Algorithm in 
+Mobile Ad hoc 
+Networks for 
+Creating 
+Systematic QoS 
+ECS Transactions 
+(Electrochemical 
+Society) 
+June 2022 ISSN (Online): 
+1938-6737 
+https://iopscience.io
+p.org/journal/1938-
+6737 
+https://iopscience.io
+p.org/article/10.1149
+/10701.3599ecst/pdf  
+13 Dr. S. 
+Soundararajan 
+Biomedical Image 
+Restoration Using 
+Machine Learning 
+GPU Acceleration 
+Approach for 
+Precision 
+Improvement 
+International 
+Journal of Health 
+Sciences 
+June 2022 
+ISSN (Print): 
+2550-6978ISSN 
+(Online): 2550-
+696X 
+https://scienceschola
+r.us/journal/index.ph
+p/ijhs 
+https://doi.org/10.53
+730/ijhs.v6nS3.5892 
+ 
