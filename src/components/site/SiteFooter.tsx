@@ -102,11 +102,10 @@ export function SiteFooter() {
             </p>
             <div className="flex items-center gap-3 text-muted-foreground flex-wrap">
               {[
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Instagram, href: "#", label: "Instagram" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/innovate-cse-751818420/", label: "LinkedIn" },
+                { icon: Instagram, href: "https://www.instagram.com/vitcsedepartment?igsh=MXVxZGx1ZWMzYWdkZA==", label: "Instagram" },
                 { icon: Facebook, href: "#", label: "Facebook" },
-                { icon: Youtube, href: "#", label: "YouTube" },
-                { icon: Twitter, href: "#", label: "X (Twitter)" }
+                { icon: Youtube, href: "https://www.youtube.com/@InnovateCSE", label: "YouTube" }
               ].map((social, i) => (
                 <a
                   key={i}
