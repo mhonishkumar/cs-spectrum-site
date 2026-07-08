@@ -157,9 +157,9 @@ function Index() {
                   <p className="mt-2 text-sm text-muted-foreground">Graduates of the CSE program will:</p>
                   <ul className="mt-5 space-y-4">
                     {[
-                      { k: "PEO 1", v: "Apply their technical competence in computer science to solve real-world problems, with technical and people leadership." },
-                      { k: "PEO 2", v: "Conduct cutting-edge research and develop solutions on problems of social relevance." },
-                      { k: "PEO 3", v: "Work in a business environment, exhibiting team skills, work ethics, adaptability and lifelong learning." },
+                      { k: "PEO 1", v: "Achieve a Successful Profession with Good Knowledge in Computer Science and Engineering to Meet the Demands of Industry." },
+                      { k: "PEO 2", v: "Become Morally Responsible Engineers and Contribute to The Betterment of Society." },
+                      { k: "PEO 3", v: "Possess Required Skills and Leadership Qualities Which Will Make Them to Be a Continuous Learner." },
                     ].map((p, i) => (
                       <Reveal key={p.k} delay={i * 100}>
                         <li className="flex gap-4">
@@ -178,9 +178,8 @@ function Index() {
                   <p className="mt-2 text-sm text-muted-foreground">Graduates of B.E. CSE will have the ability to:</p>
                   <ul className="mt-5 space-y-4">
                     {[
-                      { k: "PSO 1", v: "Exhibit design and programming skills to build and automate business solutions using cutting-edge technologies." },
-                      { k: "PSO 2", v: "Build a strong theoretical foundation leading to excellence and excitement towards research, providing elegant solutions to complex problems." },
-                      { k: "PSO 3", v: "Work effectively with various engineering fields as a team to design, build and develop system applications." },
+                      { k: "PSO 1", v: "Apply the acquired knowledge of Mathematics and Computer Science Engineering fundamentals to analyse, design and develop software products or projects." },
+                      { k: "PSO 2", v: "Identify and apply appropriate latest software tools to provide solutions for complex engineering problems." },
                     ].map((p, i) => (
                       <Reveal key={p.k} delay={i * 100}>
                         <li className="flex gap-4">

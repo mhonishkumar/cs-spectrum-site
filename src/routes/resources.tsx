@@ -81,7 +81,7 @@ function ResourcesPage() {
       <main className="py-20">
         <section className="mx-auto max-w-7xl px-6">
           <SectionTitle kicker="LEARN ANYTIME">Study Materials</SectionTitle>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {RESOURCES.map((resource, i) => (
               <Reveal key={resource.title} delay={i * 100}>
                 <ResourceCard resource={resource} />
@@ -143,7 +143,7 @@ function ResourcesPage() {
               </div>
               <div className="mt-5 text-center lg:text-left">
                 <p className="font-extrabold text-2xl text-primary">Dr. R. Raja</p>
-                <p className="text-sm font-semibold text-brand mt-1">Academic Coordinator – Digital Innovation Cell</p>
+                <p className="text-sm font-semibold text-brand mt-1">Academic Coordinator</p>
                 <p className="text-xs font-medium text-muted-foreground mt-1">Department of Computer Science and Engineering<br/>Velammal Institute of Technology</p>
               </div>
             </Reveal>
@@ -151,12 +151,17 @@ function ResourcesPage() {
             <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
               <Reveal delay={100}>
                 <p>
-                  It is a pleasure to see our faculty and students embracing digital innovation and continuous learning. The Digital Innovation Cell is committed to fostering creativity, collaboration, and academic excellence through modern teaching practices and emerging technologies.
+                  It is a pleasure to witness the enthusiasm and commitment of our faculty and students in embracing digital innovation and continuous learning. The Digital Innovation Cell plays a vital role in promoting creativity, collaboration, and academic excellence by encouraging the adoption of modern teaching methodologies, emerging technologies, and innovative learning practices.
                 </p>
               </Reveal>
               <Reveal delay={200}>
                 <p>
-                  I appreciate the dedication of our faculty and the enthusiasm of our students in making learning more effective and innovative. Let us continue to explore new ideas, enhance our skills, and work together towards excellence.
+                  I sincerely appreciate the dedication of our faculty members in inspiring students through quality education and the active participation of our students in research, innovation, technical events, and skill development activities. Together, we are creating a dynamic learning environment that prepares our students to meet the challenges of the ever-evolving technology landscape.
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <p>
+                  Let us continue to explore new opportunities, strengthen our technical capabilities, and work collectively towards achieving excellence in education, innovation, and societal impact.
                 </p>
               </Reveal>
               <Reveal delay={300}>
