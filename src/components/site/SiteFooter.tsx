@@ -104,7 +104,7 @@ export function SiteFooter() {
               {[
                 { icon: Linkedin, href: "https://www.linkedin.com/in/innovate-cse-751818420/", label: "LinkedIn" },
                 { icon: Instagram, href: "https://www.instagram.com/vitcsedepartment?igsh=MXVxZGx1ZWMzYWdkZA==", label: "Instagram" },
-                { icon: Facebook, href: "#", label: "Facebook" },
+                { icon: Facebook, href: "https://www.facebook.com/velammal.admin/", label: "Facebook" },
                 { icon: Youtube, href: "https://www.youtube.com/@InnovateCSE", label: "YouTube" }
               ].map((social, i) => (
                 <a
