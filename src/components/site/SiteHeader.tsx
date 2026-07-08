@@ -17,10 +17,10 @@ const NAV: { label: string; to: string }[] = [
 ];
 
 const UTIL = [
-  { label: "Contact", href: "#" },
-  { label: "Directory", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "YouTube", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/vitcsedepartment?igsh=MXVxZGx1ZWMzYWdkZA==" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/innovate-cse-751818420/" },
+  { label: "Facebook", href: "https://www.facebook.com/velammal.admin/" },
+  { label: "YouTube", href: "https://www.youtube.com/@InnovateCSE" },
 ];
 
 export function SiteHeader() {
