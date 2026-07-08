@@ -81,7 +81,7 @@ export const FACULTY = [
     "name": "Mrs. Bhavani Chandana",
     "designation": "Assistant Professor",
     "qualification": "M. Tech.,",
-    "image": "/faculty-images/kanchana.jpeg"
+    "image": "/faculty-images/bhanvani chandhana.jpeg"
   },
   {
     "name": "Mrs. Renuga R",
