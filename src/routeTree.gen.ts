@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as InnovationShowcaseRouteImport } from './routes/innovation-showcase'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as FacultyResearchRouteImport } from './routes/faculty-research'
@@ -22,6 +23,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InnovationShowcaseRoute = InnovationShowcaseRouteImport.update({
+  id: '/innovation-showcase',
+  path: '/innovation-showcase',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/innovation-showcase': typeof InnovationShowcaseRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/innovation-showcase': typeof InnovationShowcaseRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/faculty-research': typeof FacultyResearchRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/innovation-showcase': typeof InnovationShowcaseRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/faculty-research'
     | '/feedback'
     | '/gallery'
+    | '/innovation-showcase'
     | '/resources'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/faculty-research'
     | '/feedback'
     | '/gallery'
+    | '/innovation-showcase'
     | '/resources'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/faculty-research'
     | '/feedback'
     | '/gallery'
+    | '/innovation-showcase'
     | '/resources'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   FacultyResearchRoute: typeof FacultyResearchRoute
   FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
+  InnovationShowcaseRoute: typeof InnovationShowcaseRoute
   ResourcesRoute: typeof ResourcesRoute
 }
 
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/resources'
       fullPath: '/resources'
       preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/innovation-showcase': {
+      id: '/innovation-showcase'
+      path: '/innovation-showcase'
+      fullPath: '/innovation-showcase'
+      preLoaderRoute: typeof InnovationShowcaseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   FacultyResearchRoute: FacultyResearchRoute,
   FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
+  InnovationShowcaseRoute: InnovationShowcaseRoute,
   ResourcesRoute: ResourcesRoute,
 }
 export const routeTree = rootRouteImport
