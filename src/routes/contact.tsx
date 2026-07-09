@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { Reveal } from "@/components/ui/Reveal";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Linkedin, MapPin, Mail, Phone } from "lucide-react";
 import img from "@/assets/cse-lab.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -56,6 +56,23 @@ function ContactPage() {
                   </div>
                   <span className="font-medium leading-tight">Velammal Institute of Technology<br/>Chennai, Tamil Nadu</span>
                 </div>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground flex-wrap pt-4">
+                {[
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/innovate-cse-751818420/", label: "LinkedIn" },
+                  { icon: Instagram, href: "https://www.instagram.com/vitcsedepartment?igsh=MXVxZGx1ZWMzYWdkZA==", label: "Instagram" },
+                  { icon: Facebook, href: "https://www.facebook.com/velammal.admin/", label: "Facebook" },
+                  { icon: Youtube, href: "https://www.youtube.com/@InnovateCSE", label: "YouTube" }
+                ].map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-brand hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-sm"
+                  >
+                    <social.icon className="h-4 w-4" />
+                  </a>
+                ))}
               </div>
             </div>
             
