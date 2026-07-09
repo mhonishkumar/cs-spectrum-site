@@ -60,16 +60,6 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "Dr. S. Anbu",
-    "title": "Smart RSSI Localization for Construction Accident Response",
-    "patentNumber": "202441037329",
-    "status": "Published",
-    "date": "24-05-2024",
-    "year": "2024",
-    "link": "",
-    "office": "Indian Patent Office"
-  },
-  {
     "facultyName": "Mr. K. Balachander",
     "title": "Autism Spectrum Disorder Detection with Children Expression Recognition",
     "patentNumber": "202441037330",
@@ -270,7 +260,7 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "Dr. V. P.",
+    "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "Deeper Segmentation Prediction Using Deep Learning in CNN Model",
     "patentNumber": "202341034154",
     "status": "Published",

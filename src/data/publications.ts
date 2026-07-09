@@ -232,7 +232,7 @@ export const PUBLICATIONS = [
     "year": "2022-2023"
   },
   {
-    "facultyName": "Dr. Pranamita Nanda",
+    "facultyName": "Mrs. Pranamita Nanda",
     "title": "An Efficient Algorithm for Multi-Class Classification in Deep Neural Network",
     "journal": "Lecture Notes in Networks and Systems",
     "issn": "ISSN (Print): 2367-3370ISSN (Online): 2367- 3389",
