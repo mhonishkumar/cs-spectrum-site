@@ -21,7 +21,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Mr. Raja R.",
-    "title": "Arduino Based Authenticatin g Voting Machine (AVM) Using RFID and Fingerprint for the",
+    "title": "Arduino Based Authenticatin g Voting Machine (AVM) Using RFID and Fingerprint for the Elections.",
     "patentNumber": "202441037324",
     "status": "Published",
     "date": "17-05-2024",
@@ -91,7 +91,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Dr. N. Balaji",
-    "title": "Enhancement of Toll Operations Using ZIGBEE",
+    "title": "Enhancement of Toll Operations Using ZIGBEE Communication,Authentication and Dynamic Traffic Management",
     "patentNumber": "202441037332",
     "status": "Published",
     "date": "24-05-2024",
@@ -120,8 +120,8 @@ export const PATENTS = [
     "office": "Indian Patent Office"
   },
   {
-    "facultyName": "Dr. V. P. Gladis",
-    "title": "Advanced",
+    "facultyName": "Dr. V. P. Gladis Pushparathi",
+    "title": "Advanced License Plate Recognition for Theft Vehicle Detection",
     "patentNumber": "202441037335",
     "status": "Published",
     "date": "24-05-2024",
@@ -161,7 +161,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Ms. Joice Ruby J",
-    "title": "Next- Generation",
+    "title": "Next- Generation 5G Wireless Networks",
     "patentNumber": "202441103052",
     "status": "Published",
     "date": "10-01-2025",
@@ -231,7 +231,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Ms. P. Chitra",
-    "title": "Face",
+    "title": "Face Detection and Recognition for Criminal Identification System",
     "patentNumber": "202341033824",
     "status": "Published",
     "date": "18-08-2023",
@@ -271,7 +271,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Dr. V. P.",
-    "title": "Deeper",
+    "title": "Deeper Segmentation Prediction Using Deep Learning in CNN Model",
     "patentNumber": "202341034154",
     "status": "Published",
     "date": "30-06-2023",
@@ -341,7 +341,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Mr. R. Nithin Kumar",
-    "title": "The Design of a Low-",
+    "title": "The Design of a Low-Cost IoT System for Automated Attendee Registration Based on Wireless Electronic Sensors",
     "patentNumber": "202341011064",
     "status": "Published",
     "date": "17-03-2023",
