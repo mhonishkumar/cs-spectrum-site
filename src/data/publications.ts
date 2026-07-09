@@ -1,6 +1,6 @@
 export const PUBLICATIONS = [
   {
-    "facultyName": "Drs.R. S. Pratheeba",
+    "facultyName": "Mrs.R. S. Pratheeba",
     "title": "Histopathological Image Analysis and Enhanced Diagnostic Accuracy Explainability for Oral Cancer Detection",
     "journal": "Cancer Investigation(Tayl or & Francis)",
     "issn": "Print: 0735- 7907Online: 1532- 4192",
@@ -8,15 +8,15 @@ export const PUBLICATIONS = [
     "year": "2025-2026"
   },
   {
-    "facultyName": "Drs.T. Kavitha",
+    "facultyName": "Mrs.T. Kavitha",
     "title": "Blockchain-Enhanced Framework for Ensuring Data Consistency, Transparency and Privacy in Cloud Computing",
     "journal": "Journal of Applied Engineering and Technological Science",
     "issn": "E-ISSN: 2715- 5315",
-    "link": "https://journal.yrpipku.",
+    "link": "https://journal.yrpipku.com/index.php/jaets",
     "year": "2025-2026"
   },
   {
-    "facultyName": "Drs.J. Merlin Rosia",
+    "facultyName": "Mrs.J. Merlin Rosia",
     "title": "Strategic Frameworks for Carbon Emission Mitigation",
     "journal": "Discover Sustainability (Springer Nature)",
     "issn": "E-ISSN: 2662- 9984",
@@ -24,7 +24,7 @@ export const PUBLICATIONS = [
     "year": "2025-2026"
   },
   {
-    "facultyName": "Drs.J. Merlin Rosia",
+    "facultyName": "Mrs.J. Merlin Rosia",
     "title": "Carbon Emission Reduction Methodologies",
     "journal": "International Journal of Innovative Science and Research Technology (IJISRT)",
     "issn": "ISSN: 2456-2165",
@@ -42,17 +42,17 @@ export const PUBLICATIONS = [
   {
     "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "An Attention- Based Neural Network for Lung Cancer Classification and Gradient in MRI",
-    "journal": "Automatika \u2013 Journal for Control, Measurement, Electronics, Computing and Communications",
+    "journal": "Automatika -- Journal for Control, Measurement, Electronics, Computing and Communications",
     "issn": "0005-1144ISSN (Online): 1848- 3380",
-    "link": "https://www.tandfonline.com/journa",
+    "link": "https://www.tandfonline.com/journals/taut20",
     "year": "2024-2025"
   },
   {
     "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "Prostate Cancer Classification and Interpretation with Multiparametric Magnetic Resonance Imaging and Gleason Grade Score Using DarkNet53 Model",
-    "journal": "Automatika \u2013 Journal for Control, Measurement, Electronics, Computing and Communications",
+    "journal": "Automatika -- Journal for Control, Measurement, Electronics, Computing and Communications",
     "issn": "0005-1144ISSN (Online): 1848- 3380",
-    "link": "https://www.tandfonline.com/journa",
+    "link": "https://www.tandfonline.com/journals/taut20",
     "year": "2024-2025"
   },
   {
@@ -60,7 +60,7 @@ export const PUBLICATIONS = [
     "title": "Early Colon Cancer Prediction from Histopathological Images Using Enhanced Deep",
     "journal": "Cancer Investigation",
     "issn": "0735-7907ISSN (Online): 1532- 4192",
-    "link": "https://www.tandfonline.com/journa",
+    "link": "https://www.tandfonline.com/journals/icnv20",
     "year": "2024-2025"
   },
   {
@@ -84,7 +84,7 @@ export const PUBLICATIONS = [
     "title": "Predicting Nanoparticle Behavior in Biological Systems: A Machine Learning Approach",
     "journal": "Nano World Journal",
     "issn": "ISSN (Online): 2379-1101",
-    "link": "https://www.nanoth",
+    "link": "https://www.nanotheranostics.com",
     "year": "2023-2024"
   },
   {
@@ -108,7 +108,7 @@ export const PUBLICATIONS = [
     "title": "Metaheuristic Optimization and Multihop Routing Scheme with Mobile Sink for Wireless Sensor Networks",
     "journal": "Wireless Personal Communications",
     "issn": "ISSN (Print): 0929-6212ISSN (Online): 1572- 834X",
-    "link": "https://link.springer",
+    "link": "https://link.springer.com/journal/11277",
     "year": "2023-2024"
   },
   {
@@ -121,10 +121,10 @@ export const PUBLICATIONS = [
   },
   {
     "facultyName": "Dr. S. Soundararajan",
-    "title": "A Novel Survival",
-    "journal": "Expert Systems",
-    "issn": "ISSN (Print):",
-    "link": "https://www.scienc",
+    "title": "A Novel Survival Analysis of Machine Using Fuzzy Ensemble Convolutional Based Optimal RNN",
+    "journal": "Expert Systems with Applications",
+    "issn": "ISSN (Print):0957-4174ISSN(Online): 1873-6793",
+    "link": "https://www.sciencedirect.com/journal/expert-systems-with-applications",
     "year": "2023-2024"
   },
   {
@@ -140,15 +140,15 @@ export const PUBLICATIONS = [
     "title": "Optimizing Wear of Al 6062 Alloy Using Machine Learning and Tungsten Carbide Nanoparticles",
     "journal": "European Chemical Bulletin",
     "issn": "ISSN (Print): 2063-5346",
-    "link": "https://www.eurche",
+    "link": "https://www.eurchembull.com",
     "year": "2023-2024"
   },
   {
     "facultyName": "Dr. S. Soundararajan",
-    "title": "Affordable and Energy-Efficient Smart Security System with",
+    "title": "Affordable and Energy-Efficient Smart Security System with Information Stamping for IoT Networks",
     "journal": "European Chemical Bulletin",
     "issn": "ISSN (Print): 2063-5346",
-    "link": "https://www.eurche",
+    "link": "https://www.eurchembull.com",
     "year": "2023-2024"
   },
   {
@@ -156,7 +156,7 @@ export const PUBLICATIONS = [
     "title": "Blockchain Espoused Adaptive Multi-Scale Dual Attention Network with Quaternion Fractional Order Meixner Moments Encryption for Cyber Security in Wireless Communication Network",
     "journal": "Wireless Networks",
     "issn": "ISSN (Print): 1022-0038ISSN (Online): 1572- 8196",
-    "link": "https://link.springer",
+    "link": "https://link.springer.com/journal/11276",
     "year": "2023-2024"
   },
   {
@@ -196,7 +196,7 @@ export const PUBLICATIONS = [
     "title": "Optimal Route Design for Sensor Networks with Effective Area",
     "journal": "NeuroQuantology",
     "issn": "ISSN (Print): 1303-5150",
-    "link": "https://www.neuroqu",
+    "link": "https://www.neuroquantology.com",
     "year": "2022-2023"
   },
   {
@@ -224,19 +224,11 @@ export const PUBLICATIONS = [
     "year": "2022-2023"
   },
   {
-    "facultyName": "Dr. V. P.",
-    "title": "Data Sampling",
-    "journal": "Journal of",
-    "issn": "ISSN (Print):",
-    "link": "https://www.iospress",
-    "year": "2022-2023"
-  },
-  {
-    "facultyName": "Gladis Pushparathi",
-    "title": "Approach Using Heuristic Learning Vector Quantization (LVQ) Classifier for Software Defect Prediction",
-    "journal": "Intelligent & Fuzzy Systems",
-    "issn": "1064-1246ISSN (Online): 1875- 8967",
-    "link": "",
+    "facultyName": "Dr. V. P. Gladis Pushparathi",
+    "title": "Data Sampling Approach Using Heuristic Learning Vector Quantization(LVQ) Classifier for Software Defect Prediction",
+    "journal": "Journal of Intelligent & Fuzzy Systems",
+    "issn": "ISSN (Print): 1064-1246 ISSN (Online): 1875-8967",
+    "link": "https://www.iospress.com/catalog/journals/journal-of-intelligent-and-fuzzy-systems",
     "year": "2022-2023"
   },
   {
