@@ -44,9 +44,9 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
 },
   {
     id: "proj-6",
-    title: "Serverless E-Commerce Microservices",
-    videoId: "#", // Reusing a valid placeholder
-    students: ["Sneha R.", "Ananya J."],
-    description: "A highly scalable e-commerce backend built entirely using serverless components to reduce cold starts and optimize cost.",
+    title: "🍽️ MealMind is an AI-based Food Prediction and Redistribution System designed to reduce food wastage in hostels through intelligent demand forecasting and efficient surplus food management.",
+    videoId: "https://youtu.be/KKGctexk9Ok?si=Hi8rpbiAGacAO-0s", // Reusing a valid placeholder
+    students: ["Deva Harshini", "Afra"],
+    description: "MealMind is an innovative AI-based food prediction and redistribution system designed to minimize food waste in hostels through intelligent demand forecasting and efficient surplus management. The system uses Artificial Intelligence and Machine Learning to analyze historical meal consumption, attendance, holidays, weather conditions, and other influencing factors to accurately predict the quantity of food required each day. By minimizing overproduction and redistributing surplus food to nearby NGOs and charitable organizations, MealMind promotes sustainability, reduces operational costs, and helps address food insecurity.\n#MealMind #ArtificialIntelligence #MachineLearning #FoodWaste #FoodRedistribution #SmartHostel #AIProject #FinalYearProject #Python #Sustainability #FoodManagement #Innovation #StudentProject #TechForGood",
   }
 ];
