@@ -3,123 +3,50 @@ export interface ProjectVideo {
   title: string;
   videoId: string;
   students: string[];
-  facultyGuide: string;
-  technology: string[];
-  year: string;
-  category: string;
-  batch: string;
   description: string;
-  objectives: string[];
-  github?: string;
-  paper?: string;
 }
 
 export const INNOVATION_PROJECTS: ProjectVideo[] = [
   {
     id: "proj-1",
-    title: "AI-Based Smart Attendance System",
-    videoId: "#", // Placeholder mock ID
-    students: ["Harish Narayan", "Karthik R."],
-    facultyGuide: "Dr. R. Venkadesh",
-    technology: ["React", "Flask", "OpenCV", "TensorFlow"],
-    year: "2025",
-    category: "Computer Vision",
-    batch: "2021-2025",
-    description: "An AI-powered attendance system using facial recognition that automates the roll-call process in large classrooms with 99% accuracy.",
-    objectives: [
-      "Automate attendance tracking using IP cameras.",
-      "Reduce proxy attendance to zero.",
-      "Generate daily reports and notify absentees automatically."
-    ],
-    github: "https://github.com/example/attendance-ai",
+    title: "Eco Crop: Enhancing Agricultural Productivity  Full Project Video YouTube Description",
+    videoId: "https://youtu.be/G8ghEsRRV4Y", // Placeholder mock ID
+    students: ["Manoj"],
+    description: "🌱 Eco Crop: Enhancing Agricultural Productivity Through Smart Solutions | Full Project Video\n\nWelcome to the complete demonstration of Eco Crop, an innovative smart agriculture project developed to enhance agricultural productivity through intelligent technologies. This project integrates AI, IoT, and data-driven solutions to help farmers monitor crops, optimize resources, and improve farming efficiency.\n#EcoCrop #SmartAgriculture #PrecisionFarming #ArtificialIntelligence #IoT #AgricultureTechnology #SustainableFarming #StudentProject #FinalYearProject #Innovation #EngineeringProjects #ProjectShowcase",
   },
   {
     id: "proj-2",
-    title: "Zero-Trust IoT Security Gateway",
-    videoId: "#", // Placeholder mock ID
+    title: "AI-Driven 3D Virtual Museum Guide | QR-Based Multilingual Navigation",
+    videoId: "https://youtu.be/dmGaRY-RMpc", // Placeholder mock ID
     students: ["Divya S.", "Priya M."],
-    facultyGuide: "Dr. Meenakshi Iyer",
-    technology: ["Python", "AWS IoT", "Docker", "Raspberry Pi"],
-    year: "2024",
-    category: "Cybersecurity",
-    batch: "2020-2024",
-    description: "A lightweight, secure gateway for edge devices implementing Zero-Trust Architecture to prevent lateral movement during network breaches.",
-    objectives: [
-      "Implement mutual TLS for all edge node communications.",
-      "Monitor traffic anomalies in real-time.",
-      "Isolate compromised nodes autonomously."
-    ],
-    paper: "https://arxiv.org/abs/example",
+    description: "Design and Development of an AI-Driven Multilingual 3D Virtual Museum Guide Using QR-Based Technology is an innovative project that enhances the museum experience through Artificial Intelligence, 3D virtual environments, multilingual support, and QR code integration.",
   },
   {
     id: "proj-3",
-    title: "Predictive Healthcare Analytics Engine",
-    videoId: "#", // Placeholder mock ID
-    students: ["Aravind K.", "Rahul V."],
-    facultyGuide: "Prof. Anitha Suresh",
-    technology: ["Next.js", "FastAPI", "PostgreSQL", "Scikit-Learn"],
-    year: "2026",
-    category: "Data Science",
-    batch: "2022-2026",
-    description: "A clinical decision support system that predicts patient readmission risks using historical electronic health records.",
-    objectives: [
-      "Process multi-modal patient data securely.",
-      "Achieve an AUC-ROC score > 0.85 on readmission predictions.",
-      "Provide an interpretable dashboard for clinicians."
-    ],
-    github: "https://github.com/example/health-predict",
+    title: "Travel Planner AI | Smart Trip Planning Using Artificial Intelligence",
+    videoId: "https://youtu.be/NOVZX5tJ-Ko", // Placeholder mock ID
+    students: ["Tharun Sanjay"],
+    description: "✈️ Travel Planner AI is an intelligent travel planning system that leverages Artificial Intelligence to help users create personalized travel itineraries, discover destinations, estimate budgets, and optimize travel schedules with ease.\nTravel Planner AI simplifies travel planning by providing intelligent recommendations, optimized schedules, and personalized itineraries, making every journey more convenient, efficient, and enjoyable.\n#TravelPlannerAI #ArtificialIntelligence #TravelTech #SmartTravel #AIProject #StudentProject #Innovation #MachineLearning #WebDevelopment #FinalYearProject #EngineeringProjects #ProjectShowcase",
   },
   {
     id: "proj-4",
-    title: "Decentralized Academic Credentials",
-    videoId: "#", // Placeholder mock ID
-    students: ["Siddharth M."],
-    facultyGuide: "Dr. R. Venkadesh",
-    technology: ["Solidity", "React", "Ethereum", "IPFS"],
-    year: "2025",
-    category: "Blockchain",
-    batch: "2021-2025",
-    description: "A blockchain-based system for issuing and verifying university degrees and transcripts, eliminating the possibility of forged documents.",
-    objectives: [
-      "Issue non-fungible academic credentials.",
-      "Store encrypted data on IPFS.",
-      "Allow instant verification by employers via a web portal."
-    ],
-    github: "https://github.com/example/d-credentials",
+    title: "CareNet AI | Intelligent Healthcare Support Using Artificial Intelligence",
+    videoId: "https://youtu.be/kj0LIQ6iFCo", // Placeholder mock ID
+    students: ["Raghul","Vishva","Ranjith"],
+    description: "CareNet AI is an innovative AI-powered healthcare support platform developed to provide intelligent medical assistance, symptom analysis, and healthcare guidance. The system leverages Artificial Intelligence to help users access preliminary health information, connect with healthcare resources, and improve the overall patient support experience.\n#CareNetAI #ArtificialIntelligence #HealthcareAI #MedicalSupport #StudentProject #Innovation #AI #HealthcareTechnology #MachineLearning #FinalYearProject #EngineeringStudents #ProjectShowcase",
   },
   {
     id: "proj-5",
-    title: "Autonomous Warehouse Robot",
-    videoId: "#", // Placeholder mock ID
-    students: ["Naveen T.", "Vijay P."],
-    facultyGuide: "Dr. Meenakshi Iyer",
-    technology: ["ROS", "C++", "Lidar", "Arduino"],
-    year: "2024",
-    category: "Robotics",
-    batch: "2020-2024",
-    description: "A prototype of an autonomous guided vehicle (AGV) capable of navigating indoor environments and avoiding dynamic obstacles.",
-    objectives: [
-      "Implement SLAM for indoor mapping.",
-      "Navigate smoothly around moving humans.",
-      "Integrate with an inventory management API."
-    ]
-  },
+    title: "Trade Finance Blockchain Explorer | Student Innovation Project",
+    videoId: "https://youtu.be/AecZyRESy8U", // Placeholder mock ID
+    students: ["Vijaya Nirmala", "Puli Likitha","Shaik Parveen"],
+    description: "🌐 Trade Finance Blockchain Explorer is an innovative blockchain-powered platform designed to modernize trade finance by providing secure, transparent, and tamper-proof management of trade transactions. The system leverages blockchain technology to streamline documentation, improve trust between stakeholders, and enhance the efficiency of international trade processes.\n#TradeFinance #Blockchain #BlockchainExplorer #SmartContracts #FinTech #TradeTechnology #StudentProject #Innovation #FinalYearProject #WebDevelopment #EmergingTechnology #EngineeringStudents",
+},
   {
     id: "proj-6",
-    title: "Serverless E-Commerce Microservices",
-    videoId: "#", // Reusing a valid placeholder
-    students: ["Sneha R.", "Ananya J."],
-    facultyGuide: "Prof. Anitha Suresh",
-    technology: ["AWS Lambda", "DynamoDB", "React", "Node.js"],
-    year: "2026",
-    category: "Cloud Computing",
-    batch: "2022-2026",
-    description: "A highly scalable e-commerce backend built entirely using serverless components to reduce cold starts and optimize cost.",
-    objectives: [
-      "Handle up to 10k concurrent requests.",
-      "Maintain latency under 200ms.",
-      "Implement event-driven architecture for order processing."
-    ],
-    github: "https://github.com/example/serverless-shop",
+    title: "🍽️ MealMind is an AI-based Food Prediction and Redistribution System designed to reduce food wastage in hostels through intelligent demand forecasting and efficient surplus food management.",
+    videoId: "https://youtu.be/KKGctexk9Ok?si=Hi8rpbiAGacAO-0s", // Reusing a valid placeholder
+    students: ["Deva Harshini", "Afra"],
+    description: "MealMind is an innovative AI-based food prediction and redistribution system designed to minimize food waste in hostels through intelligent demand forecasting and efficient surplus management. The system uses Artificial Intelligence and Machine Learning to analyze historical meal consumption, attendance, holidays, weather conditions, and other influencing factors to accurately predict the quantity of food required each day. By minimizing overproduction and redistributing surplus food to nearby NGOs and charitable organizations, MealMind promotes sustainability, reduces operational costs, and helps address food insecurity.\n#MealMind #ArtificialIntelligence #MachineLearning #FoodWaste #FoodRedistribution #SmartHostel #AIProject #FinalYearProject #Python #Sustainability #FoodManagement #Innovation #StudentProject #TechForGood",
   }
 ];
