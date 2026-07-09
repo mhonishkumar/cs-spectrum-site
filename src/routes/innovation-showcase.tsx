@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { PageHero, SectionTitle } from "@/components/site/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
-import { INNOVATION_PROJECTS, ProjectVideo } from "@/data/innovationShowcase";
+import { INNOVATION_PROJECTS, type ProjectVideo } from "@/data/innovationShowcase";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -26,6 +26,12 @@ import { Play, Search, Github, FileText, Users, User, Calendar, BookOpen } from 
 
 import aiImg from "@/assets/cse-ai.jpg"; // Using this as the tech-themed background
 
+const getYoutubeId = (urlOrId: string) => {
+  if (!urlOrId) return "";
+  const match = urlOrId.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
+  return match ? match[1] : urlOrId;
+};
+
 export const Route = createFileRoute("/innovation-showcase")({
   head: () => ({
     meta: [
@@ -41,35 +47,17 @@ export const Route = createFileRoute("/innovation-showcase")({
 
 function InnovationShowcase() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [yearFilter, setYearFilter] = useState<string>("all");
-  const [categoryFilter, setCategoryFilter] = useState<string>("all");
-  const [batchFilter, setBatchFilter] = useState<string>("all");
-
   const [selectedProject, setSelectedProject] = useState<ProjectVideo | null>(null);
-
-  // Extract unique filter options
-  const uniqueYears = useMemo(() => Array.from(new Set(INNOVATION_PROJECTS.map(p => p.year))).sort().reverse(), []);
-  const uniqueCategories = useMemo(() => Array.from(new Set(INNOVATION_PROJECTS.map(p => p.category))).sort(), []);
-  const uniqueBatches = useMemo(() => Array.from(new Set(INNOVATION_PROJECTS.map(p => p.batch))).sort().reverse(), []);
 
   // Filter logic
   const filteredProjects = useMemo(() => {
     return INNOVATION_PROJECTS.filter((project) => {
-      // Text search: matches title, student names, faculty guide, or technologies
+      // Text search: matches title, student names
       const query = searchQuery.toLowerCase();
-      const matchesSearch =
-        project.title.toLowerCase().includes(query) ||
-        project.students.some((s) => s.toLowerCase().includes(query)) ||
-        project.facultyGuide.toLowerCase().includes(query) ||
-        project.technology.some((t) => t.toLowerCase().includes(query));
-
-      const matchesYear = yearFilter === "all" || project.year === yearFilter;
-      const matchesCategory = categoryFilter === "all" || project.category === categoryFilter;
-      const matchesBatch = batchFilter === "all" || project.batch === batchFilter;
-
-      return matchesSearch && matchesYear && matchesCategory && matchesBatch;
+      return project.title.toLowerCase().includes(query) ||
+             project.students.some((s) => s.toLowerCase().includes(query));
     });
-  }, [searchQuery, yearFilter, categoryFilter, batchFilter]);
+  }, [searchQuery]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -87,54 +75,16 @@ function InnovationShowcase() {
           <SectionTitle kicker="DISCOVER">Projects & Research</SectionTitle>
         </Reveal>
 
-        {/* Filters Section */}
+        {/* Search Section */}
         <div className="mt-10 mb-12 bg-card border border-border rounded-2xl p-6 shadow-sm flex flex-col md:flex-row gap-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search by title, student, faculty, or technology..."
+              placeholder="Search by title or student..."
               className="pl-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-              <SelectTrigger className="w-full sm:w-[160px]">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {uniqueCategories.map((cat) => (
-                  <SelectItem key={cat} value={cat}>{cat}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select value={yearFilter} onValueChange={setYearFilter}>
-              <SelectTrigger className="w-full sm:w-[130px]">
-                <SelectValue placeholder="Academic Year" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Years</SelectItem>
-                {uniqueYears.map((year) => (
-                  <SelectItem key={year} value={year}>{year}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select value={batchFilter} onValueChange={setBatchFilter}>
-              <SelectTrigger className="w-full sm:w-[140px]">
-                <SelectValue placeholder="Batch" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Batches</SelectItem>
-                {uniqueBatches.map((batch) => (
-                  <SelectItem key={batch} value={batch}>{batch}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </div>
         </div>
 
@@ -147,7 +97,7 @@ function InnovationShowcase() {
                 <div className="relative w-full pt-[56.25%] bg-muted">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full border-0"
-                    src={`https://www.youtube.com/embed/${project.videoId}?rel=0`}
+                    src={`https://www.youtube.com/embed/${getYoutubeId(project.videoId)}?rel=0`}
                     title={project.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -156,15 +106,6 @@ function InnovationShowcase() {
 
                 {/* Card Content */}
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="flex items-center gap-2 mb-3 flex-wrap">
-                    <Badge variant="secondary" className="font-medium text-xs">
-                      {project.category}
-                    </Badge>
-                    <Badge variant="outline" className="font-medium text-xs">
-                      {project.year}
-                    </Badge>
-                  </div>
-                  
                   <h3 className="font-bold text-xl leading-tight mb-2 group-hover:text-brand transition-colors line-clamp-2">
                     {project.title}
                   </h3>
@@ -177,10 +118,6 @@ function InnovationShowcase() {
                     <div className="flex items-center gap-2 text-foreground/80">
                       <Users className="h-4 w-4 text-brand" />
                       <span className="truncate">{project.students.join(", ")}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-foreground/80">
-                      <User className="h-4 w-4 text-brand" />
-                      <span className="truncate">{project.facultyGuide}</span>
                     </div>
                   </div>
 
@@ -215,7 +152,7 @@ function InnovationShowcase() {
             <div className="relative w-full pt-[56.25%] bg-black rounded-t-lg overflow-hidden shrink-0">
               <iframe
                 className="absolute top-0 left-0 w-full h-full border-0"
-                src={`https://www.youtube.com/embed/${selectedProject.videoId}?rel=0&autoplay=1`}
+                src={`https://www.youtube.com/embed/${getYoutubeId(selectedProject.videoId)}?rel=0&autoplay=1`}
                 title={selectedProject.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -225,85 +162,31 @@ function InnovationShowcase() {
             <div className="p-6 md:p-8 space-y-8">
               <div>
                 <DialogHeader>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="default" className="bg-brand hover:bg-brand/90">
-                      {selectedProject.category}
-                    </Badge>
-                    <Badge variant="outline">Batch {selectedProject.batch}</Badge>
-                  </div>
                   <DialogTitle className="text-2xl md:text-3xl font-bold leading-tight">
                     {selectedProject.title}
                   </DialogTitle>
                 </DialogHeader>
-                <DialogDescription className="text-base mt-4 text-foreground/90 leading-relaxed">
+                <DialogDescription className="text-base mt-4 text-foreground/90 leading-relaxed whitespace-pre-wrap">
                   {selectedProject.description}
                 </DialogDescription>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-lg flex items-center gap-2 border-b pb-2">
-                    <BookOpen className="h-5 w-5 text-brand" />
-                    Objectives
-                  </h4>
-                  <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                    {selectedProject.objectives.map((obj, i) => (
-                      <li key={i}>{obj}</li>
-                    ))}
-                  </ul>
-                </div>
-
+              <div className="grid gap-8">
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-lg flex items-center gap-2 border-b pb-2 mb-4">
                       <Users className="h-5 w-5 text-brand" />
-                      Team & Faculty
+                      Team
                     </h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between items-center bg-secondary/50 p-3 rounded-lg">
                         <span className="text-muted-foreground font-medium">Students</span>
                         <span className="font-medium text-right">{selectedProject.students.join(", ")}</span>
                       </div>
-                      <div className="flex justify-between items-center bg-secondary/50 p-3 rounded-lg">
-                        <span className="text-muted-foreground font-medium">Faculty Guide</span>
-                        <span className="font-medium text-right">{selectedProject.facultyGuide}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-lg border-b pb-2 mb-4">Technologies</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.technology.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-brand/10 text-brand border-brand/20">
-                          {tech}
-                        </Badge>
-                      ))}
                     </div>
                   </div>
                 </div>
               </div>
-
-              {(selectedProject.github || selectedProject.paper) && (
-                <div className="flex gap-4 pt-6 border-t mt-8">
-                  {selectedProject.github && (
-                    <Button asChild variant="outline" className="gap-2 w-full sm:w-auto">
-                      <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4" />
-                        View Repository
-                      </a>
-                    </Button>
-                  )}
-                  {selectedProject.paper && (
-                    <Button asChild variant="outline" className="gap-2 w-full sm:w-auto">
-                      <a href={selectedProject.paper} target="_blank" rel="noopener noreferrer">
-                        <FileText className="h-4 w-4" />
-                        Research Paper
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              )}
             </div>
           </DialogContent>
         )}

@@ -8,7 +8,6 @@ const QUICK_LINKS = [
   { label: "Faculty", href: "/faculty" },
   { label: "Research", href: "/faculty-research" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/faculty-blog" },
   { label: "Achievements", href: "/achievements" },
   { label: "Contact", href: "/contact" },
 ];
