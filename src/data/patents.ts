@@ -371,7 +371,7 @@ export const PATENTS = [
   },
   {
     "facultyName": "Mr. J. A. Jevin",
-    "title": "Deep Learning Resolves Representativ e Movement Patterns in a Marine",
+    "title": "Deep Learning Resolves Representative Movement Patterns in a Marine",
     "patentNumber": "202341016417",
     "status": "Published",
     "date": "17-03-2023",
