@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ModeToggle } from "@/components/ModeToggle";
 
 
 const NAV: { label: string; to: string }[] = [
@@ -52,19 +53,22 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
-            className="md:hidden inline-flex items-center justify-center p-2 border hairline text-primary"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="md:hidden flex items-center gap-4">
+            <ModeToggle />
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle menu"
+              className="inline-flex items-center justify-center p-2 border hairline text-primary"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Sticky nav — hairline underline with electric-indigo hover */}
       <nav className="sticky top-0 z-40 bg-background/95 backdrop-blur-md border-b hairline">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-6 flex items-center">
           <ul
             className={`${
               open ? "flex flex-col py-3" : "hidden md:flex"
@@ -88,6 +92,9 @@ export function SiteHeader() {
               );
             })}
           </ul>
+          <div className="hidden md:flex ml-auto items-center">
+            <ModeToggle />
+          </div>
         </div>
       </nav>
     </>
