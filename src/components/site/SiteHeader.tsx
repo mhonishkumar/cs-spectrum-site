@@ -45,13 +45,16 @@ export function SiteHeader() {
               </h1>
             </div>
           </Link>
-          <nav className="hidden md:flex items-end gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
-            {UTIL.map((u) => (
-              <a key={u.label} href={u.href} className="hover:text-brand transition-colors">
-                {u.label}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
+              {UTIL.map((u) => (
+                <a key={u.label} href={u.href} className="hover:text-brand transition-colors">
+                  {u.label}
+                </a>
+              ))}
+            </nav>
+            <ModeToggle />
+          </div>
 
           <div className="md:hidden flex items-center gap-4">
             <ModeToggle />
@@ -92,9 +95,6 @@ export function SiteHeader() {
               );
             })}
           </ul>
-          <div className="hidden md:flex ml-auto items-center">
-            <ModeToggle />
-          </div>
         </div>
       </nav>
     </>
