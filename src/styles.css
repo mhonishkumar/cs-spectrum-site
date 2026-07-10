@@ -61,6 +61,31 @@
   --gradient-hero: linear-gradient(140deg, #E6F2DD 0%, #f2f7ef 55%, #B1D3B9 100%);
 }
 
+.dark {
+  --background: #11001C;
+  --foreground: #f8f4fb;
+  --card: #190028;
+  --card-foreground: #f8f4fb;
+  --primary: #f8f4fb;
+  --primary-foreground: #11001C;
+  --secondary: #220135;
+  --secondary-foreground: #f8f4fb;
+  --muted: #32004F;
+  --muted-foreground: #c6b3d6;
+  --accent: #3A015C;
+  --accent-foreground: #ffffff;
+  --border: #32004F;
+  --input: #32004F;
+  --ring: #3A015C;
+
+  --brand: #3A015C;
+  --brand-foreground: #ffffff;
+  --brand-deep: #220135;
+  --brand-deep-2: #190028;
+
+  --gradient-hero: linear-gradient(140deg, #220135 0%, #190028 55%, #11001C 100%);
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   body {

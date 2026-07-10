@@ -117,27 +117,6 @@ export const FACULTY_RESEARCH = [
     ]
   },
   {
-    facultyName: "Dr. Meenakshi Iyer",
-    role: "Associate Professor",
-    avatar: faculty1,
-    papers: [
-      {
-        title: "Zero-Trust Architecture Implementation in Edge Computing Networks",
-        journal: "ACM Journal of Computer Security",
-        date: "Oct 2025",
-        type: "Journal",
-        link: "#",
-      },
-      {
-        title: "Predictive Threat Modeling for IoT Device Ecosystems",
-        journal: "USENIX Security Symposium",
-        date: "Aug 2025",
-        type: "Conference",
-        link: "#",
-      }
-    ]
-  },
-  {
     facultyName: "Prof. Anitha Suresh",
     role: "Assistant Professor",
     avatar: faculty3,

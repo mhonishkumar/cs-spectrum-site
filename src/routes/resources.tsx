@@ -132,46 +132,6 @@ function ResourcesPage() {
             ))}
           </div>
         </section>
-
-        {/* Academic Coordinator Welcome Section */}
-        <section className="mx-auto max-w-7xl px-6 py-20 border-t border-border mt-10">
-          <SectionTitle kicker="LEADERSHIP">Message from the Academic Coordinator</SectionTitle>
-          <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_2.5fr] items-start">
-            <Reveal scale className="mx-auto lg:mx-0 w-64 lg:w-full max-w-sm">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border bg-card">
-                <img src="/acedamiccoordinator.jpeg" alt="Dr. R. Raja" className="w-full h-auto object-cover aspect-4/5" />
-              </div>
-              <div className="mt-5 text-center lg:text-left">
-                <p className="font-extrabold text-2xl text-primary">Dr. R. Raja</p>
-                <p className="text-sm font-semibold text-brand mt-1">Academic Coordinator</p>
-                <p className="text-xs font-medium text-muted-foreground mt-1">Department of Computer Science and Engineering<br/>Velammal Institute of Technology</p>
-              </div>
-            </Reveal>
-
-            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
-              <Reveal delay={100}>
-                <p>
-                  It is a pleasure to witness the enthusiasm and commitment of our faculty and students in embracing digital innovation and continuous learning. The Digital Innovation Cell plays a vital role in promoting creativity, collaboration, and academic excellence by encouraging the adoption of modern teaching methodologies, emerging technologies, and innovative learning practices.
-                </p>
-              </Reveal>
-              <Reveal delay={200}>
-                <p>
-                  I sincerely appreciate the dedication of our faculty members in inspiring students through quality education and the active participation of our students in research, innovation, technical events, and skill development activities. Together, we are creating a dynamic learning environment that prepares our students to meet the challenges of the ever-evolving technology landscape.
-                </p>
-              </Reveal>
-              <Reveal delay={200}>
-                <p>
-                  Let us continue to explore new opportunities, strengthen our technical capabilities, and work collectively towards achieving excellence in education, innovation, and societal impact.
-                </p>
-              </Reveal>
-              <Reveal delay={300}>
-                <p>
-                  Best wishes for your continued success.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />
