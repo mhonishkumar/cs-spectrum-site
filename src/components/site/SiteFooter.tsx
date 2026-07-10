@@ -4,6 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
+
   { label: "Faculty", href: "/faculty" },
   { label: "Research", href: "/faculty-research" },
   { label: "Gallery", href: "/gallery" },
@@ -58,9 +59,11 @@ export function SiteFooter() {
                   <MapPin className="h-4 w-4" />
                 </div>
                 <span className="leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  <a href="https://maps.app.goo.gl/KCoHi3nVhnBFZKvg7" target="_blank">
                   Velammal Institute of Technology,<br />
                   Chennai - Kolkata High Way,<br />
                   Panchetti, Tamil Nadu 601204
+                  </a>
                 </span>
               </li>
               <li className="flex items-center gap-3 group">
