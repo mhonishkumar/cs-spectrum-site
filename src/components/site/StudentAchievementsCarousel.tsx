@@ -141,14 +141,14 @@ export function StudentAchievementsCarousel() {
               <div className="flex gap-2">
                 <button
                   onClick={scrollPrev}
-                  className="p-2.5 rounded-full border border-border bg-card text-muted-foreground hover:text-primary hover:bg-secondary transition-colors shadow-sm"
+                  className="p-3 rounded-full border border-border bg-card text-muted-foreground hover:text-primary hover:bg-secondary transition-colors shadow-sm"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className="p-2.5 rounded-full border border-border bg-card text-muted-foreground hover:text-primary hover:bg-secondary transition-colors shadow-sm"
+                  className="p-3 rounded-full border border-border bg-card text-muted-foreground hover:text-primary hover:bg-secondary transition-colors shadow-sm"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-5 h-5" />

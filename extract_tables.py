@@ -1,4 +1,7 @@
-import pdfplumber
+try:
+    import pdfplumber
+except ImportError:
+    raise ImportError("pdfplumber is required to run this script. Install with: pip install pdfplumber")
 import json
 import re
 
@@ -13,7 +16,7 @@ try:
     with pdfplumber.open('public/JOURNAL PUBLICATION BY FACULTY MEMBERS updated.pdf') as pdf:
         for page in pdf.pages:
             # Try to find the academic year from text
-            text = page.extract_text()
+            text = page.extract_text() or ""
             year_match = re.search(r'Academic Year\s*(\d{4}[-–]\d{4})', text)
             if year_match:
                 current_year = year_match.group(1).replace('–', '-')
@@ -43,7 +46,7 @@ try:
                     link = ""
                     
                     # The Name is usually column 1 or 2
-                    if len(cleaned_row) >= 6:
+                    if len(cleaned_row) >= 3:
                         # Col 0: S.No (sometimes mixed with another serial)
                         
                         col_offset = 0
@@ -51,18 +54,22 @@ try:
                         if re.match(r'^\d+$', cleaned_row[1]):
                             col_offset = 1
                             
-                        faculty = cleaned_row[1 + col_offset]
-                        title = cleaned_row[2 + col_offset]
-                        journal = cleaned_row[3 + col_offset]
-                        
+                        # safe-get helper
+                        def g(i):
+                            return cleaned_row[i] if i < len(cleaned_row) else ""
+
+                        faculty = g(1 + col_offset)
+                        title = g(2 + col_offset)
+                        journal = g(3 + col_offset)
+
                         # ISSN is usually after date
                         # In 2025-2026: Date is col 4, ISSN is col 5, Journal Link is col 6
                         # In other years it varies. Let's just search for ISSN format in the row.
-                        
-                        date_str = cleaned_row[4 + col_offset]
-                        
-                        issn_candidate = cleaned_row[5 + col_offset] if len(cleaned_row) > 5 + col_offset else ""
-                        link_candidate = cleaned_row[6 + col_offset] if len(cleaned_row) > 6 + col_offset else ""
+
+                        date_str = g(4 + col_offset)
+
+                        issn_candidate = g(5 + col_offset)
+                        link_candidate = g(6 + col_offset)
                         
                         if "ISSN" in issn_candidate or "-" in issn_candidate:
                             issn = issn_candidate

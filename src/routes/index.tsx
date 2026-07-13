@@ -27,25 +27,25 @@ function Index() {
             "linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.5) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }} />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28 text-primary">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-28 text-primary">
           <p className="text-sm font-medium tracking-wide">
             <span className="text-primary/70">HOME</span>
             <span className="mx-2 text-primary/30">/</span>
             <span className="text-brand">DEPARTMENT OVERVIEW</span>
           </p>
-          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold leading-[1.05] max-w-4xl">
+          <h2 className="mt-5 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.05] max-w-4xl">
             Department of Computer Science &{" "}
             <span className="text-brand">Engineering</span>
           </h2>
-          <p className="mt-5 max-w-2xl text-primary/80 md:text-lg">
+          <p className="mt-5 max-w-2xl text-primary/80 text-base sm:text-lg">
             Building the future through innovation in Artificial Intelligence, Cybersecurity, Cloud Computing and Software Engineering.
           </p>
           <Reveal delay={200}>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#about" className="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#about" className="inline-flex w-full justify-center sm:w-auto items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:brightness-110 transition">
                 Explore the Department <ArrowRight className="h-4 w-4" />
               </a>
-              <Link to="/digital-initiatives" className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-3 text-sm font-semibold text-primary hover:bg-muted transition">
+              <Link to="/digital-initiatives" className="inline-flex w-full justify-center sm:w-auto items-center gap-2 rounded-md border border-border bg-card px-5 py-3 text-sm font-semibold text-primary hover:bg-muted transition">
                 Digital Initiatives
               </Link>
             </div>

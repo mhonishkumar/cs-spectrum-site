@@ -31,20 +31,21 @@ export function SiteHeader() {
     <>
       {/* Editorial masthead */}
       <header className="border-b hairline bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-8 flex items-end justify-between gap-6">
-          <Link to="/" className="group min-w-0 flex items-center gap-4">
+        <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col gap-6 md:flex-row md:items-end justify-between">
+          <Link to="/" className="group min-w-0 flex flex-col sm:flex-row sm:items-center gap-3">
             <img
               src="/vit.png"
               alt="Velammal Institute of Technology logo"
-              className="h-14 w-14 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
+              className="h-12 w-12 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
             />
             <div className="min-w-0">
               <p className="eyebrow text-brand">Velammal Institute of Technology</p>
-              <h1 className="mt-1 font-display text-4xl md:text-5xl leading-none tracking-tight text-primary">
+              <h1 className="mt-1 font-display text-3xl sm:text-4xl md:text-5xl leading-none tracking-tight text-primary">
                 Computer Science & Engineering
               </h1>
             </div>
           </Link>
+
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
               {UTIL.map((u) => (
@@ -56,12 +57,13 @@ export function SiteHeader() {
             <ModeToggle />
           </div>
 
-          <div className="md:hidden flex items-center gap-4">
+          <div className="md:hidden flex items-center justify-between gap-3">
             <ModeToggle />
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
-              className="inline-flex items-center justify-center p-2 border hairline text-primary"
+              aria-expanded={open}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border hairline text-primary transition-colors hover:bg-muted"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -71,18 +73,20 @@ export function SiteHeader() {
 
       {/* Sticky nav — hairline underline with electric-indigo hover */}
       <nav className="sticky top-0 z-40 bg-background/95 backdrop-blur-md border-b hairline">
-        <div className="mx-auto max-w-7xl px-6 flex items-center">
-          <ul
-            className={`${
-              open ? "flex flex-col py-3" : "hidden md:flex"
-            } flex-wrap gap-x-8 gap-y-2 py-4 text-[12px] font-medium uppercase tracking-[0.14em] text-foreground/85`}
-          >
-            {NAV.map((item, i) => {
-              const base =
-                "group inline-flex items-baseline gap-2 border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
-              const active = "text-brand border-brand";
-              return (
-                <li key={item.label}>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className={`${open ? "border-t border-border bg-background/95 backdrop-blur-sm" : ""}`}>
+            <ul
+              className={`${
+                open ? "flex flex-col gap-2 py-4" : "hidden md:flex"
+              } flex-wrap gap-x-8 gap-y-2 text-[12px] font-medium uppercase tracking-[0.14em] text-foreground/85`}
+            >
+              {NAV.map((item, i) => {
+                const base = open
+                  ? "group inline-flex items-center justify-between w-full rounded-2xl px-4 py-3 text-sm font-semibold text-foreground/90 hover:bg-muted hover:text-brand transition-colors"
+                  : "group inline-flex items-baseline gap-2 border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors";
+                const active = open ? "bg-brand/10 text-brand" : "text-brand border-brand";
+                return (
+                  <li key={item.label}>
                     <Link
                       to={item.to as "/"}
                       className={base}
@@ -91,10 +95,11 @@ export function SiteHeader() {
                     >
                       <span>{item.label}</span>
                     </Link>
-                </li>
-              );
-            })}
-          </ul>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </nav>
     </>

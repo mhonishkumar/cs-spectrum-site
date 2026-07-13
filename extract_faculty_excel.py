@@ -1,7 +1,15 @@
-import openpyxl
 import os
 import io
-from PIL import Image
+
+try:
+    import openpyxl
+except ImportError as exc:
+    raise SystemExit("Missing dependency: openpyxl. Install with `pip install openpyxl`.") from exc
+
+try:
+    from PIL import Image
+except ImportError as exc:
+    raise SystemExit("Missing dependency: Pillow. Install with `pip install pillow`.") from exc
 
 excel_file = "public/Faculty Profile_Photo.xlsx"
 image_dir = "public/faculty-images/updated"

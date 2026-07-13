@@ -24,19 +24,19 @@ export function PageHero({
         className="absolute inset-0 opacity-30"
         style={{ backgroundImage: "var(--gradient-hero)" }}
       />
-      <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28 grid grid-cols-12 gap-8 items-end">
+      <div className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-28 grid grid-cols-12 gap-8 items-end">
         <div className="col-span-12 lg:col-span-9">
           <p className="eyebrow flex items-center gap-2">
             HOME
             <ChevronRight className="h-3 w-3 text-brand" />
             <span className="text-brand">{crumb}</span>
           </p>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-primary">
+          <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-primary">
             {title}
           </h1>
         </div>
         <div className="col-span-12 lg:col-span-3 lg:border-l hairline lg:pl-8">
-          <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
+          <p className="text-sm sm:text-base text-foreground/75 leading-relaxed">
             {subtitle}
           </p>
         </div>
