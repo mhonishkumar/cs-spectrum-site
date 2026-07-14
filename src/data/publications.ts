@@ -32,14 +32,6 @@ export const PUBLICATIONS = [
     "year": "2025-2026"
   },
   {
-    "facultyName": "Dr. Guruvammal",
-    "title": "Explainable AI with Hybrid Deep Learning Model for Brain Tumor Classification",
-    "journal": "Sensing and Imaging (Springer Nature)",
-    "issn": "Print: 1557- 2064Online: 1557- 2072",
-    "link": "https://link.springer.com/journal/11220",
-    "year": "2025-2026"
-  },
-  {
     "facultyName": "Dr. V. P. Gladis Pushparathi",
     "title": "An Attention- Based Neural Network for Lung Cancer Classification and Gradient in MRI",
     "journal": "Automatika -- Journal for Control, Measurement, Electronics, Computing and Communications",

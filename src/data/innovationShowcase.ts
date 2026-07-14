@@ -61,13 +61,13 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
     title: "Bloodline AI | AI-Powered HealthTech Solution | MedTech & BioTech Innovation Project",
     videoId: "https://youtu.be/Y_v5Q5b0dO4", // Reusing a valid placeholder
     students: ["Poorvesh", "Gnanesh","Karan"],
-    description: "🩸 Bloodline AI is an innovative HealthTech, MedTech, and BioTech project that leverages Artificial Intelligence to support smarter healthcare services, improve medical decision-making, and enhance patient care through intelligent data-driven solutions.\nDesigned to bridge the gap between technology and healthcare, Bloodline AI demonstrates how AI can contribute to faster analysis, improved diagnostics, and efficient healthcare management.\nBloodline AI showcases the transformative potential of AI in MedTech, BioTech, and HealthTech, delivering innovative solutions that support smarter healthcare, improve efficiency, and contribute to better patient outcomes.\n#BloodlineAI #HealthTech #MedTech #BioTech #ArtificialIntelligence #MachineLearning #HealthcareInnovation #StudentProject #Innovation #FinalYearProject #EngineeringProjects #ProjectShowcase #DigitalHealth",
+    description: "🩸 Bloodline AI is an innovative HealthTech, MedTech, and BioTech project that leverages Artificial Intelligence to support smarter healthcare services, improve medical decision-making, and enhance patient care through intelligent data-driven solutions.\nDesigned to bridge the gap between technology and healthcare, Bloodline AI demonstrates how AI can contribute to faster analysis, improved diagnostics, and efficient healthcare management.\nBloodline AI showcases the transformative potential of AI in MedTech, BioTech, and HealthTech, delivering innovative solutions that support smarter healthcare, improve efficiency, and contribute to better patient outcomes.\n#BloodlineAI #HealthTech #MedTech #BioTech #ArtificialIntelligence #MachineLearning #HealthcareInnovation #StudentProject #Innovation #EngineeringProjects #ProjectShowcase #DigitalHealth",
   },
   {
     id: "proj-9",
     title: "Quantum Ready: ML for Post-Quantum Security | AI-Powered Cybersecurity Project",
     videoId: "https://youtu.be/QLX529dC33k", // Reusing a valid placeholder
-    students: ["Ruthiksha", "Deepika","Dayanitha"],
+    students: ["Keerthika", "Deepika","Dayanitha"],
     description: "🔐 Quantum Ready: ML for Post-Quantum Security is an innovative project that combines Machine Learning (ML) and post-quantum cryptography to strengthen cybersecurity against emerging threats posed by quantum computing. The system explores intelligent methods to enhance security, detect potential vulnerabilities, and support quantum-resistant cryptographic solutions.\nQuantum Ready showcases how Machine Learning can be integrated with post-quantum security techniques to build resilient, future-ready cybersecurity solutions capable of addressing the challenges of the quantum computing era.\n#QuantumReady #MachineLearning #PostQuantumSecurity #Cybersecurity #AIProject #Innovation #StudentProject #FinalYearProject #EngineeringProjects #TechInnovation #DataSecurity #FutureOfSecurity",
   },
   {
