@@ -90,6 +90,24 @@ function ResourcesPage() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-7xl px-6 mt-16 text-center">
+          <Reveal>
+            <div className="bg-brand/5 border border-brand/20 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-primary mb-3">Faculty Feedback Request</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We request the teaching faculty to review the details given in this section and provide valuable suggestion for future improvement. The uploaded documents can be reproduced and developed futher.
+              </p>
+              <a 
+                href="https://forms.gle/MbbJoFzAu6Wn6Lfp6" 
+                target="_blank" 
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-brand px-6 py-2.5 text-sm font-semibold text-brand-foreground hover:brightness-110 transition shadow-sm"
+              >
+                Submit Feedback
+              </a>
+            </div>
+          </Reveal>
+        </section>
         <section className="bg-secondary/50 py-20 mt-20 border-y border-border">
           <div className="mx-auto max-w-7xl px-6">
             <SectionTitle kicker="FOUR-YEAR JOURNEY">Curriculum Progression</SectionTitle>

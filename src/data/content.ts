@@ -50,6 +50,8 @@ export const RESOURCES = [
   { icon: FileText, title: "Subject-Wise Notes", href: "https://drive.google.com/drive/folders/19yLKZUvIJDHQA0FTo-l0DKYttGmt-Ze1?usp=sharing" },
   { icon: BookOpen, title: "Teaching Methodologies (Pedagogy)", href: "https://drive.google.com/file/d/1Kb1O86soWiyhUgwCoGXXlM9-SGrSx9Md/view?usp=drive_link" },
   { icon: Play, title: "YouTube Lecture Series", href: "https://youtube.com/@innovatecse?si=mX3h1bWgCHNAYnFr" },
+  { icon: FileText, title: "Collaborative Learning", href: "" },
+  { icon: FileText, title: "Real Life Examples", href: "" },
   { 
     icon: GraduationCap, 
     title: "Google Classroom", 
