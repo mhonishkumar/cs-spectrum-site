@@ -31,7 +31,7 @@ export function PageHero({
             <ChevronRight className="h-3 w-3 text-brand" />
             <span className="text-brand">{crumb}</span>
           </p>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight text-primary">
+          <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] sm:leading-[0.95] tracking-tight text-primary">
             {title}
           </h1>
         </div>
@@ -56,7 +56,7 @@ export function SectionTitle({
     <div className="pb-6 border-b hairline flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div className="min-w-0">
         {kicker && <p className="eyebrow">{kicker}</p>}
-        <h2 className="mt-3 font-display text-4xl md:text-5xl leading-[1.02] text-primary tracking-tight">
+        <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl leading-[1.1] sm:leading-[1.02] text-primary tracking-tight">
           {children}
         </h2>
       </div>
