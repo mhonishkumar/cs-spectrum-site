@@ -269,7 +269,7 @@ function Index() {
                     </span>
                     <div>
                       <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest">Email</p>
-                      <p className="font-semibold text-primary">hod.cse@velammalitech.edu.in</p>
+                      <p className="font-semibold text-primary break-all">hod.cse@velammalitech.edu.in</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">

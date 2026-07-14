@@ -70,7 +70,7 @@ export function SiteFooter() {
                 <div className="p-1.5 rounded-md bg-secondary text-brand group-hover:bg-brand group-hover:text-white transition-colors duration-300">
                   <Mail className="h-4 w-4" />
                 </div>
-                <a href="mailto:hod.cse@velammalitech.edu.in" className="hover:text-brand transition-colors duration-300">
+                <a href="mailto:hod.cse@velammalitech.edu.in" className="hover:text-brand transition-colors duration-300 break-all">
                   hod.cse@velammalitech.edu.in
                 </a>
               </li>
