@@ -67,7 +67,7 @@ export const FACULTY_FEEDBACK = [
     name: "Dr. V. Illayaraja",
     role: "Associate Professor",
     department: "Department of Computer Science & Engineering",
-    college:"Other College",
+    college:"VIT",
     email: "infoilai11@gmail.com",
     body: "After carefully reviewing the lecture notes, laboratory manuals, question papers, and course materials, I am pleased to note that the overall quality of the resources is excellent. The lecture notes are well-structured, comprehensive, and presented in a logical sequence that will help students understand the concepts with ease. The laboratory manuals are detailed, user-friendly, and provide clear procedural steps, enabling students to perform experiments confidently. The question papers are balanced, covering all Course Outcomes and different cognitive levels, ensuring a fair assessment of students' knowledge and analytical abilities. The course materials demonstrate academic rigor, relevance, and a strong commitment to quality education. I appreciate the effort invested in preparing these resources, and I believe they will significantly enhance the teaching-learning process.",
   },
@@ -75,7 +75,7 @@ export const FACULTY_FEEDBACK = [
     name: "Dr. K. Balachander",
     role: "Professor",
     department: "Department of Computer Science & Engineering",
-    college:"Other College",
+    college:"RMKCET",
     email: "kbc.cse@gmail.com",
     body: "I found the course materials to be professionally prepared and aligned with the curriculum requirements. The lecture notes explain complex concepts in a simple and effective manner with appropriate examples, making them highly beneficial for students. The laboratory manuals are systematic, comprehensive, and encourage practical understanding of the subject. The question papers are thoughtfully designed, ensuring an appropriate balance between theoretical knowledge and problem-solving skills. It is evident that considerable time and dedication have been invested in preparing these materials. Overall, the teaching resources are of a very high standard and will contribute positively to students' academic growth and learning outcomes.",
   },
@@ -92,6 +92,20 @@ export const FACULTY_FEEDBACK = [
     department: "Department of Computer Science & Engineering",
     college:"Velammal Institute of Technology",
     body: "The overall quality of the course materials is highly commendable. The lecture notes are engaging, accurate, and student-friendly, making them an excellent learning resource. The laboratory manuals are clearly written and provide sufficient guidance for students to complete practical exercises independently. The assessment materials are fair, comprehensive, and effectively evaluate students across multiple learning domains. The effort and professionalism demonstrated in the preparation of these teaching resources are truly appreciable. These materials will undoubtedly support effective teaching and foster meaningful learning experiences for students.",
+  },
+  {
+    name: "Karthikeyan S",
+    role: "3rd Year",
+    department: "Department of Computer Science & Engineering",
+    college:"Velammal Institute of Technology",
+    body: "The Innovation Showcase on Quantum-Ready Machine Learning for Post-Quantum Security was one of the most inspiring resource I gained through our department. It introduced me to the emerging challenges that quantum computing poses to modern cybersecurity and sparked my interest in post-quantum cryptography.\nMotivated by the ideas presented in the showcase, I developed a project focused on Quantum Security-Based Technology, exploring how quantum-resistant cryptographic techniques can be applied to build secure communication systems for the future. Working on this project helped me strengthen my research, problem-solving, and software development skills while giving me valuable exposure to one of the fastest-growing areas of cybersecurity.\nI'm grateful to the department for organizing innovation-driven initiatives that encourage students to explore advanced technologies and transform ideas into practical projects. This experience has motivated me to continue learning and pursuing research in quantum-safe security.",
+  },
+  {
+    name: "Mhonish Kumar J",
+    role: "3rd Year",
+    department: "Department of Computer Science & Engineering",
+    college:"Velammal Institute of Technology",
+    body: "Watching the MEDOVA | Predictive AI and Smart Medical Ecosystem project in our department's Innovation Showcase completely changed the way I looked at the application of Artificial Intelligence in healthcare. The project demonstrated how AI can be used to predict medical conditions, support healthcare professionals, and build a smarter medical ecosystem that benefits patients. \nThe innovation and practical impact of the project inspired me to explore this field further. I am currently planning to develop a healthcare-focused project that leverages Artificial Intelligence and predictive analytics to assist in early disease detection and improve clinical decision-making. The showcase motivated me to think beyond classroom concepts and explore real-world solutions to meaningful problems. \nI appreciate the department for providing a platform where students can learn from innovative projects developed by their peers. It has encouraged me to pursue research, enhance my technical skills, and contribute to technology that can create a positive impact on society.",
   },
 ];
 

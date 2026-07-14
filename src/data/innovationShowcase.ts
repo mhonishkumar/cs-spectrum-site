@@ -67,7 +67,7 @@ export const INNOVATION_PROJECTS: ProjectVideo[] = [
     id: "proj-9",
     title: "Quantum Ready: ML for Post-Quantum Security | AI-Powered Cybersecurity Project",
     videoId: "https://youtu.be/QLX529dC33k", // Reusing a valid placeholder
-    students: ["Ruthiksha", "Deepika","Dayanitha"],
+    students: ["Keerthika", "Deepika","Dayanitha"],
     description: "🔐 Quantum Ready: ML for Post-Quantum Security is an innovative project that combines Machine Learning (ML) and post-quantum cryptography to strengthen cybersecurity against emerging threats posed by quantum computing. The system explores intelligent methods to enhance security, detect potential vulnerabilities, and support quantum-resistant cryptographic solutions.\nQuantum Ready showcases how Machine Learning can be integrated with post-quantum security techniques to build resilient, future-ready cybersecurity solutions capable of addressing the challenges of the quantum computing era.\n#QuantumReady #MachineLearning #PostQuantumSecurity #Cybersecurity #AIProject #Innovation #StudentProject #FinalYearProject #EngineeringProjects #TechInnovation #DataSecurity #FutureOfSecurity",
   },
   {
