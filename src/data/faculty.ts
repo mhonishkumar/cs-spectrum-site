@@ -18,12 +18,6 @@ export const FACULTY = [
     "image": "/faculty-images/venkdesh.jpeg"
   },
   {
-    "name": "Dr. Guruvammal S",
-    "designation": "Professor",
-    "qualification": "M.E., Ph.D.,",
-    "image": "/faculty-images/gurvaammal.jpeg"
-  },
-  {
     "name": "Dr. Prameeladevi C H",
     "designation": "Associate Professor",
     "qualification": "M.E., Ph.D.,",
