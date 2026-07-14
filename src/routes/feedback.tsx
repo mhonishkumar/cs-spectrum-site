@@ -65,6 +65,23 @@ function FacultyFeedbackPage() {
             ))}
           </div>
         </section>
+
+        <section className="mx-auto max-w-7xl px-6 mt-20 border-t border-border pt-20 text-center">
+          <Reveal>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4">Have Your Say</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              We highly value your input. Please take a moment to share your thoughts, suggestions, or experiences to help us continuously improve our academic programs and departmental initiatives.
+            </p>
+            <a 
+              href="https://forms.gle/MbbJoFzAu6Wn6Lfp6" 
+              target="_blank" 
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-md bg-brand px-8 py-3 text-sm font-semibold text-brand-foreground hover:brightness-110 transition shadow-sm"
+            >
+              Submit Feedback
+            </a>
+          </Reveal>
+        </section>
       </main>
 
       <SiteFooter />

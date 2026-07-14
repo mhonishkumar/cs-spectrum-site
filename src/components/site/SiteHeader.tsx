@@ -31,21 +31,21 @@ export function SiteHeader() {
     <>
       {/* Editorial masthead */}
       <header className="border-b hairline bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-8 flex items-end justify-between gap-6">
-          <Link to="/" className="group min-w-0 flex items-center gap-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 md:py-8 flex items-center justify-between gap-4">
+          <Link to="/" className="group min-w-0 flex items-center gap-3 sm:gap-4">
             <img
               src="/vit.png"
               alt="Velammal Institute of Technology logo"
-              className="h-14 w-14 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
+              className="h-10 w-10 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain shrink-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
             />
-            <div className="min-w-0">
-              <p className="eyebrow text-brand">Velammal Institute of Technology</p>
-              <h1 className="mt-1 font-display text-4xl md:text-5xl leading-none tracking-tight text-primary">
+            <div className="min-w-0 flex flex-col justify-center">
+              <p className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-widest text-brand">Velammal Institute of Technology</p>
+              <h1 className="mt-0.5 sm:mt-1 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight sm:leading-none tracking-tight text-primary whitespace-normal">
                 Computer Science & Engineering
               </h1>
             </div>
           </Link>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 shrink-0">
             <nav className="flex items-center gap-8 text-[11px] uppercase tracking-widest text-muted-foreground font-medium">
               {UTIL.map((u) => (
                 <a key={u.label} href={u.href} className="hover:text-brand transition-colors">
@@ -56,7 +56,7 @@ export function SiteHeader() {
             <ModeToggle />
           </div>
 
-          <div className="md:hidden flex items-center gap-4">
+          <div className="md:hidden flex items-center gap-2 sm:gap-4 shrink-0">
             <ModeToggle />
             <button
               onClick={() => setOpen((v) => !v)}
